@@ -1,0 +1,27 @@
+footer {
+    background-color: #1f1f1f;
+}
+
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    font-size: 1.2em;
+}
+
+a+a {
+    margin-left: 10px;
+}
+
+footer i {
+    transition: color .2s;
+}
+
+.social i:hover {
+    color: #ED6464;
+}
+
+.contacts a:hover i {
+    color: #ED6464;
+}
