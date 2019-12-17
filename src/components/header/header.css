@@ -3,33 +3,33 @@ header {
     color: white;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.top-menu ul {
     border-bottom: 1px solid #ED6464;
 }
 
-li {
+.top-menu li {
     display: inline-block;
 }
 
-li+li {
+.top-menu li+li {
     margin-left: 20px;
 }
 
 a {
-    text-decoration: none;
-    /* color: #80bfff; */
     color: white;
 }
 
-.top-header {
+.top-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-nav a{
+.mid-section {
+    padding: 20px 0;
+}
+
+nav a {
     transition: opacity .2s;
 }
 
@@ -43,18 +43,16 @@ nav a:hover {
     font-size: 1.6em;
 }
 
-h1 {
-    font-size: 4em;
-    margin: 0;
-}
+
 
 q {
     color: #ED6464;
 }
 
-.webapp_cover
+.hamb
 {
     width: 39px;
+    display: none;
 }
 
 .menu_button
@@ -83,6 +81,7 @@ q {
     width: 100%;
     height: 5px;
     background-color: #fff;
+    transition: background-color .2s;
 }
 
 .menu_label::before, .menu_label::after
@@ -135,6 +134,31 @@ q {
     animation: moveUpThenDown 0.8s ease 0.2s forwards, shakeWhileMovingUp 0.8s ease 0.2s forwards, shakeWhileMovingDown 0.2s ease 0.8s forwards;
 }
 
+.hamb:hover .menu_label::before, .hamb:hover .menu_label::after, .hamb:hover .menu_text_bar {
+    background-color: #ED6464;
+}
+
+.hamb-menu {
+    position: absolute;
+    width: 100%;
+    background-color:#1f1f1f;
+    top: 8%;
+    left: 0;
+    height: 100%;
+    transform: rotateY(90deg);
+    transition: transform .4s;
+}
+
+.hamb-menu a {
+    font-size: 2em;
+    transition: border-bottom .4s;
+    border-bottom: 2px solid transparent;
+}
+
+.hamb-menu a:hover{
+    border-bottom: 2px solid #ED6464;
+}
+
 @keyframes moveUpThenDown
 {
     0%{ top:0; }
@@ -157,4 +181,14 @@ q {
     80%{ transform:rotateZ(3deg); }
     90%{ transform:rotateZ(-3deg); }
     100%{ transform:rotateZ(0); }
+}
+
+@media screen and (max-width: 600px) {
+    .top-menu {
+        display: none;
+    }
+
+    .hamb {
+        display: block;
+    }
 }

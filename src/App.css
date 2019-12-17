@@ -4,6 +4,7 @@
 
 body {
   font-family: 'Poppins', 'Helvetica', sans-serif;
+  color: white;
 }
 
 .App {
@@ -46,6 +47,40 @@ body {
 }
 
 .container {
-  width: 992px;
+  max-width: 992px;
+  width: 100%;
   margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 3em;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+  h1, h2 {
+      font-size: 2.6em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1, h2 {
+      font-size: 2em;
+  }
 }

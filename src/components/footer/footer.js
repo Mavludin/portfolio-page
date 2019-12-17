@@ -4,6 +4,7 @@ import './footer.css';
 const Footer = () => {
     return (
         <footer>
+            <h2>Stay in touch</h2>
             <div className="footer-wrapper container">
                 <div className="social">
                     <a target="_blank" href="https://www.instagram.com/icukengw/"><i className="fab fa-instagram"></i></a>
