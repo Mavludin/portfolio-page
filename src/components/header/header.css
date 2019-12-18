@@ -3,7 +3,7 @@ header {
     color: white;
     overflow: hidden;
     position: relative;
-    height: calc(100vh + 38px);
+    height: 100vh;
 }
 
 .lines {
@@ -115,6 +115,8 @@ a {
     padding: 5px 25px;
 
     transition: background-color .2s;
+
+    margin-top: 2%;
 }
 
 .fa-arrow-right {

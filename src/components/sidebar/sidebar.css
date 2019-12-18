@@ -1,0 +1,30 @@
+aside {
+    width: 100px;
+    position: fixed;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+aside div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: pointer;
+
+    transition: background-color .2s;
+}
+
+.activeWindow {
+    background-color: white;
+
+}
+
+aside div:hover {
+    background-color: white;
+}
+
+aside div + div {
+    margin-top: 15px;
+}

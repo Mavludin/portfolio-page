@@ -47,19 +47,18 @@ class Header extends React.Component {
                     <div className="header-content">
 
                         <div className="top-section">
-                        <i class="mdi mdi-rocket"></i>
 
-                            <h1> Hello, I'm <span>Mavludin</span>, <br/> a front-end web developer. </h1>
+                            <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
                             <a className="getStarted" href="/">Get started <i className="fas fa-arrow-right"></i></a>
 
                         </div>
     
-                        <div className="bot-section">
+                        {/* <div className="bot-section"> */}
 
                             {/* <div className="logo">
                                 <a href="/">Ben Dover</a>
                             </div> */}
-                            <nav className="top-menu">
+                            {/* <nav className="top-menu">
                                 <ul>
                                     <li><a href="/">About Me</a></li>
                                     <li><a href="/">My Skills</a></li>
@@ -84,9 +83,9 @@ class Header extends React.Component {
                                         <div className="menu_text_bar"></div>
                                     </label>
                                 </div>
-                            </div>
+                            </div> */}
 
-                        </div>
+                        {/* </div> */}
 
                     </div>
     
