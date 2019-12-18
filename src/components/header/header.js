@@ -18,37 +18,52 @@ class Header extends React.Component {
         this.setState({isChecked: !this.state.isChecked});
     }
 
-
     componentDidUpdate() {
         this.checkBox.current.checked = this.state.isChecked;
 
         if (this.state.isChecked) {
-            this.hambMenu.current.style.transform = 'rotateY(0deg)';
+            this.hambMenu.current.style.height = '200px';
+            this.hambMenu.current.style.opacity = '1';
         }
-        else this.hambMenu.current.style.transform = 'rotateY(90deg)';
+        else {
+            this.hambMenu.current.style.opacity = '0';
+            this.hambMenu.current.style.height = '0';
+        }
     }
 
     render() {
 
-
-
         return (
-            <header>
+            <header onScroll={(e)=>this.Scrolling(e)}>
+
+                <div className="lines">
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                </div>
                 
                 <div className="container">
     
                     <div className="header-content">
 
                         <div className="top-section">
+                        <i class="mdi mdi-rocket"></i>
 
-                            <div className="logo">
+                            <h1> Hello, I'm <span>Mavludin</span>, <br/> a front-end web developer. </h1>
+                            <a className="getStarted" href="/">Get started <i className="fas fa-arrow-right"></i></a>
+
+                        </div>
+    
+                        <div className="bot-section">
+
+                            {/* <div className="logo">
                                 <a href="/">Ben Dover</a>
-                            </div>
+                            </div> */}
                             <nav className="top-menu">
                                 <ul>
                                     <li><a href="/">About Me</a></li>
                                     <li><a href="/">My Skills</a></li>
-                                    <li><a href="/">My Projects</a></li>
+                                    <li><a href="/">Portfolio</a></li>
                                     <li><a href="/">Contacts</a></li>
                                 </ul>
                             </nav>
@@ -57,7 +72,7 @@ class Header extends React.Component {
                                 <ul>
                                     <li><a href="/">About Me</a></li>
                                     <li><a href="/">My Skills</a></li>
-                                    <li><a href="/">My Projects</a></li>
+                                    <li><a href="/">Portfolio</a></li>
                                     <li><a href="/">Contacts</a></li>
                                 </ul>
                             </nav>
@@ -71,14 +86,6 @@ class Header extends React.Component {
                                 </div>
                             </div>
 
-                        </div>
-    
-                        <div className="mid-section">
-                            <h1> A front-end developer crazy at pretty desing solutions </h1>
-                        </div>
-                        
-                        <div className="bot-section">
-                            <q> You do not get paid for knowledge, but for knowing how to bring it into life. </q>
                         </div>
 
                     </div>

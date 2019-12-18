@@ -5,7 +5,7 @@ const mainBlock = () => {
     return (
         <main>
             <div className = 'container'>
-                <h2>My Skills</h2>
+                <h2>ABOUT</h2>
             </div>
         </main>
     )
