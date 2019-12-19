@@ -1,7 +1,9 @@
 import React from 'react';
-import './header.css';
+import './homepage.css';
 
-class Header extends React.Component {
+import { Link } from 'react-router-dom';
+
+class HomePage extends React.Component {
 
     constructor() {
         super();
@@ -34,24 +36,14 @@ class Header extends React.Component {
     render() {
 
         return (
-            <header onScroll={(e)=>this.Scrolling(e)}>
-
-                <div className="lines">
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                </div>
-                
+            <div className="home-page" onScroll={(e)=>this.Scrolling(e)}>
+        
                 <div className="container">
     
-                    <div className="header-content">
+                    <div className="home-page-content">
 
-                        <div className="top-section">
-
-                            <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
-                            <a className="getStarted" href="/">Get started <i className="fas fa-arrow-right"></i></a>
-
-                        </div>
+                        <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
+                        <Link to="/about" className="getStarted" href="/">Get started <i className="fas fa-arrow-right"></i></Link>
     
                         {/* <div className="bot-section"> */}
 
@@ -90,10 +82,9 @@ class Header extends React.Component {
                     </div>
     
                 </div>
-            </header>
+            </div>
         )
     }
 
 }
-
-export default Header;
+export default HomePage;

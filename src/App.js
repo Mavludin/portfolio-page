@@ -1,22 +1,34 @@
 import React from 'react';
 import './App.css';
 
-import Header from './components/header/header';
 import Footer from './components/footer/footer';
-// import MainBlock from './components/main-block/main-block';
+import HomePage from './containers/homepage/homepage';
 import Sidebar from './components/sidebar/sidebar';
+import AboutPage from './containers/about/about';
+import SkillsPage from './containers/skills/skills';
 
-import { BrowserRouter, Switch } from 'react-router-dom';
-
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
 function App() {
   return (
 
     <BrowserRouter>
       <div className="App">
-        <Header />
+
+      <div className="lines">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
+      
         <Sidebar />
-        {/* <MainBlock /> */}
+        <div>
+          <Switch>
+            <Route path="/about" component={AboutPage} />
+            <Route path="/skills" component={SkillsPage} />
+            <Route path="/" component={HomePage} />
+          </Switch>
+        </div>
         <Footer />
       </div>
     </BrowserRouter>

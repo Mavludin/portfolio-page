@@ -4,7 +4,7 @@ footer {
     bottom: 0;
 }
 
-.footer-wrapper {
+.contacts {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -26,15 +26,4 @@ footer i {
 
 .contacts a:hover i {
     color: #ED6464;
-}
-
-@media screen and (max-width: 600px) {
-    .contacts {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .social {
-        font-size: 1.5em;
-    }
 }
