@@ -1,26 +1,16 @@
-.home-page {
+.HomePage {
     color: white;
     overflow: hidden;
     position: relative;
     height: 100vh;
 }
 
-.home-page-content {
-    position: relative;
 
-    height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.home-page-content h1>span {
+.HomePage h1 span {
     color: #ED6464;
 }
 
-.top-menu {
+/* .top-menu {
     display: flex;
     width: 100%;
     height: 100%;
@@ -41,13 +31,13 @@
 
 .top-menu li a:hover {
     color: #ED6464;
-}
+} */
 
 a {
     color: white;
 }
 
-.getStarted {
+.GetStarted {
     font-size: 1.5em;
     border: 2px solid white;
     padding: 5px 25px;
@@ -61,22 +51,22 @@ a {
     transition: transform .2s;
 }
 
-.getStarted:hover {
+.GetStarted:hover {
     background-color: #ED6464;
     border-color: #ED6464;
 }
 
-.getStarted:hover .fa-arrow-right {
+.GetStarted:hover .fa-arrow-right {
     transform: rotate(90deg);
 }
-
-.bot-section {
+/* 
+.BotSection {
     border-bottom: 3px solid #ED6464;
     display: flex;
     align-items: center;
 }
 
-.logo {
+.Logo {
     font-weight: 600;
     font-size: 1.6em;
 }
@@ -219,15 +209,15 @@ q {
     80%{ transform:rotateZ(3deg); }
     90%{ transform:rotateZ(-3deg); }
     100%{ transform:rotateZ(0); }
-}
+} */
 
 @media screen and (max-width: 600px) {
 
-    .home-page {
+    .HomePage {
         overflow: visible;
     }
 
-    .top-menu {
+    /* .top-menu {
         display: none;
     }
 
@@ -240,5 +230,5 @@ q {
         flex-flow: column-reverse;
         position: relative;
         padding: 5px 0;
-    }
+    } */
 }

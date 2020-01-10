@@ -1,15 +1,15 @@
 import React from 'react';
-import './sidebar.css';
+import classes from './sidebar.module.css';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const sidebar = () => {
     return (
         <aside>
-            <Link to="/"><div className="activeWindow"></div></Link>
-            <Link to="/about"><div></div></Link>
-            <Link to="/skills"><div></div></Link>
-            <Link to="/feedback"><div></div></Link>
+            <NavLink exact={true} activeClassName={classes.Active} to="/"><div></div></NavLink>
+            <NavLink activeClassName={classes.Active} to="/about"><div></div></NavLink>
+            <NavLink activeClassName={classes.Active} to="/skills"><div></div></NavLink>
+            {/* <NavLink activeClassName={classes.Active} to="/feedback"><div></div></NavLink> */}
         </aside>
     )
 }

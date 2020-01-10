@@ -4,7 +4,7 @@ footer {
     bottom: 0;
 }
 
-.contacts {
+.Contacts {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -20,10 +20,6 @@ footer i {
     transition: color .2s;
 }
 
-.social i:hover {
-    color: #ED6464;
-}
-
-.contacts a:hover i {
+.Contacts a:hover i {
     color: #ED6464;
 }

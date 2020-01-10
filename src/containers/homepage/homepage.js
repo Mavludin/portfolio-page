@@ -1,5 +1,7 @@
 import React from 'react';
-import './homepage.css';
+
+import classes from './homepage.module.css';
+import '../../Main.css';
 
 import { Link } from 'react-router-dom';
 
@@ -36,51 +38,47 @@ class HomePage extends React.Component {
     render() {
 
         return (
-            <div className="home-page" onScroll={(e)=>this.Scrolling(e)}>
+            <div className={classes.HomePage} onScroll={(e)=>this.Scrolling(e)}>
         
-                <div className="container">
+                <div className="container flex-content">
     
-                    <div className="home-page-content">
+                    <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
+                    <Link to="/about" className={classes.GetStarted} href="/">Get started <i className="fas fa-arrow-right"></i></Link>
 
-                        <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
-                        <Link to="/about" className="getStarted" href="/">Get started <i className="fas fa-arrow-right"></i></Link>
-    
-                        {/* <div className="bot-section"> */}
+                    {/* <div className="bot-section"> */}
 
-                            {/* <div className="logo">
-                                <a href="/">Ben Dover</a>
-                            </div> */}
-                            {/* <nav className="top-menu">
-                                <ul>
-                                    <li><a href="/">About Me</a></li>
-                                    <li><a href="/">My Skills</a></li>
-                                    <li><a href="/">Portfolio</a></li>
-                                    <li><a href="/">Contacts</a></li>
-                                </ul>
-                            </nav>
+                        {/* <div className="logo">
+                            <a href="/">Ben Dover</a>
+                        </div> */}
+                        {/* <nav className="top-menu">
+                            <ul>
+                                <li><a href="/">About Me</a></li>
+                                <li><a href="/">My Skills</a></li>
+                                <li><a href="/">Portfolio</a></li>
+                                <li><a href="/">Contacts</a></li>
+                            </ul>
+                        </nav>
 
-                            <nav ref={this.hambMenu} className="hamb-menu">
-                                <ul>
-                                    <li><a href="/">About Me</a></li>
-                                    <li><a href="/">My Skills</a></li>
-                                    <li><a href="/">Portfolio</a></li>
-                                    <li><a href="/">Contacts</a></li>
-                                </ul>
-                            </nav>
+                        <nav ref={this.hambMenu} className="hamb-menu">
+                            <ul>
+                                <li><a href="/">About Me</a></li>
+                                <li><a href="/">My Skills</a></li>
+                                <li><a href="/">Portfolio</a></li>
+                                <li><a href="/">Contacts</a></li>
+                            </ul>
+                        </nav>
 
-                            <div onClick={this.toggleChecked} className="hamb">
-                                <div className="menu_button">
-                                    <input ref={this.checkBox} type="checkbox" className="menu_checkbox" />
-                                    <label htmlFor="menu_checkbox" className="menu_label">
-                                        <div className="menu_text_bar"></div>
-                                    </label>
-                                </div>
-                            </div> */}
+                        <div onClick={this.toggleChecked} className="hamb">
+                            <div className="menu_button">
+                                <input ref={this.checkBox} type="checkbox" className="menu_checkbox" />
+                                <label htmlFor="menu_checkbox" className="menu_label">
+                                    <div className="menu_text_bar"></div>
+                                </label>
+                            </div>
+                        </div> */}
 
-                        {/* </div> */}
+                    {/* </div> */}
 
-                    </div>
-    
                 </div>
             </div>
         )

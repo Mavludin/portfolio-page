@@ -12,11 +12,11 @@ aside div {
     border-radius: 50%;
     border: 1px solid white;
     cursor: pointer;
-
+    
     transition: background-color .2s;
 }
 
-.activeWindow {
+.Active > div {
     background-color: white;
 
 }

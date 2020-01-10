@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './Main.css';
 
 import Footer from './components/footer/footer';
 import HomePage from './containers/homepage/homepage';
@@ -9,7 +9,8 @@ import SkillsPage from './containers/skills/skills';
 
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
-function App() {
+const App = () => {
+
   return (
 
     <BrowserRouter>
@@ -22,14 +23,15 @@ function App() {
       </div>
       
         <Sidebar />
-        <div>
+        <main>
           <Switch>
-            <Route path="/about" component={AboutPage} />
-            <Route path="/skills" component={SkillsPage} />
-            <Route path="/" component={HomePage} />
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/skills" component={SkillsPage} />
           </Switch>
-        </div>
+        </main>
         <Footer />
+        
       </div>
     </BrowserRouter>
   );
