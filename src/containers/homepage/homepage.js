@@ -40,7 +40,7 @@ class HomePage extends React.Component {
         return (
             <div className={classes.HomePage} onScroll={(e)=>this.Scrolling(e)}>
         
-                <div className="container flex-content">
+                <div style={{alignItems: 'center'}} className="container flex-content">
     
                     <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
                     <Link to="/about" className={classes.GetStarted} href="/">Get started <i className="fas fa-arrow-right"></i></Link>

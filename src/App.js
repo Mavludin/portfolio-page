@@ -9,32 +9,34 @@ import SkillsPage from './containers/skills/skills';
 
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
-const App = () => {
+class App extends React.Component {
 
-  return (
+  render() {
+    return (
 
-    <BrowserRouter>
-      <div className="App">
-
-      <div className="lines">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
-      
-        <Sidebar />
-        <main>
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/about" component={AboutPage} />
-            <Route exact path="/skills" component={SkillsPage} />
-          </Switch>
-        </main>
-        <Footer />
+      <BrowserRouter>
+        <div className="App">
+  
+        <div className="lines">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
         
-      </div>
-    </BrowserRouter>
-  );
+          <Sidebar />
+          <main>
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/about" component={AboutPage} />
+              <Route exact path="/skills" component={SkillsPage} />
+            </Switch>
+          </main>
+          <Footer />
+          
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;

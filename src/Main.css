@@ -20,7 +20,6 @@ body {
   
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
@@ -35,9 +34,13 @@ h2 {
   margin: 0;
 }
 
+p {
+  text-align: center;
+  font-size: 1.2em;
+}
+
 ul {
   list-style-type: none;
-  padding: 0;
   margin: 0;
 }
 

@@ -8,11 +8,10 @@ const About = () => {
     return (
         <div className={[classes.AboutPage, 'container', 'flex-content'].join(' ')} >
             <h1>What I do</h1>
-            <h3>
-                I create web sites and applications by using the tools that you can get familiar with <Link to="/skills"> on the next page. </Link>
-                In the development process I like applying the best pretty desing solutions to let a project look most 
-                user - friendly and 
-            </h3>
+            <p>
+                I build web sites and applications by utilizing the most progressive frontend and dev tools that you can get familiar with on the next page. 
+                During the development process, I adhere to attractive design solutions that provide maximum user-friendliness.
+            </p>
         </div>
     )
 }

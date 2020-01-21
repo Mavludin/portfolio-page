@@ -1,0 +1,18 @@
+img {
+    width: 32px;
+    margin-right: 5px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    width: fit-content;
+    transition: border-color .2s;
+    padding-bottom: 5px;
+}
+
+li:hover {
+    border-color: #ED6464;
+}
