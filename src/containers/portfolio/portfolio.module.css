@@ -1,0 +1,29 @@
+.Content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Item {
+    width: 33.3%;
+    height: 200px;
+    padding: 5px;
+}
+
+.ItemInner {
+    padding: 5px;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+    text-align: center;
+}
+
+img {
+    width: 32px;
+}
+
+.Tools {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

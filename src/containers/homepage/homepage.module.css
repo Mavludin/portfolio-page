@@ -36,29 +36,6 @@
 a {
     color: white;
 }
-
-.GetStarted {
-    font-size: 1.5em;
-    border: 2px solid white;
-    padding: 5px 25px;
-
-    transition: background-color .2s;
-
-    margin-top: 2%;
-}
-
-.fa-arrow-right {
-    transition: transform .2s;
-}
-
-.GetStarted:hover {
-    background-color: #ED6464;
-    border-color: #ED6464;
-}
-
-.GetStarted:hover .fa-arrow-right {
-    transform: rotate(90deg);
-}
 /* 
 .BotSection {
     border-bottom: 3px solid #ED6464;

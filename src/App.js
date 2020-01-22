@@ -6,6 +6,7 @@ import HomePage from './containers/homepage/homepage';
 import Sidebar from './components/sidebar/sidebar';
 import AboutPage from './containers/about/about';
 import SkillsPage from './containers/skills/skills';
+import Portfolio from './containers/portfolio/portfolio';
 
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
@@ -29,6 +30,7 @@ class App extends React.Component {
               <Route exact path="/" component={HomePage} />
               <Route exact path="/about" component={AboutPage} />
               <Route exact path="/skills" component={SkillsPage} />
+              <Route exact path="/portfolio" component={Portfolio} />
             </Switch>
           </main>
           <Footer />

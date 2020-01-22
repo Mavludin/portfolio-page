@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', 'Helvetica', sans-serif;
   color: white;
@@ -25,13 +29,8 @@ body {
 
 h1 {
   font-size: 3em;
-  margin: 0;
   text-align: center;
-}
-
-h2 {
-  font-size: 3em;
-  margin: 0;
+  animation: scaling 4s infinite linear;
 }
 
 p {
@@ -41,11 +40,69 @@ p {
 
 ul {
   list-style-type: none;
-  margin: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(1.0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+.redBtn {
+  font-size: 1.5em;
+  border: 2px solid white;
+  padding: 5px 25px;
+
+  transition: background-color .2s;
+
+  margin-top: 2%;
+}
+
+.redBtn:hover {
+  background-color: #ED6464;
+  border-color: #ED6464;
+}
+
+.redBtn:hover i {
+  animation: jumping 1s ease-out;
+}
+
+@keyframes jumping {
+  0% {
+      transform: translateX(10px);
+  }
+
+  20% {
+      transform: translateX(0);
+  }
+
+  40% {
+      transform: translateX(8px);
+  }
+
+  60% {
+      transform: translateX(0);
+  }
+
+  80% {
+      transform: translateX(4px);
+  }
+
+  80% {
+      transform: translateX(0);
+  }
 }
 
 .lines {

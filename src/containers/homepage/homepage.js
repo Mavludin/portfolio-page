@@ -43,7 +43,7 @@ class HomePage extends React.Component {
                 <div style={{alignItems: 'center'}} className="container flex-content">
     
                     <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
-                    <Link to="/about" className={classes.GetStarted} href="/">Get started <i className="fas fa-arrow-right"></i></Link>
+                    <Link to="/about" className='redBtn' href="/">Get started <i className="fas fa-arrow-right"></i></Link>
 
                     {/* <div className="bot-section"> */}
 

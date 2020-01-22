@@ -18,16 +18,18 @@ const Skills = () => {
         <div className='container flex-content'>
             <h1>Skills</h1>
             <ul>
-                <li><img src={Html5Icon} alt="Html 5 icon" />HTML5</li>
-                <li><img src={Css3Icon} alt="Css 3 icon" />CSS3</li>
-                <li><img src={SassIcon} alt="Sass icon" />SASS (SCSS)</li>
-                <li><img src={JsIcon} alt="JS icon" />JavaScript</li>
-                <li><img src={JQueryIcon} alt="JQuery icon" />JQuery</li>
-                <li><img src={ReactIcon} alt="React icon" />React JS</li>
-                <li><img src={ReduxIcon} alt="Redux icon" />Redux</li>
-                <li><img src={GitIcon} alt="Git icon" />Git</li>
+
                 <li><img src={PsIcon} alt="Photoshop icon" />Photoshop</li>
+                <li><img src={Html5Icon} alt="Html 5 icon" />HTML5</li>
+                <li><img src={JsIcon} alt="JS icon" />JavaScript</li>
+                <li><img src={GitIcon} alt="Git icon" />Git</li>
                 <li><img src={FigmaIcon} alt="Figma icon" />Figma</li>
+                <li><img src={Css3Icon} alt="Css 3 icon" />CSS3</li>
+                <li><img src={JQueryIcon} alt="JQuery icon" />JQuery</li>
+                <li><img src={ReduxIcon} alt="Redux icon" />Redux</li>
+                <li><img src={SassIcon} alt="Sass icon" />SASS (SCSS)</li>
+                <li><img className={classes.SpinIcon} src={ReactIcon} alt="React icon" />React JS</li>
+
             </ul>
         </div>
     )
