@@ -2,7 +2,7 @@
     color: white;
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    height: 100%;
 }
 
 
@@ -36,6 +36,55 @@
 a {
     color: white;
 }
+
+.RedBtn {
+    font-size: 1.5em;
+    border: 2px solid white;
+    padding: 5px 25px;
+  
+    transition: background-color .2s;
+  
+    margin-top: 2%;
+  }
+  
+  .RedBtn i {
+    margin-left: 5px;
+  }
+  
+  .RedBtn:hover {
+    background-color: #ED6464;
+    border-color: #ED6464;
+  }
+  
+  .RedBtn:hover i {
+    animation: jumping 1s ease-out;
+  }
+  
+  @keyframes jumping {
+    0% {
+        transform: translateX(10px);
+    }
+  
+    20% {
+        transform: translateX(0);
+    }
+  
+    40% {
+        transform: translateX(8px);
+    }
+  
+    60% {
+        transform: translateX(0);
+    }
+  
+    80% {
+        transform: translateX(4px);
+    }
+  
+    80% {
+        transform: translateX(0);
+    }
+  }
 /* 
 .BotSection {
     border-bottom: 3px solid #ED6464;

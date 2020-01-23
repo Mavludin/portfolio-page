@@ -10,27 +10,85 @@ body {
   background-color: #1f1f1f;
 }
 
+.App {
+  height: 100vh;
+}
+
 .container {
   max-width: 992px;
   width: 100%;
   margin: 0 auto;
   padding: 10px;
-  box-sizing: border-box;
 }
 
 .flex-content {
   position: relative;
-  height: 100vh;
   
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
+
+main {
+  height: 90%;
+}
+
+main > div {
+  height: 100%;
+}
+
+/* .Page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+} */
+
+/* .fade-appear, .fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transform: opacity 300ms linear 150ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear;
+} */
 
 h1 {
   font-size: 3em;
   text-align: center;
-  animation: scaling 4s infinite linear;
+  position: relative;
+  cursor: pointer;
+}
+
+h1:hover::before {
+  opacity: 1;
+}
+
+h1::before {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  content: attr(datatype);
+  z-index: -1;
+  left: 5px;
+  color: red;
+  transition: .2s;
 }
 
 p {
@@ -44,65 +102,6 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-@keyframes scaling {
-  0% {
-    transform: scale(1.0);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-
-  100% {
-    transform: scale(1.0);
-  }
-}
-
-.redBtn {
-  font-size: 1.5em;
-  border: 2px solid white;
-  padding: 5px 25px;
-
-  transition: background-color .2s;
-
-  margin-top: 2%;
-}
-
-.redBtn:hover {
-  background-color: #ED6464;
-  border-color: #ED6464;
-}
-
-.redBtn:hover i {
-  animation: jumping 1s ease-out;
-}
-
-@keyframes jumping {
-  0% {
-      transform: translateX(10px);
-  }
-
-  20% {
-      transform: translateX(0);
-  }
-
-  40% {
-      transform: translateX(8px);
-  }
-
-  60% {
-      transform: translateX(0);
-  }
-
-  80% {
-      transform: translateX(4px);
-  }
-
-  80% {
-      transform: translateX(0);
-  }
 }
 
 .lines {
@@ -158,10 +157,10 @@ a {
 
 @keyframes run {
   0% {
-      top: -50%
+      top: -50%;
   }
   100% {
-      top: 110%
+      top: 110%;
   }
 }
 

@@ -15,8 +15,8 @@ import FigmaIcon from '../../img/figma.svg';
 
 const Skills = () => {
     return (
-        <div className='container flex-content'>
-            <h1>Skills</h1>
+        <div className={[classes.SkillsPage, 'container', 'flex-content'].join(' ')}>
+            <h1 datatype="Skills">Skills</h1>
             <ul>
 
                 <li><img src={PsIcon} alt="Photoshop icon" />Photoshop</li>

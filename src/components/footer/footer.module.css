@@ -1,15 +1,14 @@
 footer {
-    position: absolute;
-    right: 5%;
-    bottom: 0;
+    height: 10%;
 }
 
 .Contacts {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding: 10px 0;
     font-size: 1.2em;
+    height: 100%;
 }
 
 a+a {
@@ -17,9 +16,10 @@ a+a {
 }
 
 footer i {
-    transition: color .2s;
+    transition: all .2s;
 }
 
 .Contacts a:hover i {
     color: #ED6464;
+    transform: scale(1.2);
 }

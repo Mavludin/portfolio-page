@@ -7,43 +7,43 @@ import { Link } from 'react-router-dom';
 
 class HomePage extends React.Component {
 
-    constructor() {
-        super();
+    // constructor() {
+    //     super();
 
-        this.checkBox = React.createRef();
-        this.hambMenu = React.createRef();
+    //     this.checkBox = React.createRef();
+    //     this.hambMenu = React.createRef();
 
-        this.state = {
-            isChecked : false
-        }
-    }
+    //     this.state = {
+    //         isChecked : false
+    //     }
+    // }
 
-    toggleChecked = () => {
-        this.setState({isChecked: !this.state.isChecked});
-    }
+    // toggleChecked = () => {
+    //     this.setState({isChecked: !this.state.isChecked});
+    // }
 
-    componentDidUpdate() {
-        this.checkBox.current.checked = this.state.isChecked;
+    // componentDidUpdate() {
+    //     this.checkBox.current.checked = this.state.isChecked;
 
-        if (this.state.isChecked) {
-            this.hambMenu.current.style.height = '200px';
-            this.hambMenu.current.style.opacity = '1';
-        }
-        else {
-            this.hambMenu.current.style.opacity = '0';
-            this.hambMenu.current.style.height = '0';
-        }
-    }
+    //     if (this.state.isChecked) {
+    //         this.hambMenu.current.style.height = '200px';
+    //         this.hambMenu.current.style.opacity = '1';
+    //     }
+    //     else {
+    //         this.hambMenu.current.style.opacity = '0';
+    //         this.hambMenu.current.style.height = '0';
+    //     }
+    // }
 
     render() {
 
         return (
-            <div className={classes.HomePage} onScroll={(e)=>this.Scrolling(e)}>
+            <div className={classes.HomePage}>
         
-                <div style={{alignItems: 'center'}} className="container flex-content">
+                <div className="container flex-content">
     
                     <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
-                    <Link to="/about" className='redBtn' href="/">Get started <i className="fas fa-arrow-right"></i></Link>
+                    <Link to="/about" className={classes.RedBtn} href="/">Get started <i className="fas fa-arrow-right"></i></Link>
 
                     {/* <div className="bot-section"> */}
 

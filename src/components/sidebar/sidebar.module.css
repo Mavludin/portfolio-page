@@ -13,12 +13,11 @@ aside div {
     border: 1px solid white;
     cursor: pointer;
     
-    transition: background-color .2s;
+    transition: all .2s;
 }
 
 .Active > div {
     background-color: white;
-
 }
 
 aside div:hover {

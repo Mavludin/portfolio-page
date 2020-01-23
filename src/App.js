@@ -1,6 +1,8 @@
 import React from 'react';
 import './Main.css';
 
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 import Footer from './components/footer/footer';
 import HomePage from './containers/homepage/homepage';
 import Sidebar from './components/sidebar/sidebar';
@@ -23,17 +25,25 @@ class App extends React.Component {
           <div className="line"></div>
           <div className="line"></div>
         </div>
-        
-          <Sidebar />
-          <main>
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route exact path="/about" component={AboutPage} />
-              <Route exact path="/skills" component={SkillsPage} />
-              <Route exact path="/portfolio" component={Portfolio} />
-            </Switch>
-          </main>
-          <Footer />
+
+        <Sidebar />
+        <main>
+
+          {/* <Route render={({location})=>(
+            <TransitionGroup>
+            <CSSTransition key={location.key} timeout={300} classNames="fade"> */}
+               <Switch> {/*location={location}>*/ }
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/about" component={AboutPage} />
+                <Route exact path="/skills" component={SkillsPage} />
+                <Route exact path="/portfolio" component={Portfolio} />
+              </Switch>
+            {/* </CSSTransition>
+          </TransitionGroup>
+          )} /> */}
+
+        </main>
+        <Footer />
           
         </div>
       </BrowserRouter>
