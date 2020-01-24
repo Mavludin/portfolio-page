@@ -3,6 +3,7 @@ import './Main.css';
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
+import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import HomePage from './containers/homepage/homepage';
 import Sidebar from './components/sidebar/sidebar';
@@ -26,6 +27,7 @@ class App extends React.Component {
           <div className="line"></div>
         </div>
 
+        <Header />
         <Sidebar />
         <main>
 
