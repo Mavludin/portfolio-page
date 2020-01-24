@@ -157,8 +157,11 @@ q {
 
 @media screen and (max-width: 836px) {
 
-    .BotSection { 
-        display: block;
+    .BotSection {
+        align-items: flex-start;
+        flex-flow: column-reverse;
+        position: relative;
+        padding: 20px;
     }
 }
 
