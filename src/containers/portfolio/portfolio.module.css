@@ -101,7 +101,7 @@
 }
 
 .FavPlaces .ItemInner::after {
-    background-image: url(../../img/fav-places.jpg);
+    background-image: url(../../img/portfolio/fav-places.jpg);
 }
 
 .VeganStore .ItemInner {
@@ -113,21 +113,33 @@
 }
 
 .VeganStore .ItemInner::after {
-    background-image: url(../../img/vegan-store.jpg);
+    background-image: url(../../img/portfolio/vegan-store.jpg);
 }
 
 .MomentoReplica .ItemInner::after {
-    background-image: url(../../img/momento.jpg);
+    background-image: url(../../img/portfolio/momento.jpg);
 }
 
 .ECommerce .ItemInner::after {
-    background-image: url(../../img/e-com.jpg);
+    background-image: url(../../img/portfolio/e-com.jpg);
 }
 
 .MusicPlayer .ItemInner::after {
-    background-image: url(../../img/m-player.jpg);
+    background-image: url(../../img/portfolio/m-player.jpg);
 }
 
 .AdminPage .ItemInner::after {
-    background-image: url(../../img/admin-page.jpg);
+    background-image: url(../../img/portfolio/admin-page.jpg);
+}
+
+@media screen and (max-width: 836px) {
+    .Item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Item {
+        width: 100%;
+    }
 }

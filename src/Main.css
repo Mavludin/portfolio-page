@@ -164,14 +164,26 @@ a {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .container {
+    padding: 10px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 5px;
+  }
+}
+
 @media screen and (max-width: 900px) {
-  h1, h2 {
+  h1 {
       font-size: 2.6em;
   }
 }
 
 @media screen and (max-width: 600px) {
-  h1, h2 {
+  h1 {
       font-size: 2em;
   }
 }

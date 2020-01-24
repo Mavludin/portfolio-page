@@ -4,6 +4,7 @@ aside {
     top: 50%;
     transform: translateY(-50%);
     z-index: 100;
+    height: 120px;
 }
 
 aside div {
@@ -27,3 +28,15 @@ aside div:hover {
 aside div + div {
     margin-top: 15px;
 }
+
+@media screen and (max-width: 1199px) {
+    aside {
+        right: 1%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    aside {
+        display: none;
+    }
+  }
