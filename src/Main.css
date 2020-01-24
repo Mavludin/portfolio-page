@@ -170,15 +170,21 @@ a {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 5px;
-  }
-}
-
 @media screen and (max-width: 900px) {
   h1 {
       font-size: 2.6em;
+  }
+}
+
+@media screen and (max-width: 836px) {
+  .App, main {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 5px;
   }
 }
 
