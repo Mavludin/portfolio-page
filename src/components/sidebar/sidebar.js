@@ -7,9 +7,9 @@ const sidebar = () => {
     return (
         <aside>
             <NavLink exact={true} activeClassName={classes.Active} to="/"><div></div></NavLink>
-            <NavLink activeClassName={classes.Active} to="/about"><div></div></NavLink>
-            <NavLink activeClassName={classes.Active} to="/skills"><div></div></NavLink>
-            <NavLink activeClassName={classes.Active} to="/portfolio"><div></div></NavLink>
+            <NavLink activeClassName={classes.Active} exact to="/about"><div></div></NavLink>
+            <NavLink activeClassName={classes.Active} exact to="/skills"><div></div></NavLink>
+            <NavLink activeClassName={classes.Active} exact to="/portfolio"><div></div></NavLink>
         </aside>
     )
 }

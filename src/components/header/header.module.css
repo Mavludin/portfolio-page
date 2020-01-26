@@ -3,41 +3,41 @@
     display: none;
 }
 
-.Logo {
-    font-weight: 600;
-    font-size: 1.6em;
-}
-
-.TopMenu {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.TopMenu li {
-    display: inline-block;
-}
-
-.TopMenu li+li {
-    margin-left: 20px;
-}
-
-.TopMenu li a {
-    text-transform: uppercase;
-    transition: color .2s;
-}
-
-.TopMenu li a:hover {
-    color: #ED6464;
-}
-
-q {
-    color: #ED6464;
-}
-
 .Hamb {
     width: 39px;
     display: none;
+}
+
+.HambMenu {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: .4s;
+    position: absolute;
+    top: 55px;
+    z-index: 1000;
+    background-color:rgba(31,31,31, 0.9);
+    padding: 16px;
+    height: 100vh;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.HambMenu ul {
+    padding: 0;
+}
+
+.HambMenu a {
+    font-size: 2em;
+    transition: color .4s;
+}
+
+.HambMenu a:hover{
+    color: #ED6464;
+}
+
+.Active {
+    color: #ED6464;
 }
 
 .MenuBtn {
@@ -111,29 +111,6 @@ q {
     background-color: #ED6464;
 }
 
-.HambMenu {
-    height: 0;
-    opacity: 0;
-    width: 100%;
-
-    position: absolute;
-    top: 42px;
-    left: 0;
-    background:#1f1f1f;
-
-    transition: .4s;
-}
-
-.HambMenu a {
-    font-size: 2em;
-    transition: color .4s;
-    text-transform: uppercase;
-}
-
-.HambMenu a:hover{
-    color: #ED6464;
-}
-
 @keyframes moveUpThenDown {
     0%{ top:0; }
     50%{ top:-27px;}
@@ -158,22 +135,19 @@ q {
 @media screen and (max-width: 836px) {
 
     .BotSection {
+        display: flex;
         align-items: flex-start;
         flex-flow: column-reverse;
         position: relative;
         padding: 20px;
     }
-}
-
-@media screen and (max-width: 600px) {
-
-    .TopMenu {
-        display: none;
-    }
 
     .Hamb {
         display: block;
     }
+}
+
+@media screen and (max-width: 600px) {
 
     .BotSection {
         align-items: flex-start;
