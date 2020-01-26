@@ -1,11 +1,3 @@
-.HomePage {
-    color: white;
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-}
-
-
 .HomePage h1 span {
     color: #ED6464;
 }

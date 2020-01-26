@@ -16,14 +16,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-
-main {
-  height: 90%;
-}
-
-footer {
-  height: 10%;
+  overflow: hidden;
 }
 
 .container {
@@ -44,33 +37,39 @@ footer {
   align-items: center;
 }
 
-/* .Page {
+.Page {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-} */
+}
 
-/* .fade-appear, .fade-enter {
+.fade-appear, .fade-enter {
   opacity: 0;
+  transform: translateY(-100%);
   z-index: 1;
+  transition: all 800ms ease-out;
 }
 
 .fade-appear-active,
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transform: opacity 300ms linear 150ms;
+  transform: translateY(0%);
+  transition: all 800ms ease-out;
 }
 
 .fade-exit {
   opacity: 1;
+  transform: translateY(0%);
+  transition: all 800ms ease-out;
 }
 
 .fade-exit.fade-exit-active {
   opacity: 0;
-  transition: opacity 150ms linear;
-} */
+  transform: translateY(-100%);
+  transition: all 800ms ease-out;
+}
 
 h1 {
   font-size: 3em;

@@ -31,18 +31,18 @@ class App extends React.Component {
         <Sidebar />
         <main>
 
-          {/* <Route render={({location})=>(
+          <Route render={({location})=>(
             <TransitionGroup>
-            <CSSTransition key={location.key} timeout={300} classNames="fade"> */}
-               <Switch> {/*location={location}>*/ }
+            <CSSTransition key={location.key} timeout={800} classNames="fade">
+               <Switch location={location}>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/about" component={AboutPage} />
                 <Route exact path="/skills" component={SkillsPage} />
                 <Route exact path="/portfolio" component={Portfolio} />
               </Switch>
-            {/* </CSSTransition>
+             </CSSTransition>
           </TransitionGroup>
-          )} /> */}
+          )} />
 
         </main>
         <Footer />

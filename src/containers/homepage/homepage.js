@@ -10,14 +10,9 @@ class HomePage extends React.Component {
     render() {
 
         return (
-            <div className={classes.HomePage}>
-        
-                <div className="container flex-content">
-    
-                    <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
-                    <Link to="/about" className={classes.RedBtn} href="/">Get started <i className="fas fa-arrow-right"></i></Link>
-
-                </div>
+            <div className={[classes.HomePage, 'flex-content', 'container', 'Page'].join(' ')}>
+                <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
+                <Link to="/about" className={classes.RedBtn} href="/">Get started <i className="fas fa-arrow-right"></i></Link>
             </div>
         )
     }
