@@ -2,8 +2,6 @@ import React from 'react';
 import '../../Main.css';
 import classes from './about.module.css';
 
-import { Link } from 'react-router-dom';
-
 const About = () => {
     return (
         <div className={[classes.AboutPage, 'container', 'flex-content'].join(' ')} >
