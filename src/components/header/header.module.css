@@ -1,9 +1,14 @@
 header {
     display: none;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 500;
 }
 
 .HeaderContent {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -16,16 +21,16 @@ header {
 }
 
 .HambMenu {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     transform: translateX(-100%);
     opacity: 0;
     transition: .4s;
     position: absolute;
-    top: 55px;
-    z-index: 1000;
+    top: 75px;
     background-color:rgba(31,31,31, 0.9);
     padding: 16px;
+    z-index: 1000;
     left: 0;
     text-align: center;
 }

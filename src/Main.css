@@ -4,17 +4,25 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  min-height: 900px;
+}
+
 body {
   font-family: 'Poppins', 'Helvetica', sans-serif;
   color: white;
   background-color: #1f1f1f;
 }
 
+.App, #root {
+  height: 100%;
+}
+
 .App {
 
   position: relative;
 
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -25,6 +33,7 @@ body {
 main {
   position: relative;
   height: 100vh;
+  height: 80%;
 }
 
 .container {
@@ -35,10 +44,6 @@ main {
 }
 
 .flex-content {
-  position: relative;
-  
-  height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,11 +52,10 @@ main {
 
 .Page {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+  transform: translateY(-50%);
+  width: 100%;
 }
 
 .fade-appear, .fade-enter {
@@ -64,13 +68,13 @@ main {
 .fade-appear-active,
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transform: translateY(0%);
+  transform: translateY(-50%);
   transition: all 800ms ease-out;
 }
 
 .fade-exit {
   opacity: 1;
-  transform: translateY(0%);
+  transform: translateY(-50%);
   transition: all 800ms ease-out;
 }
 
@@ -186,6 +190,7 @@ a {
 @media screen and (max-width: 836px) {
   .App {
     justify-content: space-between;
+    overflow: visible;
   }
 }
 
