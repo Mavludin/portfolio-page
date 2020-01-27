@@ -29,7 +29,7 @@ class App extends React.Component {
 
         <Header />
         <Sidebar />
-        <main>
+        <main className="container">
 
           <Route render={({location})=>(
             <TransitionGroup>

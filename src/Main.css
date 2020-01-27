@@ -11,12 +11,20 @@ body {
 }
 
 .App {
+
+  position: relative;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
+}
+
+main {
+  position: relative;
+  height: 100vh;
 }
 
 .container {
@@ -43,6 +51,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: -1;
 }
 
 .fade-appear, .fade-enter {
@@ -168,12 +177,6 @@ a {
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .container {
-    padding: 10px 40px;
-  }
-}
-
 @media screen and (max-width: 900px) {
   h1 {
       font-size: 2.6em;
@@ -182,14 +185,7 @@ a {
 
 @media screen and (max-width: 836px) {
   .App {
-    min-height: 90vh;
     justify-content: space-between;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 5px;
   }
 }
 

@@ -12,7 +12,7 @@ import GitIcon from '../../img/git.svg';
 
 const Portfolio = () => {
     return (
-        <div className={[classes.PortfolioPage, 'flex-content', 'container', 'Page'].join(' ')} >
+        <div className={[classes.PortfolioPage, 'flex-content', 'Page'].join(' ')} >
             <h1 datatype="Portfolio">Portfolio</h1>
 
             <div className={classes.Content}>

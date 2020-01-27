@@ -36,7 +36,7 @@ class Header extends React.Component {
     render(){
         return (
             <header className='container'>
-                 <div className={classes.BotSection}>
+                 <div className={classes.HeaderContent}>
 
                     <nav ref={this.hambMenu} className={classes.HambMenu}>
                         <ul>

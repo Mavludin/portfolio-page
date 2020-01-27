@@ -1,3 +1,9 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .Contacts {
     display: flex;
     align-items: center;
