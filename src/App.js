@@ -11,7 +11,7 @@ import AboutPage from './containers/about/about';
 import SkillsPage from './containers/skills/skills';
 import Portfolio from './containers/portfolio/portfolio';
 
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { Route, BrowserRouter, Switch, withRouter } from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -31,7 +31,7 @@ class App extends React.Component {
         <Sidebar />
 
           <Route render={({location})=>(
-            <TransitionGroup className="MainBlock container">
+            <TransitionGroup className="MainBlock">
             <CSSTransition key={location.key} timeout={1000} classNames="fade">
                <Switch location={location}>
                 <Route exact path="/" component={HomePage} />
@@ -51,4 +51,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App);

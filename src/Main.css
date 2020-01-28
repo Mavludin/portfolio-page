@@ -10,15 +10,24 @@ html, body {
   height: 100%;
 }
 
-#root, .App, .MainBlock {
-  height: 100%;
-}
-
 body {
   position: relative;
   font-family: 'Poppins', 'Helvetica', sans-serif;
   color: white;
   background-color: #1f1f1f;
+  min-height: 100vh;
+}
+
+.midHeight {
+  min-height: 836px;
+}
+
+.mobileHeight {
+  min-height: 1500px;
+}
+
+#root, .App {
+  height: 100%;
 }
 
 .App {
@@ -30,13 +39,8 @@ body {
 }
 
 .MainBlock {
-  position: relative;
-  height: 100%;
-}
-
-.container {
-  max-width: 992px;
   width: 100%;
+  height: 100%;
 }
 
 .flex-content {
@@ -52,10 +56,11 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  transform: translateY(0%);
+  max-width: 992px;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 2;
+  margin: 0 auto;
 }
 
 .fade-appear, .fade-enter {
@@ -129,7 +134,7 @@ a {
   height: 100%;
   margin: auto;
   width: 90vw;
-  z-index: -2;
+  z-index: 1;
 }
 
 .line {
