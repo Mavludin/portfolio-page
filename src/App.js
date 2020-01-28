@@ -29,11 +29,10 @@ class App extends React.Component {
 
         <Header />
         <Sidebar />
-        <main className="container">
 
           <Route render={({location})=>(
-            <TransitionGroup>
-            <CSSTransition key={location.key} timeout={800} classNames="fade">
+            <TransitionGroup className="MainBlock container">
+            <CSSTransition key={location.key} timeout={1000} classNames="fade">
                <Switch location={location}>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/about" component={AboutPage} />
@@ -44,7 +43,6 @@ class App extends React.Component {
           </TransitionGroup>
           )} />
 
-        </main>
         <Footer />
           
         </div>

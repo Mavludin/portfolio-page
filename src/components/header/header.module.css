@@ -1,10 +1,8 @@
 header {
     display: none;
     width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 500;
+    height: 60px;
+    position: relative;
 }
 
 .HeaderContent {
@@ -26,7 +24,7 @@ header {
     transform: translateX(-100%);
     opacity: 0;
     transition: .4s;
-    position: absolute;
+    position: fixed;
     top: 75px;
     background-color:rgba(31,31,31, 0.9);
     padding: 16px;

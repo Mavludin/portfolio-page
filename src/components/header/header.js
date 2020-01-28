@@ -24,13 +24,10 @@ class Header extends React.Component {
         if (this.state.isChecked) {
             this.hambMenu.current.style.transform = 'translateX(0%)';
             this.hambMenu.current.style.opacity = '1';
-            document.querySelector('header').style.height = '100vh';
         }
         else {
             this.hambMenu.current.style.transform = 'translateX(-100%)';
             this.hambMenu.current.style.opacity = '0';
-            document.querySelector('header').style.height = 'auto';
-
 
         }
 
