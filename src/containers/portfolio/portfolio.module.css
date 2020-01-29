@@ -137,6 +137,9 @@
 }
 
 @media screen and (max-width: 836px) {
+    .PortfolioPage {
+        justify-content: flex-start;
+    }
     .Item {
         width: 50%;
     }

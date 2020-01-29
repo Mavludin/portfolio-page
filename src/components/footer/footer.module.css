@@ -28,3 +28,9 @@ footer i {
     color: #ED6464;
     transform: scale(1.2);
 }
+
+@media screen and (max-width: 836px) {
+    footer {
+        margin-top: 0;
+    }
+  }

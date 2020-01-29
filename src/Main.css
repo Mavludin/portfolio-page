@@ -204,6 +204,10 @@ a {
     justify-content: space-between;
     overflow: visible;
   }
+
+  .MainBlock {
+    overflow: scroll;
+  }
 }
 
 @media screen and (max-width: 600px) {
