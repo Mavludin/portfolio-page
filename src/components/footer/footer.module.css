@@ -4,6 +4,7 @@ footer {
     height: 50px;
     margin-top: -50px;
     clear: both;
+    z-index: 2;
 }
 
 .Contacts {
