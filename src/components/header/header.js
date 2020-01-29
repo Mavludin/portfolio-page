@@ -33,13 +33,13 @@ class Header extends React.Component {
 
     }
 
-    changeHeight = () => {
-        document.body.className += ' midHeight';
-    }
+    // changeHeight = () => {
+    //     document.body.className += ' midHeight';
+    // }
 
-    getHeightBack = () => {
-        document.body.style.minHeight += '100vh';
-    }
+    // getHeightBack = () => {
+    //     document.body.style.minHeight += '100vh';
+    // }
 
     render(){
         return (
@@ -48,10 +48,10 @@ class Header extends React.Component {
 
                     <nav ref={this.hambMenu} className={classes.HambMenu}>
                         <ul>
-                            <li><NavLink onClick={ ()=>{ this.setState({isChecked: false}); this.getHeightBack() } } activeClassName={classes.Active} exact={true} to="/">Home</NavLink></li>
-                            <li><NavLink onClick={ ()=>{ this.setState({isChecked: false}); this.getHeightBack() } } activeClassName={classes.Active} exact to="/about">About Me</NavLink></li>
-                            <li><NavLink onClick={ ()=>{ this.setState({isChecked: false}); this.getHeightBack() } } activeClassName={classes.Active} exact to="/skills">My Skills</NavLink></li>
-                            <li><NavLink onClick={()=> { this.setState({isChecked: false}); this.changeHeight() } } activeClassName={classes.Active} exact to="/portfolio">Portfolio</NavLink></li>
+                            <li><NavLink onClick={ ()=> this.setState({isChecked: false}) } activeClassName={classes.Active} exact={true} to="/">Home</NavLink></li>
+                            <li><NavLink onClick={ ()=>this.setState({isChecked: false}) } activeClassName={classes.Active} exact to="/about">About Me</NavLink></li>
+                            <li><NavLink onClick={ ()=>this.setState({isChecked: false}) } activeClassName={classes.Active} exact to="/skills">My Skills</NavLink></li>
+                            <li><NavLink onClick={()=> this.setState({isChecked: false}) } activeClassName={classes.Active} exact to="/portfolio">Portfolio</NavLink></li>
                         </ul>
                     </nav>
 
