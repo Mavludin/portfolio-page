@@ -1,31 +1,51 @@
+.Skills {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.Skills > div {
+    width: 33.3%;
+    height: 100%;
+}
+
+.SkillsPage h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ED6464;
+}
+
 .SkillsPage ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
 }
 
 .SkillsPage li {
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     border-bottom: 2px solid transparent;
-    width: 25%;
     font-size: 1.2em;
-    margin-bottom: 10px;
 }
 
 .SkillsPage img {
-    max-width: 48px;
-    width: 50%;
+    width: 32px;
     margin-right: 10px;
-}
-
-.SkillsPage span {
-    width: 50%;
 }
 
 .SpinIcon {
     animation: rotating 4s linear infinite;
+}
+
+.SkillsPage a {
+    color: #ED6464;
+    cursor: pointer;
+}
+
+.SkillsPage p {
+    margin: 20px;
 }
 
 li:hover .SpinIcon {
@@ -42,11 +62,17 @@ li:hover .SpinIcon {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .SkillsPage li {
-        width: 50%;
-        justify-content: center;
+@media screen and (max-width: 836px) {
+    .Skills {
+        flex-direction: column;
     }
+
+    .Skills > div {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -54,9 +80,6 @@ li:hover .SpinIcon {
         font-size: 1em;
     }
 
-    .SkillsPage img {
-        max-width: 32px;
-    }
 }
 
 @media screen and (max-width: 436px) {
@@ -64,7 +87,4 @@ li:hover .SpinIcon {
         padding: 0;
     }
 
-    .SkillsPage li {
-        justify-content: flex-end;
-    }
 }

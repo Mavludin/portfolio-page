@@ -95,6 +95,7 @@ h1 {
   text-align: center;
   position: relative;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 h1:hover::before {
