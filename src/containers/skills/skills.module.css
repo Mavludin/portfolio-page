@@ -63,6 +63,11 @@ li:hover .SpinIcon {
 }
 
 @media screen and (max-width: 836px) {
+
+    .SkillsPage {
+        justify-content: flex-start;
+    }
+
     .Skills {
         flex-direction: column;
     }
