@@ -13,7 +13,13 @@ import Portfolio from './containers/portfolio/portfolio';
 
 import { Route, BrowserRouter, Switch, withRouter } from 'react-router-dom';
 
+import pageFlipAudio from './sound/page-flip.wav';
+
 class App extends React.Component {
+
+  componentDidMount() {
+    document.querySelector('.MainBlock').scrollTop = '0';
+  }
 
   render() {
     return (
@@ -41,8 +47,9 @@ class App extends React.Component {
               </Switch>
              </CSSTransition>
           </TransitionGroup>
-          )} />
 
+          )} />
+          <audio src={pageFlipAudio}></audio>
         <Footer />
           
         </div>

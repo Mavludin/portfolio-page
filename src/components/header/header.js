@@ -19,6 +19,11 @@ class Header extends React.Component {
         })
     }
 
+    setScrollTopToZero = () => {
+        document.querySelector('.MainBlock').scrollTop = '0';
+        document.querySelector('audio').play();
+    }
+
     componentDidUpdate() {
 
         if (this.state.isChecked) {
@@ -40,10 +45,10 @@ class Header extends React.Component {
 
                     <nav ref={this.hambMenu} className={classes.HambMenu}>
                         <ul>
-                            <li><NavLink onClick={()=>this.setState({isChecked: false})} activeClassName={classes.Active} exact={true} to="/">Home</NavLink></li>
-                            <li><NavLink onClick={()=>this.setState({isChecked: false})} activeClassName={classes.Active} exact to="/about">About Me</NavLink></li>
-                            <li><NavLink onClick={()=>this.setState({isChecked: false})} activeClassName={classes.Active} exact to="/skills">My Skills</NavLink></li>
-                            <li><NavLink onClick={()=>this.setState({isChecked: false})} activeClassName={classes.Active} exact to="/portfolio">Portfolio</NavLink></li>
+                            <li><NavLink onClick={()=>{this.setState({isChecked: false}); this.setScrollTopToZero();}} activeClassName={classes.Active} exact={true} to="/">Home</NavLink></li>
+                            <li><NavLink onClick={()=>{this.setState({isChecked: false}); this.setScrollTopToZero();}} activeClassName={classes.Active} exact to="/about">About Me</NavLink></li>
+                            <li><NavLink onClick={()=>{this.setState({isChecked: false}); this.setScrollTopToZero();}} activeClassName={classes.Active} exact to="/skills">My Skills</NavLink></li>
+                            <li><NavLink onClick={()=>{this.setState({isChecked: false}); this.setScrollTopToZero();}} activeClassName={classes.Active} exact to="/portfolio">Portfolio</NavLink></li>
                         </ul>
                     </nav>
 

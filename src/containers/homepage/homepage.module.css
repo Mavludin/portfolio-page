@@ -50,7 +50,7 @@ a {
         transform: translateX(4px);
     }
   
-    80% {
+    100% {
         transform: translateX(0);
     }
   }

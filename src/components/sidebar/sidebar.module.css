@@ -7,7 +7,21 @@ aside {
     height: 120px;
 }
 
-aside div {
+aside > div {
+    position: absolute;
+    width: max-content;
+    top: -50px;
+    height: 33px;
+    left: -10px;
+    animation: swing 2s linear infinite;
+    color: #ED6464;
+}
+
+aside i {
+    font-size: 2em;
+}
+
+aside a div {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -17,11 +31,11 @@ aside div {
     transition: all .2s;
 }
 
-.Active > div {
+.Active div {
     background-color: white;
 }
 
-aside div:hover {
+aside a div:hover {
     background-color: white;
 }
 
@@ -39,4 +53,27 @@ aside div + div {
     aside {
         display: none;
     }
+}
+
+@keyframes swing {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(4px);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+
+    75% {
+        transform: translateY(4px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
 }
