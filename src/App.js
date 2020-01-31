@@ -13,7 +13,7 @@ import Portfolio from './containers/portfolio/portfolio';
 
 import { Route, BrowserRouter, Switch, withRouter } from 'react-router-dom';
 
-import pageFlipAudio from './sound/page-flip.wav';
+import pageFlipAudio from './sound/page-flip.mp3';
 
 class App extends React.Component {
 
