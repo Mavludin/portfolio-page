@@ -206,9 +206,10 @@ a {
     overflow: visible;
   }
 
-  .MainBlock {
-    overflow: scroll;
+  html, body {
+    min-height: calc(130vh - 130px);
   }
+
 }
 
 @media screen and (max-width: 600px) {
