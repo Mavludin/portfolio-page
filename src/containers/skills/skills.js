@@ -16,6 +16,12 @@ import BootstrapIcon from '../../img/bootstrap.svg';
 import { Link } from 'react-router-dom';
 
 const Skills = () => {
+
+    const scrollAndPageFlip = () => {
+        document.querySelector('.MainBlock').scrollTop = '0';
+        document.querySelector('audio').play();
+    }
+
     return (
         <div className={[classes.SkillsPage, 'flex-content', 'Page'].join(' ')}>
             <h1 datatype="Skills">Skills</h1>
@@ -59,7 +65,7 @@ const Skills = () => {
             </div>
 
             <p>You must be wondering what I have done with all the things above. Well, 
-                <Link onClick={()=>document.querySelector('audio').play()} to="/portfolio"> here you go</Link>.
+                <Link onClick={scrollAndPageFlip} to="/portfolio"> here you go</Link>.
             </p>
 
         </div>
