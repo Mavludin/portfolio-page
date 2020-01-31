@@ -58,7 +58,9 @@ const Skills = () => {
 
             </div>
 
-            <p>You must be wondering what I have done with all the things above. Well, <Link to="/portfolio">here you go</Link>.</p>
+            <p>You must be wondering what I have done with all the things above. Well, 
+                <Link onClick={()=>document.querySelector('audio').play()} to="/portfolio"> here you go</Link>.
+            </p>
 
         </div>
     )
