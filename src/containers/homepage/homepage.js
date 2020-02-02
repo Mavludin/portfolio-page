@@ -16,6 +16,7 @@ componentDidMount() {
 
         return (
             <div className={[classes.HomePage, 'flex-content', 'Page'].join(' ')}>
+                <i className={["fas fa-fighter-jet", classes.Jet].join(' ')}></i>
                 <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
                 <Link onClick={scrollAndPageFlip} to="/about" className={classes.RedBtn} href="/">Get started <i className="fas fa-arrow-right"></i></Link>
             </div>

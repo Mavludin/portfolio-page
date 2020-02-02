@@ -10,50 +10,73 @@ a {
     font-size: 1.5em;
     border: 2px solid white;
     padding: 5px 25px;
-  
+
     transition: background-color .2s;
-  
+
     margin-top: 2%;
-  }
-  
-  .RedBtn i {
+}
+
+.RedBtn i {
     margin-left: 5px;
-  }
-  
-  .RedBtn:hover {
+}
+
+.RedBtn:hover {
     background-color: #ED6464;
     border-color: #ED6464;
-  }
-  
-  .RedBtn:hover i {
+}
+
+.RedBtn:hover i {
     animation: jumping 1s ease-out;
-  }
+}
   
-  @keyframes jumping {
+@keyframes jumping {
     0% {
         transform: translateX(10px);
     }
-  
+
     20% {
         transform: translateX(0);
     }
-  
+
     40% {
         transform: translateX(8px);
     }
-  
+
     60% {
         transform: translateX(0);
     }
-  
+
     80% {
         transform: translateX(4px);
     }
-  
+
     100% {
         transform: translateX(0);
     }
-  }
+}
+
+.Jet {
+    font-size: 10em;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    transition: .2s;
+    width: 100%;
+    animation: flying 5s infinite;
+    animation-timing-function: cubic-bezier(1, 0, 1, 2);
+    transform: translateX(-150%);
+}
+
+@keyframes flying {
+    0% {
+        transform: translateX(-150%);
+    }
+
+    100% {
+        transform: translateX(150%);
+    }
+
+}
 
 @media screen and (max-width: 600px) {
 
