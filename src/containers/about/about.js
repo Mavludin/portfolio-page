@@ -6,12 +6,15 @@ import { Link } from 'react-router-dom';
 
 import scrollAndPageFlip from '../../Utils/PageFlipAndScrollTop';
 
-
 const About = () => {
 
     return (
         <div className={[classes.AboutPage, 'flex-content', 'Page'].join(' ')} >
             <h1 datatype="What do I do?">What do I do?</h1>
+
+            <i className={["fas fa-user-astronaut", classes.Astronaut].join(' ')}></i>
+            <i className={["far fa-hand-paper", classes.Wave].join(' ')}></i>
+
             <p>
                 I build web sites and applications by utilizing the most progressive tools that you can get familiar with on 
                 <Link onClick={scrollAndPageFlip} to="/skills"> the next page. </Link> 
