@@ -13,7 +13,7 @@ const Footer = () => {
                     <i className="fab fa-linkedin"></i>
                 </a>
                 <a href="https://github.com/Mavludin" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
+                    <i className="fab fa-github"></i>
                 </a>
             </div>
         </footer>

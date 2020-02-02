@@ -15,12 +15,9 @@ import FigmaIcon from '../../img/figma.svg';
 import BootstrapIcon from '../../img/bootstrap.svg';
 import { Link } from 'react-router-dom';
 
-const Skills = () => {
+import scrollAndPageFlip from '../../Utils/PageFlipAndScrollTop';
 
-    const scrollAndPageFlip = () => {
-        document.querySelector('.MainBlock').scrollTop = '0';
-        document.querySelector('audio').play();
-    }
+const Skills = () => {
 
     return (
         <div className={[classes.SkillsPage, 'flex-content', 'Page'].join(' ')}>

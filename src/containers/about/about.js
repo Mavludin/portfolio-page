@@ -4,12 +4,10 @@ import classes from './about.module.css';
 
 import { Link } from 'react-router-dom';
 
-const About = () => {
+import scrollAndPageFlip from '../../Utils/PageFlipAndScrollTop';
 
-    const scrollAndPageFlip = () => {
-        document.querySelector('.MainBlock').scrollTop = '0';
-        document.querySelector('audio').play();
-    }
+
+const About = () => {
 
     return (
         <div className={[classes.AboutPage, 'flex-content', 'Page'].join(' ')} >

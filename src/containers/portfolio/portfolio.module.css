@@ -5,8 +5,16 @@
 
 .Item {
     width: 33.3%;
-    height: 200px;
+    height: 240px;
+    text-align: center;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Item h2 {
+    color: #ED6464;
 }
 
 .ItemInner {
@@ -22,7 +30,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .PortfolioPage img {
@@ -41,8 +49,6 @@
     padding: 5px 20px;
   
     transition: background-color .2s;
-  
-    margin-top: 2%;
 }
   
 .RedBtn i {
@@ -136,6 +142,12 @@
     background-image: url(../../img/portfolio/admin-page.jpg);
 }
 
+@media screen and (max-width: 991px) {
+    .PortfolioPage img {
+        width: 28px;
+    }
+}
+
 @media screen and (max-width: 836px) {
     .PortfolioPage {
         justify-content: flex-start;
@@ -143,6 +155,7 @@
     .Item {
         width: 50%;
     }
+
 }
 
 @media screen and (max-width: 600px) {

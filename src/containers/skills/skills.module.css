@@ -2,17 +2,12 @@
     display: flex;
     width: 100%;
     align-items: center;
+    padding-left: 16%;
 }
 
 .Skills > div {
     width: 33.3%;
     height: 100%;
-}
-
-.SkillsPage h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    color: #ED6464;
 }
 
 .SkillsPage ul {
@@ -24,14 +19,13 @@
 .SkillsPage li {
     display: flex;
     align-items: center;
-    justify-content: center;
     cursor: pointer;
     border-bottom: 2px solid transparent;
     font-size: 1.2em;
 }
 
 .SkillsPage img {
-    width: 32px;
+    max-width: 32px;
     margin-right: 10px;
 }
 
@@ -62,6 +56,14 @@ li:hover .SpinIcon {
     }
 }
 
+@media screen and (max-width: 991px) {
+
+    .SkillsPage p {
+        font-size: 1em;
+    }
+
+}
+
 @media screen and (max-width: 836px) {
 
     .SkillsPage {
@@ -70,10 +72,11 @@ li:hover .SpinIcon {
 
     .Skills {
         flex-direction: column;
+        padding-left: 0;
     }
 
     .Skills > div {
-        width: 100%;
+        width: 155px;
         height: 100%;
         margin-bottom: 20px;
     }

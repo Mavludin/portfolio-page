@@ -35,6 +35,25 @@ body {
   height: 100%;
 }
 
+.mobileNav {
+  display: none;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color:#ED6464;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.prevPage {
+  left: 3%;
+}
+
+.nextPage {
+  right: 3%;
+}
+
 .flex-content {
   display: flex;
   flex-direction: column;
@@ -58,7 +77,7 @@ body {
 .fade-appear, .fade-enter {
   opacity: 0;
   z-index: 1;
-  transform: translateY(-100%);
+  transform: translateY(100%);
   transition: all 1s ease-out;
 }
 
@@ -77,7 +96,7 @@ body {
 
 .fade-exit.fade-exit-active {
   opacity: 0;
-  transform: translateY(100%);
+  transform: translateY(-100%);
   transition: all 1s ease-out;
 }
 
@@ -103,6 +122,11 @@ h1::before {
   left: 5px;
   color: red;
   transition: .2s;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #ED6464;
 }
 
 p {
@@ -181,8 +205,20 @@ a {
 
 @media screen and (max-width: 1199px) {
   .Page {
-      padding: 0 30px;
+      padding: 0 40px;
   }
+}
+
+@media screen and (max-width: 991px) {
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p {
+      font-size: 1em;
+  }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -199,6 +235,10 @@ a {
 
   .MainBlock {
     overflow: scroll;
+  }
+
+  .mobileNav {
+    display: block;
   }
 
 }

@@ -14,6 +14,7 @@ import Portfolio from './containers/portfolio/portfolio';
 import { Route, BrowserRouter, Switch, withRouter } from 'react-router-dom';
 
 import pageFlipAudio from './sound/page-flip.mp3';
+import scrollAndPageFlip from './Utils/PageFlipAndScrollTop';
 
 class App extends React.Component {
 
@@ -22,10 +23,35 @@ class App extends React.Component {
     document.querySelector('audio').volume = 0.5;
   }
 
+  goToPrevPage = () => {
+    const allPaths = ['/', '/about', '/skills', '/portfolio'];
+
+    allPaths.map((item,pos,array)=>{
+
+      if (item === this.props.location.pathname) {
+        if (pos === 0) {
+          this.props.history.push(array[array.length-1])
+        } else this.props.history.push(array[pos-1])
+      }
+    })
+  }
+
+  goToNextPage = () => {
+    const allPaths = ['/', '/about', '/skills', '/portfolio'];
+
+    allPaths.map((item,pos,array)=>{
+
+      if (item === this.props.location.pathname) {
+        if (pos === array.length-1) {
+          this.props.history.push(array[0])
+        } else this.props.history.push(array[pos+1])
+      }
+    })
+  }
+
   render() {
     return (
 
-      <BrowserRouter>
         <div className="App">
   
         <div className="lines">
@@ -36,6 +62,9 @@ class App extends React.Component {
 
         <Header />
         <Sidebar />
+
+        <div onClick={()=>{this.goToPrevPage();scrollAndPageFlip()}} className="mobileNav prevPage"><i className="fas fa-angle-left"></i></div>
+        <div onClick={()=>{this.goToNextPage();scrollAndPageFlip()}} className="mobileNav nextPage"><i className="fas fa-angle-right"></i></div>
 
           <Route render={({location})=>(
             <TransitionGroup className="MainBlock">
@@ -54,7 +83,6 @@ class App extends React.Component {
         <Footer />
           
         </div>
-      </BrowserRouter>
     );
   }
 }

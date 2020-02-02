@@ -4,6 +4,9 @@ import '../../Main.css';
 
 import { NavLink } from 'react-router-dom';
 
+import scrollAndPageFlip from '../../Utils/PageFlipAndScrollTop';
+
+
 class Header extends React.Component {
 
     checkBox = React.createRef();
@@ -17,11 +20,6 @@ class Header extends React.Component {
         this.setState({
             isChecked: e.target.checked
         })
-    }
-
-    scrollAndPageFlip = () => {
-        document.querySelector('.MainBlock').scrollTop = '0';
-        document.querySelector('audio').play();
     }
 
     componentDidUpdate() {
@@ -45,10 +43,10 @@ class Header extends React.Component {
 
                     <nav ref={this.hambMenu} className={classes.HambMenu}>
                         <ul>
-                            <li><NavLink onClick={()=>{this.setState({isChecked: false}); this.scrollAndPageFlip();}} activeClassName={classes.Active} exact={true} to="/">Home</NavLink></li>
-                            <li><NavLink onClick={()=>{this.setState({isChecked: false}); this.scrollAndPageFlip();}} activeClassName={classes.Active} exact to="/about">About Me</NavLink></li>
-                            <li><NavLink onClick={()=>{this.setState({isChecked: false}); this.scrollAndPageFlip();}} activeClassName={classes.Active} exact to="/skills">My Skills</NavLink></li>
-                            <li><NavLink onClick={()=>{this.setState({isChecked: false}); this.scrollAndPageFlip();}} activeClassName={classes.Active} exact to="/portfolio">Portfolio</NavLink></li>
+                            <li><NavLink onClick={()=>{this.setState({isChecked: false}); scrollAndPageFlip();}} activeClassName={classes.Active} exact={true} to="/">Home</NavLink></li>
+                            <li><NavLink onClick={()=>{this.setState({isChecked: false}); scrollAndPageFlip();}} activeClassName={classes.Active} exact to="/about">About Me</NavLink></li>
+                            <li><NavLink onClick={()=>{this.setState({isChecked: false}); scrollAndPageFlip();}} activeClassName={classes.Active} exact to="/skills">My Skills</NavLink></li>
+                            <li><NavLink onClick={()=>{this.setState({isChecked: false}); scrollAndPageFlip();}} activeClassName={classes.Active} exact to="/portfolio">Portfolio</NavLink></li>
                         </ul>
                     </nav>
 
