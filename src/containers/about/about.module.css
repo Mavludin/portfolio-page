@@ -14,7 +14,14 @@ h3 {
     cursor: pointer;
 }
 
-.Wave {
+@media screen and (max-width: 600px) {
+
+    .Astronaut {
+        font-size: 8em;
+    }
+}
+
+/* .Wave {
     font-size: 3em;
     display: block;
     position: absolute;
@@ -36,4 +43,4 @@ h3 {
     100% {
         transform: rotate(0deg);
     }
-}
+} */

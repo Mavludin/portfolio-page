@@ -75,8 +75,15 @@ li:hover .SpinIcon {
         padding-left: 0;
     }
 
+    .Skills h2 {
+        text-align: center;
+    }
+
+    .SkillsPage li {
+        justify-content: center;
+    }
+
     .Skills > div {
-        width: 155px;
         height: 100%;
         margin-bottom: 20px;
     }

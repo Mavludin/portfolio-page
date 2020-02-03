@@ -25,11 +25,15 @@ const Skills = () => {
 
             <div className={classes.Skills}>
 
-                <div className={classes.DesingTools}>
-                    <h2 datatype="Skills">Design Tools</h2>
+                <div className={classes.Languages}>
+                    <h2 datatype="Skills">Languages</h2>
                     <ul>
-                        <li><img src={PsIcon} alt="Photoshop icon" /><span>Photoshop</span></li>
-                        <li><img src={FigmaIcon} alt="Figma icon" /><span>Figma</span></li>
+                        <li><img src={Html5Icon} alt="Html 5 icon" /><span>HTML5</span></li>
+                        <li><img src={Css3Icon} alt="Css 3 icon" /><span>CSS3</span></li>
+                        <li><img src={SassIcon} alt="Sass icon" /><span>SASS (SCSS)</span></li>
+                        <li><img style={{borderRadius: '20px'}}  src={JsIcon} alt="JS icon" /><span>JavaScript</span></li>
+                        <li><img className={classes.SpinIcon} src={ReactIcon} alt="React icon" /><span>React JS</span></li>
+
                     </ul>
 
                 </div>
@@ -46,15 +50,11 @@ const Skills = () => {
 
                 </div>
 
-                <div className={classes.Languages}>
-                    <h2 datatype="Skills">Languages</h2>
+                <div className={classes.DesingTools}>
+                    <h2 datatype="Skills">Design Tools</h2>
                     <ul>
-                        <li><img src={Html5Icon} alt="Html 5 icon" /><span>HTML5</span></li>
-                        <li><img src={Css3Icon} alt="Css 3 icon" /><span>CSS3</span></li>
-                        <li><img src={SassIcon} alt="Sass icon" /><span>SASS (SCSS)</span></li>
-                        <li><img style={{borderRadius: '20px'}}  src={JsIcon} alt="JS icon" /><span>JavaScript</span></li>
-                        <li><img className={classes.SpinIcon} src={ReactIcon} alt="React icon" /><span>React JS</span></li>
-
+                        <li><img src={PsIcon} alt="Photoshop icon" /><span>Photoshop</span></li>
+                        <li><img src={FigmaIcon} alt="Figma icon" /><span>Figma</span></li>
                     </ul>
 
                 </div>

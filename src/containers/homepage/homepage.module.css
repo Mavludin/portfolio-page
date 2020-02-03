@@ -55,29 +55,6 @@ a {
     }
 }
 
-.Jet {
-    font-size: 10em;
-    position: absolute;
-    top: 20%;
-    left: 0;
-    transition: .2s;
-    width: 100%;
-    animation: flying 5s infinite;
-    animation-timing-function: cubic-bezier(1, 0, 1, 2);
-    transform: translateX(-150%);
-}
-
-@keyframes flying {
-    0% {
-        transform: translateX(-150%);
-    }
-
-    100% {
-        transform: translateX(150%);
-    }
-
-}
-
 @media screen and (max-width: 600px) {
 
     .HomePage {
