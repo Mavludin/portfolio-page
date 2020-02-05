@@ -16,6 +16,9 @@ import { Route, BrowserRouter, Switch, withRouter } from 'react-router-dom';
 import pageFlipAudio from './sound/page-flip.mp3';
 import scrollAndPageFlip from './Utils/PageFlipAndScrollTop';
 
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+
 class App extends React.Component {
 
   componentDidMount() {
@@ -63,8 +66,8 @@ class App extends React.Component {
         <Header />
         <Sidebar />
 
-        <div onClick={()=>{this.goToPrevPage();scrollAndPageFlip()}} className="mobileNav prevPage"><i className="fas fa-angle-left"></i></div>
-        <div onClick={()=>{this.goToNextPage();scrollAndPageFlip()}} className="mobileNav nextPage"><i className="fas fa-angle-right"></i></div>
+        <div onClick={()=>{this.goToPrevPage();scrollAndPageFlip()}} className="mobileNav prevPage"><NavigateBeforeIcon /></div>
+        <div onClick={()=>{this.goToNextPage();scrollAndPageFlip()}} className="mobileNav nextPage"><NavigateNextIcon /></div>
 
           <Route render={({location})=>(
             <TransitionGroup className="MainBlock">

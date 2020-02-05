@@ -40,18 +40,21 @@ body {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2em;
   color:#ED6464;
   cursor: pointer;
   z-index: 100;
 }
 
+.mobileNav svg {
+  font-size: 3em;
+}
+
 .prevPage {
-  left: 3%;
+  left: 0;
 }
 
 .nextPage {
-  right: 3%;
+  right: 0;
 }
 
 .flex-content {
