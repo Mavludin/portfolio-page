@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 
 import scrollAndPageFlip from '../../Utils/PageFlipAndScrollTop';
 
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+
 class HomePage extends React.Component {
 componentDidMount() {
     console.log(this.props)
@@ -17,7 +19,7 @@ componentDidMount() {
         return (
             <div className={[classes.HomePage, 'flex-content', 'Page'].join(' ')}>
                 <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
-                <Link onClick={scrollAndPageFlip} to="/about" className={classes.RedBtn} href="/">Get started <i className="fas fa-arrow-right"></i></Link>
+                <Link onClick={scrollAndPageFlip} to="/about" className={classes.RedBtn} href="/"><span>Get started</span><ArrowForwardIcon /> </Link>
             </div>
         )
     }

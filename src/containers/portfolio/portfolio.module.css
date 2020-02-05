@@ -45,13 +45,18 @@
 .RedBtn {
     font-size: 1em;
     border: 2px solid white;
-    padding: 5px 20px;
+    padding: 5px 15px;
     margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+
     transition: background-color .2s;
 }
   
-.RedBtn i {
-    margin-left: 5px;
+.RedBtn svg {
+    margin-left: 8px;
+    width: .8em;
 }
 
 .RedBtn:hover {
@@ -59,7 +64,7 @@
     border-color: #ED6464;
 }
 
-.RedBtn:hover i {
+.RedBtn:hover svg {
     animation: jumping 1s ease-out;
 }
 

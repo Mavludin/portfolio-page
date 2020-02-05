@@ -20,13 +20,20 @@ a+a {
     margin-left: 10px;
 }
 
-footer i {
-    transition: all .2s;
+.Contacts a path {
+    transition: fill .2s;
 }
 
-.Contacts a:hover i {
-    color: #ED6464;
-    transform: scale(1.2);
+.Contacts a svg {
+    transition: transform .2s;
+}
+
+.Contacts a:hover path {
+    fill: #ED6464;
+}
+
+.Contacts a:hover svg {
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 836px) {

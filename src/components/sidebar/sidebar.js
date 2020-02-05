@@ -5,11 +5,13 @@ import { NavLink } from 'react-router-dom';
 
 import scrollAndPageFlip from '../../Utils/PageFlipAndScrollTop';
 
+import pointDownIcon from '../../img/aside/point-down.svg';
+
 const sidebar = () => {
 
     return (
         <aside>
-            <div><i className="far fa-hand-point-down"></i></div>
+            <div><img src={pointDownIcon} alt="Point down" /></div>
             <NavLink onClick={()=>scrollAndPageFlip()} exact={true} activeClassName={classes.Active} to="/"><div></div></NavLink>
             <NavLink onClick={()=>scrollAndPageFlip()} activeClassName={classes.Active} exact to="/about"><div></div></NavLink>
             <NavLink onClick={()=>scrollAndPageFlip()} activeClassName={classes.Active} exact to="/skills"><div></div></NavLink>

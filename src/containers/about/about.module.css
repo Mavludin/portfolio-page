@@ -1,3 +1,7 @@
+.AboutPage h1 {
+    margin: 0;
+}
+
 h3 {
     font-weight: normal;
 }
@@ -8,39 +12,13 @@ h3 {
 }
 
 .Astronaut {
-    font-size: 10em;
     display: block;
-    margin-bottom: 30px;
-    cursor: pointer;
+    width: 200px;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 600px) {
-
     .Astronaut {
-        font-size: 8em;
+        width: 120px;
     }
 }
-
-/* .Wave {
-    font-size: 3em;
-    display: block;
-    position: absolute;
-    top: 48%;
-    right: 40%;
-    animation: waving .8s linear infinite !important;
-
-}
-
-@keyframes waving {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(10deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-} */

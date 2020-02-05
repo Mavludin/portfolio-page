@@ -10,6 +10,8 @@ import ReactIcon from '../../img/react.svg';
 import ReduxIcon from '../../img/redux.svg';
 import GitIcon from '../../img/git.svg';
 
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+
 const Portfolio = () => {
     return (
         <div className={[classes.PortfolioPage, 'flex-content', 'Page'].join(' ')} >
@@ -20,7 +22,7 @@ const Portfolio = () => {
                     <h2>Favourite places</h2>
                     <div className={classes.ItemInner}>
                         <a href="https://mavludin-html-css-project.glitch.me/" className={classes.RedBtn} target="_blank" rel="noopener noreferrer">
-                            Take a look <i className="fas fa-arrow-right"></i>
+                            <span>Take a look</span> <ArrowForwardIcon />
                         </a>
                         <p className={classes.Tools}>
                             <span>Tools: </span>
@@ -34,7 +36,7 @@ const Portfolio = () => {
                     <h2>Vegan store</h2>
                     <div className={classes.ItemInner}>
                         <a href="https://mavludin-landing-page.glitch.me/home.html" className={classes.RedBtn} target="_blank" rel="noopener noreferrer">
-                            Take a look <i className="fas fa-arrow-right"></i>
+                            <span>Take a look</span> <ArrowForwardIcon />
                         </a>
                         <p className={classes.Tools}>
                             <span>Tools: </span>
@@ -49,7 +51,7 @@ const Portfolio = () => {
                     <h2>Momento replica</h2>
                     <div className={classes.ItemInner}>
                         <a href="https://mavludin-todo-list.glitch.me/" className={classes.RedBtn} target="_blank" rel="noopener noreferrer">
-                            Take a look <i className="fas fa-arrow-right"></i>
+                            <span>Take a look</span> <ArrowForwardIcon />
                         </a>
                         <p className={classes.Tools}>
                             <span>Tools: </span>
@@ -65,7 +67,7 @@ const Portfolio = () => {
                     <h2>E-commerce</h2>
                     <div className={classes.ItemInner}>
                         <a href="https://mavludin-react-e-commerce.glitch.me/" className={classes.RedBtn} target="_blank" rel="noopener noreferrer">
-                            Take a look <i className="fas fa-arrow-right"></i>
+                            <span>Take a look</span> <ArrowForwardIcon />
                         </a>
                         <p className={classes.Tools}>
                             <span>Tools: </span>
@@ -82,7 +84,7 @@ const Portfolio = () => {
                     <h2>Music player</h2>
                     <div className={classes.ItemInner}>
                         <a href="https://mavludin-music-player.glitch.me/" className={classes.RedBtn} target="_blank" rel="noopener noreferrer">
-                            Take a look <i className="fas fa-arrow-right"></i>
+                            <span>Take a look</span> <ArrowForwardIcon />
                         </a>
                         <p className={classes.Tools}>
                             <span>Tools: </span>
@@ -98,7 +100,7 @@ const Portfolio = () => {
                     <h2>Admin page</h2>
                     <div className={classes.ItemInner}>
                         <a href="https://react-admin-page.firebaseapp.com/" className={classes.RedBtn} target="_blank" rel="noopener noreferrer">
-                            Take a look <i className="fas fa-arrow-right"></i>
+                            <span>Take a look</span> <ArrowForwardIcon />
                         </a>
                         <p className={classes.Tools}>
                             <span>Tools: </span>

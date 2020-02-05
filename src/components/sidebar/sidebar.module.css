@@ -7,18 +7,18 @@ aside {
     height: 120px;
 }
 
+aside img {
+    width: 32px;
+}
+
 aside > div {
     position: absolute;
     width: max-content;
     top: -50px;
-    height: 33px;
+    height: 38px;
     left: -10px;
     animation: swing 2s linear infinite;
     color: #ED6464;
-}
-
-aside i {
-    font-size: 2em;
 }
 
 aside a div {
