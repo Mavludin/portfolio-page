@@ -31,7 +31,7 @@ const Skills = () => {
                         <li><img src={Html5Icon} alt="Html 5 icon" /><span>HTML5</span></li>
                         <li><img src={Css3Icon} alt="Css 3 icon" /><span>CSS3</span></li>
                         <li><img src={SassIcon} alt="Sass icon" /><span>SASS (SCSS)</span></li>
-                        <li><img style={{borderRadius: '20px'}}  src={JsIcon} alt="JS icon" /><span>JavaScript</span></li>
+                        <li><img style={{borderRadius: '20px'}} src={JsIcon} alt="JS icon" /><span>JavaScript</span></li>
                         <li><img className={classes.SpinIcon} src={ReactIcon} alt="React icon" /><span>React JS</span></li>
 
                     </ul>

@@ -10,10 +10,7 @@ import scrollAndPageFlip from '../../Utils/PageFlipAndScrollTop';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 class HomePage extends React.Component {
-componentDidMount() {
-    console.log(this.props)
 
-}
     render() {
 
         return (
