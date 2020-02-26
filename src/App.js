@@ -23,7 +23,9 @@ class App extends React.Component {
 
   componentDidMount() {
     document.querySelector('.MainBlock').scrollTop = '0';
-    document.querySelector('audio').volume = 0.2;
+    setTimeout( () => {
+      document.querySelector('audio').volume = 0.2;
+    }, 0);
   }
 
   goToPrevPage = () => {
