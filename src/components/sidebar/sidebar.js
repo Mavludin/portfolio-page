@@ -3,7 +3,7 @@ import classes from './sidebar.module.css';
 
 import { NavLink } from 'react-router-dom';
 
-import scrollAndPageFlip from '../../Utils/PageFlipAndScrollTop';
+import scrollAndPageFlip from '../../utils/PageFlipAndScrollTop';
 
 import pointDownIcon from '../../img/aside/point-down.svg';
 

@@ -4,7 +4,7 @@ import '../../Main.css';
 
 import { NavLink } from 'react-router-dom';
 
-import scrollAndPageFlip from '../../Utils/PageFlipAndScrollTop';
+import scrollAndPageFlip from '../../utils/PageFlipAndScrollTop';
 
 
 class Header extends React.Component {

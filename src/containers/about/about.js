@@ -4,7 +4,7 @@ import classes from './about.module.css';
 
 import { Link } from 'react-router-dom';
 
-import scrollAndPageFlip from '../../Utils/PageFlipAndScrollTop';
+import scrollAndPageFlip from '../../utils/PageFlipAndScrollTop';
 
 import Astronaut from '../../img/about/astronaut.svg';
 

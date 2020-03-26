@@ -66,7 +66,7 @@ const Portfolio = () => {
                 <div className={[classes.Item, classes.ECommerce].join(' ')}>
                     <h2>E-commerce</h2>
                     <div className={classes.ItemInner}>
-                        <a href="https://mavludin-react-e-commerce.glitch.me/" className={classes.RedBtn} target="_blank" rel="noopener noreferrer">
+                        <a href="https://mavludin-e-commerce.netlify.com/" className={classes.RedBtn} target="_blank" rel="noopener noreferrer">
                             <span>Take a look</span> <ArrowForwardIcon />
                         </a>
                         <p className={classes.Tools}>
@@ -83,7 +83,7 @@ const Portfolio = () => {
                 <div className={[classes.Item, classes.MusicPlayer].join(' ')}>
                     <h2>Music player</h2>
                     <div className={classes.ItemInner}>
-                        <a href="https://mavludin-music-player.glitch.me/" className={classes.RedBtn} target="_blank" rel="noopener noreferrer">
+                        <a href="https://mavludin-music-player.netlify.com/" className={classes.RedBtn} target="_blank" rel="noopener noreferrer">
                             <span>Take a look</span> <ArrowForwardIcon />
                         </a>
                         <p className={classes.Tools}>

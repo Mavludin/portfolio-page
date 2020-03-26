@@ -5,7 +5,7 @@ import '../../Main.css';
 
 import { Link } from 'react-router-dom';
 
-import scrollAndPageFlip from '../../Utils/PageFlipAndScrollTop';
+import scrollAndPageFlip from '../../utils/PageFlipAndScrollTop';
 
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
