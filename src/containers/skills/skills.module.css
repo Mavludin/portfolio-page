@@ -83,8 +83,8 @@ li:hover .SpinIcon {
     }
 
     .Skills > div {
-        height: 100%;
         margin-bottom: 20px;
+        width: 100%;
     }
 
 }

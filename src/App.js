@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Main.css';
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -11,85 +11,85 @@ import AboutPage from './containers/about/about';
 import SkillsPage from './containers/skills/skills';
 import Portfolio from './containers/portfolio/portfolio';
 
-import { Route, BrowserRouter, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 
 import pageFlipAudio from './sound/page-flip.mp3';
-import scrollAndPageFlip from './Utils/PageFlipAndScrollTop';
+import scrollAndPageFlip from './utils/PageFlipAndScrollTop';
 
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
-class App extends React.Component {
+const App = (props) => {
 
-  componentDidMount() {
+  useEffect(() => {
     document.querySelector('.MainBlock').scrollTop = '0';
-    setTimeout( () => {
+    setTimeout(() => {
       document.querySelector('audio').volume = 0.2;
     }, 0);
-  }
+  })
 
-  goToPrevPage = () => {
+  const goToPrevPage = () => {
     const allPaths = ['/', '/about', '/skills', '/portfolio'];
 
-    allPaths.map((item,pos,array)=>{
-
-      if (item === this.props.location.pathname) {
+    allPaths.map((item, pos, array) => {
+      if (item === props.location.pathname) {
         if (pos === 0) {
-          this.props.history.push(array[array.length-1])
-        } else this.props.history.push(array[pos-1])
+          props.history.push(array[array.length - 1])
+        } else props.history.push(array[pos - 1])
       }
+      return true
     })
   }
 
-  goToNextPage = () => {
+  const goToNextPage = () => {
     const allPaths = ['/', '/about', '/skills', '/portfolio'];
 
-    allPaths.map((item,pos,array)=>{
-
-      if (item === this.props.location.pathname) {
-        if (pos === array.length-1) {
-          this.props.history.push(array[0])
-        } else this.props.history.push(array[pos+1])
+    allPaths.map((item, pos, array) => {
+      if (item === props.location.pathname) {
+        if (pos === array.length - 1) {
+          props.history.push(array[0])
+        } else props.history.push(array[pos + 1])
       }
+      return true
     })
   }
 
-  render() {
-    return (
+  return (
 
-        <div className="App">
-  
-        <div className="lines">
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
-        </div>
+    <div className="App">
 
-        <Header />
-        <Sidebar />
+      <div className="lines">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
 
-        <div onClick={()=>{this.goToPrevPage();scrollAndPageFlip()}} className="mobileNav prevPage"><NavigateBeforeIcon /></div>
-        <div onClick={()=>{this.goToNextPage();scrollAndPageFlip()}} className="mobileNav nextPage"><NavigateNextIcon /></div>
+      <Header />
+      <Sidebar />
 
-          <Route render={({location})=>(
-            <TransitionGroup className="MainBlock">
-            <CSSTransition key={location.key} timeout={1000} classNames="fade">
-               <Switch location={location}>
-                <Route exact path="/" component={HomePage} />
-                <Route exact path="/about" component={AboutPage} />
-                <Route exact path="/skills" component={SkillsPage} />
-                <Route exact path="/portfolio" component={Portfolio} />
-              </Switch>
-             </CSSTransition>
-          </TransitionGroup>
+      <div onClick={() => { goToPrevPage(); scrollAndPageFlip() }} className="mobileNav prevPage"><NavigateBeforeIcon /></div>
+      <div onClick={() => { goToNextPage(); scrollAndPageFlip() }} className="mobileNav nextPage"><NavigateNextIcon /></div>
 
-          )} />
-          <audio src={pageFlipAudio}></audio>
-        <Footer />
-          
-        </div>
-    );
-  }
+      <Route render={({ location }) => (
+        <TransitionGroup className="MainBlock">
+          <CSSTransition key={location.key} timeout={1000} classNames="fade">
+            <Switch location={location}>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/about" component={AboutPage} />
+              <Route exact path="/skills" component={SkillsPage} />
+              <Route exact path="/portfolio" component={Portfolio} />
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
+
+      )} />
+
+      <audio src={pageFlipAudio}></audio>
+
+      <Footer />
+
+    </div>
+  );
 }
 
 export default withRouter(App);

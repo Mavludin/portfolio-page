@@ -9,17 +9,14 @@ import scrollAndPageFlip from '../../utils/PageFlipAndScrollTop';
 
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
-class HomePage extends React.Component {
+const HomePage = () =>  {
 
-    render() {
-
-        return (
-            <div className={[classes.HomePage, 'flex-content', 'Page'].join(' ')}>
-                <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
-                <Link onClick={scrollAndPageFlip} to="/about" className={classes.RedBtn} href="/"><span>Get started</span><ArrowForwardIcon /> </Link>
-            </div>
-        )
-    }
+    return (
+        <div className={[classes.HomePage, 'flex-content', 'Page'].join(' ')}>
+            <h1> Hello, I'm <span>Mavludin</span> <br/> A front-end web developer </h1>
+            <Link onClick={scrollAndPageFlip} to="/about" className={classes.RedBtn} href="/"><span>Get started</span><ArrowForwardIcon /> </Link>
+        </div>
+    )
 
 }
 export default HomePage;

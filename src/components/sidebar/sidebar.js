@@ -18,6 +18,7 @@ const sidebar = () => {
             <NavLink onClick={()=>scrollAndPageFlip()} activeClassName={classes.Active} exact to="/portfolio"><div></div></NavLink>
         </aside>
     )
+    
 }
 
 export default sidebar;

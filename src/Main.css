@@ -245,8 +245,22 @@ a {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
+
+  .Page {
+    padding: 0 20px;
+  }
+
   h1 {
       font-size: 2em;
   }
+
+}
+
+@media screen and (max-width: 414px) {
+
+  h1 {
+      font-size: 1.6em;
+  }
+
 }
