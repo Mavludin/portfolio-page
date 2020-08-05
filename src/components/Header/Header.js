@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import classes from './header.module.css';
+import classes from './Header.module.css';
 import '../../Main.css';
 
 import { NavLink } from 'react-router-dom';
 
 import scrollAndPageFlip from '../../utils/PageFlipAndScrollTop';
-import { navLinks } from '../../utils/navLinksData';
+import { navLinks } from '../../utils/projectData';
 
 const Header = () => {
 

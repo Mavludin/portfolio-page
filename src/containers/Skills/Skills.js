@@ -1,18 +1,18 @@
 import React from 'react';
-import classes from './skills.module.css';
+import classes from './Skills.module.css';
 import '../../Main.css';
 
-import Html5Icon from '../../img/html-5.svg';
-import Css3Icon from '../../img/css-3.svg';
-import SassIcon from '../../img/sass.svg';
-import JsIcon from '../../img/js.svg';
-import JQueryIcon from '../../img/jquery.svg';
-import ReactIcon from '../../img/react.svg';
-import ReduxIcon from '../../img/redux.svg';
-import GitIcon from '../../img/git.svg';
-import PsIcon from '../../img/ps.svg';
-import FigmaIcon from '../../img/figma.svg';
-import BootstrapIcon from '../../img/bootstrap.svg';
+import Html5Icon from '../../assets/images/html-5.svg';
+import Css3Icon from '../../assets/images/css-3.svg';
+import SassIcon from '../../assets/images/sass.svg';
+import JsIcon from '../../assets/images/js.svg';
+import JQueryIcon from '../../assets/images/jquery.svg';
+import ReactIcon from '../../assets/images/react.svg';
+import ReduxIcon from '../../assets/images/redux.svg';
+import GitIcon from '../../assets/images/git.svg';
+import PsIcon from '../../assets/images/ps.svg';
+import FigmaIcon from '../../assets/images/figma.svg';
+import BootstrapIcon from '../../assets/images/bootstrap.svg';
 import { Link } from 'react-router-dom';
 
 import scrollAndPageFlip from '../../utils/PageFlipAndScrollTop';

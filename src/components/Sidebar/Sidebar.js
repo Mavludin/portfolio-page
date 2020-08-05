@@ -1,11 +1,11 @@
 import React from 'react';
-import classes from './sidebar.module.css';
+import classes from './Sidebar.module.css';
 
 import { NavLink } from 'react-router-dom';
 
 import scrollAndPageFlip from '../../utils/PageFlipAndScrollTop';
 
-import pointDownIcon from '../../img/aside/point-down.svg';
+import pointDownIcon from '../../assets/images/aside/point-down.svg';
 
 const sidebar = () => {
 

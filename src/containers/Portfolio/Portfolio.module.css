@@ -117,7 +117,7 @@
 }
 
 .FavPlaces .ItemInner::after {
-    background-image: url(../../img/portfolio/fav-places.jpg);
+    background-image: url(../../assets/images/portfolio/fav-places.jpg);
 }
 
 .VeganStore .ItemInner {
@@ -129,23 +129,23 @@
 }
 
 .VeganStore .ItemInner::after {
-    background-image: url(../../img/portfolio/vegan-store.jpg);
+    background-image: url(../../assets/images/portfolio/vegan-store.jpg);
 }
 
 .MomentoReplica .ItemInner::after {
-    background-image: url(../../img/portfolio/momento.jpg);
+    background-image: url(../../assets/images/portfolio/momento.jpg);
 }
 
 .ECommerce .ItemInner::after {
-    background-image: url(../../img/portfolio/e-com.jpg);
+    background-image: url(../../assets/images/portfolio/e-com.jpg);
 }
 
 .MusicPlayer .ItemInner::after {
-    background-image: url(../../img/portfolio/m-player.jpg);
+    background-image: url(../../assets/images/portfolio/m-player.jpg);
 }
 
 .AdminPage .ItemInner::after {
-    background-image: url(../../img/portfolio/admin-page.jpg);
+    background-image: url(../../assets/images/portfolio/admin-page.jpg);
 }
 
 @media screen and (max-width: 991px) {

@@ -3,17 +3,17 @@ import './Main.css';
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
-import HomePage from './containers/homepage/homepage';
-import Sidebar from './components/sidebar/sidebar';
-import AboutPage from './containers/about/about';
-import SkillsPage from './containers/skills/skills';
-import Portfolio from './containers/portfolio/portfolio';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import HomePage from './containers/HomePage/HomePage';
+import Sidebar from './components/Sidebar/Sidebar';
+import AboutPage from './containers/About/About';
+import SkillsPage from './containers/Skills/Skills';
+import Portfolio from './containers/Portfolio/Portfolio';
 
 import { Route, Switch, withRouter } from 'react-router-dom';
 
-import pageFlipAudio from './sound/page-flip.mp3';
+import pageFlipAudio from './assets/audio/page-flip.mp3';
 import scrollAndPageFlip from './utils/PageFlipAndScrollTop';
 
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';

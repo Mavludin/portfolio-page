@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './homepage.module.css';
+import classes from './HomePage.module.css';
 import '../../Main.css';
 
 import { Link } from 'react-router-dom';

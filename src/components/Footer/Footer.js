@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './footer.module.css';
+import classes from './Footer.module.css';
 import '../../Main.css';
 
 import LinkedInIcon from '@material-ui/icons/LinkedIn';

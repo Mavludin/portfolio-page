@@ -1,14 +1,13 @@
 import React from 'react';
 import '../../Main.css';
-import classes from './portfolio.module.css';
+import classes from './Portfolio.module.css';
 
-import Html5Icon from '../../img/html-5.svg';
-import Css3Icon from '../../img/css-3.svg';
-import JsIcon from '../../img/js.svg';
-import JQueryIcon from '../../img/jquery.svg';
-import ReactIcon from '../../img/react.svg';
-import ReduxIcon from '../../img/redux.svg';
-import GitIcon from '../../img/git.svg';
+import Html5Icon from '../../assets/images/html-5.svg';
+import Css3Icon from '../../assets/images/css-3.svg';
+import JsIcon from '../../assets/images/js.svg';
+import ReactIcon from '../../assets/images/react.svg';
+import ReduxIcon from '../../assets/images/redux.svg';
+import GitIcon from '../../assets/images/git.svg';
 
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 

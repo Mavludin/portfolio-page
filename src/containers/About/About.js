@@ -1,12 +1,12 @@
 import React from 'react';
 import '../../Main.css';
-import classes from './about.module.css';
+import classes from './About.module.css';
 
 import { Link } from 'react-router-dom';
 
 import scrollAndPageFlip from '../../utils/PageFlipAndScrollTop';
 
-import Astronaut from '../../img/about/astronaut.svg';
+import Astronaut from '../../assets/images/about/astronaut.svg';
 
 const About = () => {
 
