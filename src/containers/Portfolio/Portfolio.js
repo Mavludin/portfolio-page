@@ -11,7 +11,7 @@ import GitIcon from '../../assets/images/git.svg';
 
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
-const Portfolio = () => {
+export const Portfolio = () => {
 
     return (
         <div className={[classes.PortfolioPage, 'flex-content', 'Page'].join(' ')} >
@@ -75,5 +75,3 @@ const Portfolio = () => {
     )
     
 }
-
-export default Portfolio;

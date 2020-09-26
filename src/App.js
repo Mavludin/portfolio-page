@@ -3,18 +3,18 @@ import './Main.css';
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import HomePage from './containers/HomePage/HomePage';
-import Sidebar from './components/Sidebar/Sidebar';
-import AboutPage from './containers/About/About';
-import SkillsPage from './containers/Skills/Skills';
-import Portfolio from './containers/Portfolio/Portfolio';
+import {Header} from './components/Header/Header';
+import {Footer} from './components/Footer/Footer';
+import {HomePage} from './containers/HomePage/HomePage';
+import {Sidebar} from './components/Sidebar/Sidebar';
+import {AboutPage} from './containers/About/About';
+import {SkillsPage} from './containers/Skills/Skills';
+import {Portfolio} from './containers/Portfolio/Portfolio';
 
 import { Route, Switch, withRouter } from 'react-router-dom';
 
 import pageFlipAudio from './assets/audio/page-flip.mp3';
-import scrollAndPageFlip from './utils/PageFlipAndScrollTop';
+import {scrollAndPageFlipSound} from './utils/projectFunctions';
 
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
@@ -26,7 +26,7 @@ const App = (props) => {
     setTimeout(() => {
       document.querySelector('audio').volume = 0.2;
     }, 0);
-  })
+  }, [])
 
   const goToPrevPage = () => {
     const allPaths = ['/', '/about', '/skills', '/portfolio'];
@@ -67,8 +67,16 @@ const App = (props) => {
       <Header />
       <Sidebar />
 
-      <div onClick={() => { goToPrevPage(); scrollAndPageFlip() }} className="mobileNav prevPage"><NavigateBeforeIcon /></div>
-      <div onClick={() => { goToNextPage(); scrollAndPageFlip() }} className="mobileNav nextPage"><NavigateNextIcon /></div>
+      <div 
+        onClick={() => { goToPrevPage(); scrollAndPageFlipSound() }} 
+        className="mobileNav prevPage">
+        <NavigateBeforeIcon/>
+      </div>
+      <div 
+        onClick={() => { goToNextPage(); scrollAndPageFlipSound() }} 
+        className="mobileNav nextPage">
+        <NavigateNextIcon />
+      </div>
 
       <Route render={({ location }) => (
         <TransitionGroup className="MainBlock">

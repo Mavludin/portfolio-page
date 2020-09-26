@@ -21,6 +21,10 @@ aside > div {
     color: #ED6464;
 }
 
+aside a + a {
+    margin-left: 10px;
+}
+
 aside a div {
     width: 10px;
     height: 10px;

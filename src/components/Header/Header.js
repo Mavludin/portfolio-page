@@ -1,41 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import classes from './Header.module.css';
 import '../../Main.css';
 
 import { NavLink } from 'react-router-dom';
 
-import scrollAndPageFlip from '../../utils/PageFlipAndScrollTop';
+import {scrollAndPageFlipSound} from '../../utils/projectFunctions';
 import { navLinks } from '../../utils/projectData';
+import styled from 'styled-components';
 
-const Header = () => {
+const StyledHeader = styled.header`
+    display: none;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    padding: 20px;
+    z-index: 3;
 
-    const checkBox = React.createRef();
-    const hambMenu = React.createRef();
-
-    const [isChecked, changeCheckboxState] = useState(false);
-
-    const onUpdateState = (e) => {
-        changeCheckboxState(e.target.checked)
+    & nav {
+        transform: ${({isChecked}) => isChecked ? 'translateX(0%)' : 'translateX(-100%)'};
+        opacity: ${({isChecked}) => isChecked ? '1' : '0'}
     }
 
-    useEffect(() => {
+    @media screen and (max-width: 836px) {
 
-        if (isChecked) {
-            hambMenu.current.style.transform = 'translateX(0%)';
-            hambMenu.current.style.opacity = '1';
+        & {
+            display: block;
         }
-        else {
-            hambMenu.current.style.transform = 'translateX(-100%)';
-            hambMenu.current.style.opacity = '0';
-        }
+    
+    }
+`
 
-    })
+export const Header = () => {
+
+    const [isChecked, setCheckBoxState] = useState(false);
+
+    const onUpdateState = (e) => {
+        setCheckBoxState(e.target.checked)
+    }
 
     const renderedNavLinks = navLinks.map(item => {
         return (
             <li key={item.id}>
                 <NavLink 
-                    onClick={()=>{changeCheckboxState(false); scrollAndPageFlip();}} 
+                    onClick={()=>{setCheckBoxState(false); scrollAndPageFlipSound();}} 
                     activeClassName={classes.Active} 
                     exact={true} 
                     to={item.reference}>{item.name}
@@ -45,10 +52,10 @@ const Header = () => {
     })
 
     return (
-        <header>
-                <div className={[classes.HeaderContent].join(' ')}>
+        <StyledHeader isChecked = {isChecked} >
+            <div className={classes.HeaderContent}>
 
-                <nav ref={hambMenu} className={classes.HambMenu}>
+                <nav className={classes.HambMenu}>
                     <ul>
                         {renderedNavLinks}
                     </ul>
@@ -59,7 +66,6 @@ const Header = () => {
                         <input 
                             checked={isChecked} 
                             onChange={onUpdateState} 
-                            ref={checkBox} 
                             type="checkbox" 
                             id="menu_checkbox" 
                             className={classes.MenuCheckBox} 
@@ -71,9 +77,7 @@ const Header = () => {
                 </div>
 
             </div>
-        </header>
+        </StyledHeader>
     )
 
 }
-
-export default Header;

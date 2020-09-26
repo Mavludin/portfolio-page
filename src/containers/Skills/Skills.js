@@ -15,9 +15,9 @@ import FigmaIcon from '../../assets/images/figma.svg';
 import BootstrapIcon from '../../assets/images/bootstrap.svg';
 import { Link } from 'react-router-dom';
 
-import scrollAndPageFlip from '../../utils/PageFlipAndScrollTop';
+import {scrollAndPageFlipSound} from '../../utils/projectFunctions';
 
-const Skills = () => {
+export const SkillsPage = () => {
 
     return (
         <div className={[classes.SkillsPage, 'flex-content', 'Page'].join(' ')}>
@@ -59,11 +59,9 @@ const Skills = () => {
             </div>
 
             <p>You must be wondering what I have done with all the things above. Well,
-                <Link onClick={scrollAndPageFlip} to="/portfolio"> here you go</Link>.
+                <Link onClick={scrollAndPageFlipSound} to="/portfolio"> here you go</Link>.
             </p>
 
         </div>
     )
 }
-
-export default Skills;

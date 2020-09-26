@@ -1,12 +1,3 @@
-header {
-    display: none;
-    width: 100%;
-    height: 60px;
-    position: relative;
-    padding: 20px;
-    z-index: 3;
-}
-
 .HeaderContent {
     height: 100%;
     display: flex;
@@ -17,6 +8,8 @@ header {
 
 .Hamb {
     width: 39px;
+    position: relative;
+    z-index: 4;
 }
 
 .HambMenu {
@@ -26,12 +19,13 @@ header {
     opacity: 0;
     transition: .4s;
     position: fixed;
-    top: 75px;
+    top: 0;
     background-color:rgba(31,31,31, 0.9);
     padding: 16px;
     z-index: 3;
     left: 0;
     text-align: center;
+    padding-top: 50px
 }
 
 .HambMenu ul {
@@ -143,10 +137,8 @@ header {
     100%{ transform:rotateZ(0); }
 }
 
-@media screen and (max-width: 836px) {
-
-    header {
-        display: block;
+@media (max-width: 414px) {
+    .HambMenu a {
+        font-size: 1.8em;
     }
-
 }

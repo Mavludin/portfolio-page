@@ -41,7 +41,7 @@
     margin: 20px;
 }
 
-li:hover .SpinIcon {
+.SkillsPage li:hover .SpinIcon {
     animation-play-state: paused;
 }
 

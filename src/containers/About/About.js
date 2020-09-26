@@ -4,11 +4,11 @@ import classes from './About.module.css';
 
 import { Link } from 'react-router-dom';
 
-import scrollAndPageFlip from '../../utils/PageFlipAndScrollTop';
+import {scrollAndPageFlipSound} from '../../utils/projectFunctions';
 
 import Astronaut from '../../assets/images/about/astronaut.svg';
 
-const About = () => {
+export const AboutPage = () => {
 
     return (
         <div className={[classes.AboutPage, 'flex-content', 'Page'].join(' ')} >
@@ -18,11 +18,9 @@ const About = () => {
 
             <p>
                 I build web sites and applications by utilizing the most progressive web technologies that you can get familiar with on 
-                <Link onClick={scrollAndPageFlip} to="/skills"> the next page. </Link> 
+                <Link onClick={scrollAndPageFlipSound} to="/skills"> the next page. </Link> 
                 During the development process, I adhere to the solutions that provide maximum user experience with minimalistic design.
             </p>
         </div>
     )
 }
-
-export default About;
