@@ -14,7 +14,7 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 export const Portfolio = () => {
 
     return (
-        <div className={[classes.PortfolioPage, 'flex-content', 'Page'].join(' ')} >
+        <div className={`${classes.PortfolioPage} flex-content Page`}>
             <h1 datatype="My recent works">My recent works</h1>
 
             <div className={classes.Content}>

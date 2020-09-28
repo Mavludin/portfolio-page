@@ -20,7 +20,7 @@ import {scrollAndPageFlipSound} from '../../utils/projectFunctions';
 export const SkillsPage = () => {
 
     return (
-        <div className={[classes.SkillsPage, 'flex-content', 'Page'].join(' ')}>
+        <div className={`${classes.SkillsPage} flex-content Page`} >
             <h1 datatype="Skills">Skills</h1>
 
             <div className={classes.Skills}>

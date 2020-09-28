@@ -22,7 +22,6 @@ const StyledHeader = styled.header`
     }
 
     @media screen and (max-width: 836px) {
-
         & {
             display: block;
         }
@@ -45,7 +44,7 @@ export const Header = () => {
                     onClick={()=>{setCheckBoxState(false); scrollAndPageFlipSound();}} 
                     activeClassName={classes.Active} 
                     exact={true} 
-                    to={item.reference}>{item.name}
+                    to={item.pathName}>{item.name}
                 </NavLink>
             </li>
         )

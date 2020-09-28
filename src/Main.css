@@ -42,7 +42,7 @@ body {
   transform: translateY(-50%);
   color:#ED6464;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
 }
 
 .mobileNav svg {

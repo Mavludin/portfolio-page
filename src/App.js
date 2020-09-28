@@ -14,10 +14,11 @@ import {Portfolio} from './containers/Portfolio/Portfolio';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
 import pageFlipAudio from './assets/audio/page-flip.mp3';
-import {scrollAndPageFlipSound} from './utils/projectFunctions';
+import {changePage, scrollAndPageFlipSound} from './utils/projectFunctions';
 
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import { navLinks } from './utils/projectData';
 
 const App = (props) => {
 
@@ -28,31 +29,6 @@ const App = (props) => {
     }, 0);
   }, [])
 
-  const goToPrevPage = () => {
-    const allPaths = ['/', '/about', '/skills', '/portfolio'];
-
-    allPaths.map((item, pos, array) => {
-      if (item === props.location.pathname) {
-        if (pos === 0) {
-          props.history.push(array[array.length - 1])
-        } else props.history.push(array[pos - 1])
-      }
-      return true
-    })
-  }
-
-  const goToNextPage = () => {
-    const allPaths = ['/', '/about', '/skills', '/portfolio'];
-
-    allPaths.map((item, pos, array) => {
-      if (item === props.location.pathname) {
-        if (pos === array.length - 1) {
-          props.history.push(array[0])
-        } else props.history.push(array[pos + 1])
-      }
-      return true
-    })
-  }
 
   return (
 
@@ -68,12 +44,12 @@ const App = (props) => {
       <Sidebar />
 
       <div 
-        onClick={() => { goToPrevPage(); scrollAndPageFlipSound() }} 
+        onClick={() => { changePage(navLinks, props, 'prev'); scrollAndPageFlipSound() }} 
         className="mobileNav prevPage">
         <NavigateBeforeIcon/>
       </div>
       <div 
-        onClick={() => { goToNextPage(); scrollAndPageFlipSound() }} 
+        onClick={() => { changePage(navLinks, props, 'next'); scrollAndPageFlipSound() }} 
         className="mobileNav nextPage">
         <NavigateNextIcon />
       </div>
