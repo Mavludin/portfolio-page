@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Main.css';
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -11,24 +11,60 @@ import {AboutPage} from './containers/About/About';
 import {SkillsPage} from './containers/Skills/Skills';
 import {Portfolio} from './containers/Portfolio/Portfolio';
 
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, useHistory, useLocation } from 'react-router-dom';
 
-import pageFlipAudio from './assets/audio/page-flip.mp3';
-import {changePage, scrollAndPageFlipSound} from './utils/projectFunctions';
+import {navigate, scrollToTop} from './utils/projectFunctions';
 
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import { navLinks } from './utils/projectData';
+import { Arrows } from './components/Arrows/Arrows';
 
-const App = (props) => {
+const App = () => {
+
+  const [allowWheel, setAllowWheel] = useState(true);
+
+  const nav = {
+    history: useHistory(),
+    location: useLocation()
+  }
 
   useEffect(() => {
-    document.querySelector('.MainBlock').scrollTop = '0';
-    setTimeout(() => {
-      document.querySelector('audio').volume = 0.2;
-    }, 0);
-  }, [])
 
+    const handleResize = () => {
+      if (window.matchMedia("(min-width: 836px)").matches) {
+        setAllowWheel(true)
+      } else {
+        setAllowWheel(false)
+      }
+    }
+    
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+
+    const handleWheel = (e) => {
+
+      if (allowWheel) {
+        if (e.deltaY > 0) {
+          navigate(navLinks, nav, 'next')
+        } else {
+          navigate(navLinks, nav, 'prev')
+        }
+      } else return false
+
+    }
+
+    window.addEventListener('wheel', handleWheel)
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('wheel', handleWheel)
+    } 
+
+  }, [allowWheel, nav])
+
+  useEffect(() => {
+    nav.history.listen((location, action) => { scrollToTop() });
+  }, [nav])
 
   return (
 
@@ -42,17 +78,7 @@ const App = (props) => {
 
       <Header />
       <Sidebar />
-
-      <div 
-        onClick={() => { changePage(navLinks, props, 'prev'); scrollAndPageFlipSound() }} 
-        className="mobileNav prevPage">
-        <NavigateBeforeIcon/>
-      </div>
-      <div 
-        onClick={() => { changePage(navLinks, props, 'next'); scrollAndPageFlipSound() }} 
-        className="mobileNav nextPage">
-        <NavigateNextIcon />
-      </div>
+      <Arrows />
 
       <Route render={({ location }) => (
         <TransitionGroup className="MainBlock">
@@ -68,12 +94,10 @@ const App = (props) => {
 
       )} />
 
-      <audio src={pageFlipAudio}></audio>
-
       <Footer />
 
     </div>
   );
 }
 
-export default withRouter(App);
+export default App

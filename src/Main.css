@@ -35,28 +35,6 @@ body {
   height: 100%;
 }
 
-.mobileNav {
-  display: none;
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  color:#ED6464;
-  cursor: pointer;
-  z-index: 3;
-}
-
-.mobileNav svg {
-  font-size: 3em;
-}
-
-.prevPage {
-  left: 0;
-}
-
-.nextPage {
-  right: 0;
-}
-
 .flex-content {
   display: flex;
   flex-direction: column;
@@ -238,10 +216,6 @@ a {
 
   .MainBlock {
     overflow: scroll;
-  }
-
-  .mobileNav {
-    display: block;
   }
 
 }

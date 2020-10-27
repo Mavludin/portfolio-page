@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../Main.css';
 import classes from './Portfolio.module.css';
 
 import Html5Icon from '../../assets/images/html-5.svg';

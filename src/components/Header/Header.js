@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import classes from './Header.module.css';
-import '../../Main.css';
 
 import { NavLink } from 'react-router-dom';
 
-import {scrollAndPageFlipSound} from '../../utils/projectFunctions';
 import { navLinks } from '../../utils/projectData';
 import styled from 'styled-components';
 
@@ -41,7 +39,7 @@ export const Header = () => {
         return (
             <li key={item.id}>
                 <NavLink 
-                    onClick={()=>{setCheckBoxState(false); scrollAndPageFlipSound();}} 
+                    onClick={()=>setCheckBoxState(false)} 
                     activeClassName={classes.Active} 
                     exact={true} 
                     to={item.pathName}>{item.name}

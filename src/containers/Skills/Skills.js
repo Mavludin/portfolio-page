@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './Skills.module.css';
-import '../../Main.css';
 
 import Html5Icon from '../../assets/images/html-5.svg';
 import Css3Icon from '../../assets/images/css-3.svg';
@@ -14,8 +13,6 @@ import PsIcon from '../../assets/images/ps.svg';
 import FigmaIcon from '../../assets/images/figma.svg';
 import BootstrapIcon from '../../assets/images/bootstrap.svg';
 import { Link } from 'react-router-dom';
-
-import {scrollAndPageFlipSound} from '../../utils/projectFunctions';
 
 export const SkillsPage = () => {
 
@@ -59,7 +56,7 @@ export const SkillsPage = () => {
             </div>
 
             <p>You must be wondering what I have done with all the things above. Well,
-                <Link onClick={scrollAndPageFlipSound} to="/portfolio"> here you go</Link>.
+                <Link to="/portfolio"> here you go</Link>.
             </p>
 
         </div>

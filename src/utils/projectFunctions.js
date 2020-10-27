@@ -1,27 +1,21 @@
-export const scrollAndPageFlipSound = () => {
+export const scrollToTop = () => {
     document.querySelector('.MainBlock').scrollTop = '0';
-    setTimeout(() => {
-        document.querySelector('audio').play();
-    }, 0);
-    setTimeout(() => {
-        document.querySelector('audio').currentTime = 0;
-    }, 0);
 }
 
-export const changePage = (array, props, goTo) => {
-    array.map((item, pos, array) => {
-      if (item.pathName === props.location.pathname) {
+export const navigate = (links, nav, direction) => {
+  links.map((item, pos, array) => {
+      if (item.pathName === nav.location.pathname) {
 
-        if (goTo === 'next') {
+        if (direction === 'next') {
           if (pos === array.length - 1) {
-            props.history.push(array[0].pathName)
-          } else props.history.push(array[pos + 1].pathName)
+            nav.history.push(array[0].pathName)
+          } else nav.history.push(array[pos + 1].pathName)
         }
 
-        if (goTo === 'prev') {
+        if (direction === 'prev') {
           if (pos === 0) {
-            props.history.push(array[array.length - 1].pathName);
-          } else props.history.push(array[pos - 1].pathName)
+            nav.history.push(array[array.length - 1].pathName);
+          } else nav.history.push(array[pos - 1].pathName)
         }
 
       }
