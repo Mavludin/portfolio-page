@@ -22,10 +22,20 @@ body {
 }
 
 .App {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
   flex-direction: column;
+
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
   justify-content: space-around;
-  align-items: center;
+
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center;
+
   overflow: hidden;
 }
 
@@ -36,10 +46,19 @@ body {
 }
 
 .flex-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
   flex-direction: column;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
-  align-items: center;
+
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center;
 }
 
 .Page {
@@ -210,6 +229,8 @@ a {
 
 @media screen and (max-width: 836px) {
   .App {
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     justify-content: space-between;
     overflow: visible;
   }
