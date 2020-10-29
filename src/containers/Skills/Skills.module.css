@@ -43,10 +43,6 @@
     cursor: pointer;
 }
 
-.SkillsPage p {
-    margin-top: 20px;
-}
-
 .SkillsPage li:hover .SpinIcon {
     animation-play-state: paused;
 }
