@@ -7,8 +7,18 @@
     height: 100%;
 }
 
+.Contacts a {
+    width: 24px;
+    height: 24px;
+}
+
 .Contacts a + a {
     margin-left: 10px;
+}
+
+.Contacts a img {
+    width: 100%;
+    height: 100%;
 }
 
 .Contacts a path {
