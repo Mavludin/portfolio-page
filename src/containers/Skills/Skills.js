@@ -55,9 +55,9 @@ export const SkillsPage = () => {
 
             </div>
 
-            <div>You must be wondering what I have done with all the things above.<br /> Well,
+            {/* <p>You must be wondering what I have done with all the things above.<br /> Well,
                 <Link to="/portfolio"> here you go</Link>.
-            </div>
+            </p> */}
 
         </div>
     )

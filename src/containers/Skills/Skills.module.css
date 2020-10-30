@@ -6,11 +6,10 @@
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
-    padding-left: 16%;
+    justify-content: space-around;
 }
 
 .Skills > div {
-    width: 33.3%;
     height: 100%;
 }
 
@@ -41,6 +40,10 @@
 .SkillsPage a {
     color: #ED6464;
     cursor: pointer;
+}
+
+.SkillsPage p {
+    margin-top: 20px;
 }
 
 .SkillsPage li:hover .SpinIcon {

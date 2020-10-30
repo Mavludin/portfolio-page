@@ -4,25 +4,24 @@ aside {
     top: 50%;
     transform: translateY(-50%);
     z-index: 100;
-    height: 120px;
-}
-
-aside img {
-    width: 32px;
+    min-height: 165px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 aside > div {
-    position: absolute;
-    width: max-content;
-    top: -50px;
+    width: 38px;
     height: 38px;
-    left: -10px;
     animation: swing 2s linear infinite;
     color: #ED6464;
 }
 
-aside a + a {
-    margin-left: 10px;
+aside img {
+    width: 100%;
+    height: 100%;
 }
 
 aside a div {
