@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from 'react-router-dom';
 
 ReactDOM.render(
-<BrowserRouter basename="/portfolio-page">
+<BrowserRouter>
   <React.StrictMode>
     <App />
   </React.StrictMode>
