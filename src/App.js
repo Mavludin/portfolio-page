@@ -18,7 +18,7 @@ import {navigate, scrollToTop} from './utils/projectFunctions';
 import { navLinks } from './utils/projectData';
 import { Arrows } from './components/Arrows/Arrows';
 
-const App = () => {
+export const App = () => {
 
   const [allowWheel, setAllowWheel] = useState(true);
 
@@ -91,7 +91,6 @@ const App = () => {
             </Switch>
           </CSSTransition>
         </TransitionGroup>
-
       )} />
 
       <Footer />
@@ -99,5 +98,3 @@ const App = () => {
     </div>
   );
 }
-
-export default App
