@@ -1,4 +1,4 @@
-import React from "react";
+import { Fragment } from "react";
 import classes from "./Arrows.module.css";
 
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
@@ -14,7 +14,7 @@ export const Arrows = () => {
   };
 
   return (
-    <React.Fragment>
+    <Fragment>
       <div
         onClick={() => navigate(navLinks, nav, "prev")}
         className={`${classes.MobileNav} ${classes.PrevPage}`}
@@ -27,6 +27,6 @@ export const Arrows = () => {
       >
         <NavigateNextIcon />
       </div>
-    </React.Fragment>
+    </Fragment>
   );
 };

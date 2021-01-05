@@ -1,13 +1,12 @@
-import React from "react";
 import classes from "./About.module.css";
 
 import { Link } from "react-router-dom";
 
 import Astronaut from "../../assets/images/about/astronaut.svg";
 
-export const AboutPage = ({ nodeRef }) => {
+export const AboutPage = () => {
   return (
-    <div ref={nodeRef} className={`${classes.AboutPage} flex-content Page`}>
+    <div className={`${classes.AboutPage} flex-content`}>
       <h1 datatype="What do I do?">What do I do?</h1>
 
       <img className={classes.Astronaut} src={Astronaut} alt="That's me" />

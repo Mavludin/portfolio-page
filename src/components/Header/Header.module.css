@@ -1,144 +1,175 @@
 .HeaderContent {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
 }
 
-.Hamb {
-    width: 39px;
-    position: relative;
-    z-index: 4;
+.MobileMenuToggle {
+  width: 39px;
+  position: relative;
+  z-index: 4;
 }
 
-.HambMenu {
-    height: 100%;
-    width: 100%;
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: .4s;
-    position: fixed;
-    top: 0;
-    background-color:rgba(31,31,31, 0.9);
-    padding: 16px;
-    z-index: 4;
-    left: 0;
-    text-align: center;
-    padding-top: 50px
+.MobileMenu {
+  height: 100%;
+  width: 100%;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.4s;
+  position: fixed;
+  top: 0;
+  background-color: rgba(31, 31, 31, 0.9);
+  padding: 16px;
+  z-index: 4;
+  left: 0;
+  text-align: center;
+  padding-top: 50px;
 }
 
-.HambMenu ul {
-    padding: 0;
+.MobileMenu ul {
+  padding: 0;
 }
 
-.HambMenu a {
-    font-size: 2em;
-    transition: color .4s;
+.MobileMenu a {
+  font-size: 2em;
+  transition: color 0.4s;
 }
 
-.HambMenu a:hover{
-    color: #ED6464;
+.MobileMenu a:hover {
+  color: #ed6464;
 }
 
 .Active {
-    color: #ED6464;
+  color: #ed6464;
 }
 
 .MenuBtn {
-    width: 39px;
-    overflow: hidden;
+  width: 39px;
+  overflow: hidden;
 }
 
 .MenuCheckBox {
-    display: none;
+  display: none;
 }
 
 .MenuLabel {
-    position: relative;
-    display: block;
-    height: 29px;
-    cursor: pointer;
+  position: relative;
+  display: block;
+  height: 29px;
+  cursor: pointer;
 }
 
-.MenuLabel::before, .MenuLabel::after, .MenuTextBar {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: #fff;
-    transition: background-color .2s;
+.MenuLabel::before,
+.MenuLabel::after,
+.MenuTextBar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  transition: background-color 0.2s;
 }
 
-.MenuLabel::before, .MenuLabel::after {
-    content: '';
-    transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left;
+.MenuLabel::before,
+.MenuLabel::after {
+  content: "";
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left;
 }
 
 .MenuLabel::before {
-    top: 0;
+  top: 0;
 }
 
 .MenuLabel::after {
-    top: 12px;
+  top: 12px;
 }
 
 .MenuTextBar {
-    top: 24px;
+  top: 24px;
 }
 
 .MenuTextBar::before {
-    content: 'MENU';
-    position: absolute;
-    top: 5px;
-    right: 0;
-    left: 0;
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    text-align: center;
+  content: "MENU";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  left: 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 .MenuCheckBox:checked + .MenuLabel::before {
-    left: -39px;
+  left: -39px;
 }
 
 .MenuCheckBox:checked + .MenuLabel::after {
-    left: 39px;
+  left: 39px;
 }
 
 .MenuCheckBox:checked + .MenuLabel .MenuTextBar::before {
-    animation: moveUpThenDown 0.8s ease 0.2s forwards, shakeWhileMovingUp 0.8s ease 0.2s forwards, shakeWhileMovingDown 0.2s ease 0.8s forwards;
+  animation: moveUpThenDown 0.8s ease 0.2s forwards,
+    shakeWhileMovingUp 0.8s ease 0.2s forwards,
+    shakeWhileMovingDown 0.2s ease 0.8s forwards;
 }
 
-.Hamb:hover .MenuLabel::before, .Hamb:hover .MenuLabel::after, .Hamb:hover .MenuTextBar {
-    background-color: #ED6464;
+.MobileMenuToggle:hover .MenuLabel::before,
+.MobileMenuToggle:hover .MenuLabel::after,
+.MobileMenuToggle:hover .MenuTextBar {
+  background-color: #ed6464;
 }
 
 @keyframes moveUpThenDown {
-    0%{ top:0; }
-    50%{ top:-27px;}
-    100%{ top:-14px; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -27px;
+  }
+  100% {
+    top: -14px;
+  }
 }
 
 @keyframes shakeWhileMovingUp {
-    0%{ transform: rotateZ(0); }
-    25%{ transform:rotateZ(-10deg); }
-    50%{ transform:rotateZ(0deg); }
-    75%{ transform:rotateZ(10deg); }
-    100%{ transform:rotateZ(0); }
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateZ(0deg);
+  }
+  75% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
 }
 
 @keyframes shakeWhileMovingDown {
-    0%{ transform:rotateZ(0); }
-    80%{ transform:rotateZ(3deg); }
-    90%{ transform:rotateZ(-3deg); }
-    100%{ transform:rotateZ(0); }
+  0% {
+    transform: rotateZ(0);
+  }
+  80% {
+    transform: rotateZ(3deg);
+  }
+  90% {
+    transform: rotateZ(-3deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
 }
 
 @media (max-width: 414px) {
-    .HambMenu a {
-        font-size: 1.8em;
-    }
+  .MobileMenu a {
+    font-size: 1.8em;
+  }
 }

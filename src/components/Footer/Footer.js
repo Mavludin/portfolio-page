@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "./Footer.module.css";
 
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -6,18 +5,10 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import MailIcon from "@material-ui/icons/Mail";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import IGIcon from "@material-ui/icons/Instagram";
-import styled from "styled-components";
-
-const StyledFooter = styled.footer`
-  position: relative;
-  width: 100%;
-  height: 50px;
-  z-index: 2;
-`;
 
 export const Footer = () => {
   return (
-    <StyledFooter>
+    <footer className={classes.Footer}>
       <div className={[classes.Contacts]}>
         <a
           href="mailto:imevlud@gmail.com"
@@ -55,6 +46,6 @@ export const Footer = () => {
           <IGIcon />
         </a>
       </div>
-    </StyledFooter>
+    </footer>
   );
 };

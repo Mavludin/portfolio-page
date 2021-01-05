@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "./Skills.module.css";
 
 import Html5Icon from "../../assets/images/html-5.svg";
@@ -13,9 +12,9 @@ import PsIcon from "../../assets/images/ps.svg";
 import FigmaIcon from "../../assets/images/figma.svg";
 import BootstrapIcon from "../../assets/images/bootstrap.svg";
 
-export const SkillsPage = ({ nodeRef }) => {
+export const SkillsPage = () => {
   return (
-    <div ref={nodeRef} className={`${classes.SkillsPage} flex-content Page`}>
+    <div className={`${classes.SkillsPage} flex-content`}>
       <h1 datatype="Skills">Skills</h1>
 
       <div className={classes.Skills}>
@@ -95,8 +94,8 @@ export const SkillsPage = ({ nodeRef }) => {
       </div>
 
       {/* <p>You must be wondering what I have done with all the things above.<br /> Well,
-                <Link to="/portfolio"> here you go</Link>.
-            </p> */}
+        <Link to="/portfolio"> here you go</Link>.
+      </p> */}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import classes from "./Header.module.css";
 
 import { NavLink } from "react-router-dom";
@@ -31,10 +31,6 @@ const StyledHeader = styled.header`
 export const Header = () => {
   const [isChecked, setCheckBoxState] = useState(false);
 
-  const onUpdateState = (e) => {
-    setCheckBoxState(e.target.checked);
-  };
-
   const renderedNavLinks = navLinks.map((item) => {
     return (
       <li key={item.id}>
@@ -53,20 +49,20 @@ export const Header = () => {
   return (
     <StyledHeader isChecked={isChecked}>
       <div className={classes.HeaderContent}>
-        <nav className={classes.HambMenu}>
+        <nav className={classes.MobileMenu}>
           <ul>{renderedNavLinks}</ul>
         </nav>
 
-        <div className={classes.Hamb}>
+        <div className={classes.MobileMenuToggle}>
           <div className={classes.MenuBtn}>
             <input
               checked={isChecked}
-              onChange={onUpdateState}
+              onChange={(e)=>setCheckBoxState(e.target.checked)}
               type="checkbox"
-              id="menu_checkbox"
+              id="menuCheckbox"
               className={classes.MenuCheckBox}
             />
-            <label htmlFor="menu_checkbox" className={classes.MenuLabel}>
+            <label htmlFor="menuCheckbox" className={classes.MenuLabel}>
               <div className={classes.MenuTextBar}></div>
             </label>
           </div>

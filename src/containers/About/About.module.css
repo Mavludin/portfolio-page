@@ -1,20 +1,20 @@
 .AboutPage h1 {
-    margin: 0;
+  margin: 0;
 }
 
 .AboutPage a {
-    color: #ED6464;
-    cursor: pointer;
+  color: #ed6464;
+  cursor: pointer;
 }
 
 .Astronaut {
-    display: block;
-    width: 200px;
-    margin-bottom: 20px;
+  display: block;
+  width: 200px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 600px) {
-    .Astronaut {
-        width: 120px;
-    }
+  .Astronaut {
+    width: 120px;
+  }
 }

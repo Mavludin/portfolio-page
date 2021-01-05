@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import classes from "./Portfolio.module.css";
 
 import html5Icon from "../../assets/images/html-5.svg";
@@ -13,7 +13,7 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { cacheImages } from "../../utils/projectFunctions";
 import { images } from "../../utils/projectData";
 
-export const Portfolio = ({ nodeRef }) => {
+export const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export const Portfolio = ({ nodeRef }) => {
   }, []);
 
   return (
-    <div ref={nodeRef} className={`${classes.PortfolioPage} flex-content Page`}>
+    <div className={`${classes.PortfolioPage} flex-content`}>
       <h1 datatype="My recent works">My recent works</h1>
 
       {isLoading ? (

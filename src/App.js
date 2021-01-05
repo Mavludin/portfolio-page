@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Main.css";
 
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
@@ -11,12 +11,13 @@ import { AboutPage } from "./containers/About/About";
 import { SkillsPage } from "./containers/Skills/Skills";
 import { Portfolio } from "./containers/Portfolio/Portfolio";
 
-import { Route, Switch, useHistory, useLocation } from "react-router-dom";
+import { Route, useHistory, useLocation } from "react-router-dom";
 
 import { navigate, scrollToTop } from "./utils/projectFunctions";
 
 import { navLinks } from "./utils/projectData";
 import { Arrows } from "./components/Arrows/Arrows";
+import { Lines } from "./components/Lines/Lines";
 
 export const App = () => {
   const [allowWheel, setAllowWheel] = useState(true);
@@ -26,7 +27,7 @@ export const App = () => {
     location: useLocation(),
   };
 
-  useEffect(() => {
+  const handleWheel = () => {
     const handleResize = () => {
       if (window.matchMedia("(min-width: 836px)").matches) {
         setAllowWheel(true);
@@ -55,40 +56,50 @@ export const App = () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("wheel", handleWheel);
     };
-  }, [allowWheel, nav]);
+  }
+
+  useEffect(handleWheel, [handleWheel]);
 
   useEffect(() => {
     nav.history.listen((location, action) => {
       scrollToTop();
     });
-  }, [nav]);
+  }, [nav.history]);
+
+  const routes = [
+    { path: "/", name: "HomePage", Component: HomePage, ref: React.createRef() },
+    { path: "/about", name: "AboutPage", Component: AboutPage, ref: React.createRef() },
+    { path: "/skills", name: "SkillsPage", Component: SkillsPage, ref: React.createRef() },
+    { path: "/portfolio", name: "Portfolio", Component: Portfolio, ref: React.createRef() },
+  ];
 
   return (
     <div className="App">
-      <div className="lines">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
 
+      <Lines />
       <Header />
       <Sidebar />
       <Arrows />
 
-      <Route
-        render={({ location }) => (
-          <TransitionGroup className="MainBlock">
-            <CSSTransition key={location.key} timeout={1000} classNames="fade">
-              <Switch location={location}>
-                <Route exact path="/" component={HomePage} />
-                <Route exact path="/about" component={AboutPage} />
-                <Route exact path="/skills" component={SkillsPage} />
-                <Route exact path="/portfolio" component={Portfolio} />
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
-        )}
-      />
+      <div className="MainBlock">
+        {routes.map(({ path, Component, ref }) => (
+          <Route key={path} exact path={path}>
+            {({ match }) => (
+              <CSSTransition
+                in={match != null}
+                timeout={1000}
+                classNames="page"
+                unmountOnExit
+                nodeRef={ref}
+              >
+                <div className="page" ref={ref}>
+                  <Component />
+                </div>
+              </CSSTransition>
+            )}
+          </Route>
+        ))}
+      </div>
 
       <Footer />
     </div>

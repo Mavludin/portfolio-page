@@ -1,82 +1,81 @@
-aside {
-    position: fixed;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100;
-    min-height: 165px;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+.SideBar {
+  position: fixed;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  min-height: 165px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
-aside > div {
-    width: 38px;
-    height: 38px;
-    animation: swing 2s linear infinite;
-    color: #ED6464;
+.SideBar > div {
+  width: 38px;
+  height: 38px;
+  animation: swing 2s linear infinite;
+  color: #ed6464;
 }
 
-aside img {
-    width: 100%;
-    height: 100%;
+.SideBar img {
+  width: 100%;
+  height: 100%;
 }
 
-aside a div {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 1px solid white;
-    cursor: pointer;
-    
-    transition: all .2s;
+.SideBar a div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+
+  transition: all 0.2s;
 }
 
 .Active div {
-    background-color: white;
+  background-color: white;
 }
 
-aside a div:hover {
-    background-color: white;
+.SideBar a div:hover {
+  background-color: white;
 }
 
-aside div + div {
-    margin-top: 15px;
+.SideBar div + div {
+  margin-top: 15px;
 }
 
 @media screen and (max-width: 1199px) {
-    aside {
-        right: 1%;
-    }
+  .SideBar {
+    right: 1%
+  }
 }
 
 @media screen and (max-width: 836px) {
-    aside {
-        display: none;
-    }
+  .SideBar {
+    display: none;
+  }
 }
 
 @keyframes swing {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    25% {
-        transform: translateY(4px);
-    }
+  25% {
+    transform: translateY(4px);
+  }
 
-    50% {
-        transform: translateY(6px);
-    }
+  50% {
+    transform: translateY(6px);
+  }
 
-    75% {
-        transform: translateY(4px);
-    }
+  75% {
+    transform: translateY(4px);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
-
+  100% {
+    transform: translateY(0);
+  }
 }

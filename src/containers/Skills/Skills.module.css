@@ -1,106 +1,102 @@
 .Skills {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -webkit-box-align:center;
-    -ms-flex-align:center;
-    align-items:center;
-    justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .Skills > div {
-    height: 100%;
+  height: 100%;
 }
 
 .SkillsPage ul {
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .SkillsPage li {
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid transparent;
-    font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  font-size: 1.2em;
 }
 
 .SkillsPage img {
-    max-width: 32px;
-    margin-right: 10px;
+  max-width: 32px;
+  margin-right: 10px;
 }
 
 .SpinIcon {
-    animation: rotating 4s linear infinite;
+  animation: rotating 4s linear infinite;
 }
 
 .SkillsPage a {
-    color: #ED6464;
-    cursor: pointer;
+  color: #ed6464;
+  cursor: pointer;
 }
 
 .SkillsPage p {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .SkillsPage li:hover .SpinIcon {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 @keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 836px) {
+  .SkillsPage {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
 
-    .SkillsPage {
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-    }
+  .Skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+  }
 
-    .Skills {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        padding-left: 0;
-    }
+  .Skills h2 {
+    text-align: center;
+  }
 
-    .Skills h2 {
-        text-align: center;
-    }
+  .SkillsPage li {
+    justify-content: center;
+  }
 
-    .SkillsPage li {
-        justify-content: center;
-    }
-
-    .Skills > div {
-        margin-bottom: 20px;
-        width: 100%;
-    }
-
+  .Skills > div {
+    margin-bottom: 20px;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .SkillsPage li {
-        font-size: 1em;
-    }
-
+  .SkillsPage li {
+    font-size: 1em;
+  }
 }
 
 @media screen and (max-width: 436px) {
-    .SkillsPage ul {
-        padding: 0;
-    }
-
+  .SkillsPage ul {
+    padding: 0;
+  }
 }
