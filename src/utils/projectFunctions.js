@@ -1,5 +1,5 @@
 export const scrollToTop = () => {
-    document.querySelector('.MainBlock').scrollTop = '0';
+  document.querySelector('.MainBlock').scrollTop = '0';
 }
 
 export const navigate = (links, nav, direction) => {
@@ -22,3 +22,19 @@ export const navigate = (links, nav, direction) => {
       return true
     })
 }
+
+// Caching images on the portfolio page
+export const cacheImages = async (srcArray, setIsLoading) => {
+  const promises = await srcArray.map((src) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = resolve();
+      img.onerror = reject();
+    });
+  });
+
+  Promise.all(promises);
+
+  setIsLoading(false);
+};

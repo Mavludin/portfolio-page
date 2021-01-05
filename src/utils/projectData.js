@@ -1,61 +1,28 @@
 export const navLinks = [
-    {
-        id: 1,
-        name: 'Home',
-        pathName: '/'
-    },
-    {
-        id: 2,
-        name: 'About Me',
-        pathName: '/about'
-    },
-    {
-        id: 3,
-        name: 'My Skills',
-        pathName: '/skills'
-    },
-    {
-        id: 4,
-        name: 'Portfolio',
-        pathName: '/portfolio'
-    },
-]
+  {
+    id: 1,
+    name: "Home",
+    pathName: "/",
+  },
+  {
+    id: 2,
+    name: "About Me",
+    pathName: "/about",
+  },
+  {
+    id: 3,
+    name: "My Skills",
+    pathName: "/skills",
+  },
+  {
+    id: 4,
+    name: "Portfolio",
+    pathName: "/portfolio",
+  },
+];
 
-export const portfolioData = [
-    {
-        id: 1,
-        title: 'Favorite places',
-        reference: 'https://mavludin-html-css-project.glitch.me/',
-        tools: [ 'Html5Icon', 'Css3Icon', 'GitIcon' ]
-    },
-    {
-        id: 2,
-        title: 'Vegan store',
-        reference: 'https://mavludin-landing-page.glitch.me/home.html',
-        tools: [ 'Html5Icon', 'Css3Icon', 'JsIcon', 'GitIcon' ]
-    },
-    {
-        id: 3,
-        title: 'Momento replica',
-        reference: 'https://mavludin-todo-list.glitch.me/',
-        tools: [ 'Html5Icon', 'Css3Icon',  'JsIcon', 'JQueryIcon', 'GitIcon' ]
-    },
-    {
-        id: 4,
-        title: 'E-commerce',
-        reference: 'https://mavludin-e-commerce.netlify.com/',
-        tools: [ 'Html5Icon', 'Css3Icon',  'JsIcon', 'ReactIcon', 'GitIcon', 'ReduxIcon' ]
-    },
-    {
-        id: 5,
-        title: 'Music player',
-        reference: 'https://mavludin-music-player.netlify.com/',
-        tools: [ 'Html5Icon', 'Css3Icon',  'JsIcon', 'ReactIcon', 'GitIcon' ]
-    },
-    {
-        id: 6,
-        title: 'Admin page',
-        reference: 'https://react-admin-page.firebaseapp.com/',
-        tools: [ 'Html5Icon', 'Css3Icon',  'JsIcon', 'ReactIcon', 'GitIcon', 'ReduxIcon' ]
-    },
-]
+export const images = [
+  require("../assets/images/portfolio/e-com.jpg"),
+  require("../assets/images/portfolio/m-player.jpg"),
+  require("../assets/images/portfolio/admin-page.jpg"),
+];

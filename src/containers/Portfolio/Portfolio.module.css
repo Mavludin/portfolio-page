@@ -34,8 +34,12 @@
     justify-content: center;
 }
 
-.PortfolioPage img {
-    width: 32px;
+.Loader {
+    width: 200px
+}
+
+.Content img {
+    width: 32px
 }
 
 .Tools {
@@ -116,24 +120,12 @@
     transform: scale(1.1);
 }
 
-.FavPlaces .ItemInner::after {
-    background-image: url(../../assets/images/portfolio/fav-places.jpg);
-}
-
 .VeganStore .ItemInner {
     opacity: 0.8;
 }
 
 .VeganStore:hover .ItemInner{
     opacity: 1;
-}
-
-.VeganStore .ItemInner::after {
-    background-image: url(../../assets/images/portfolio/vegan-store.jpg);
-}
-
-.MomentoReplica .ItemInner::after {
-    background-image: url(../../assets/images/portfolio/momento.jpg);
 }
 
 .ECommerce .ItemInner::after {
@@ -149,7 +141,7 @@
 }
 
 @media screen and (max-width: 991px) {
-    .PortfolioPage img {
+    .Content img {
         width: 28px;
     }
 }

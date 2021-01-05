@@ -1,80 +1,81 @@
-import React, { useState } from 'react';
-import classes from './Header.module.css';
+import React, { useState } from "react";
+import classes from "./Header.module.css";
 
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
-import { navLinks } from '../../utils/projectData';
-import styled from 'styled-components';
+import { navLinks } from "../../utils/projectData";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const StyledHeader = styled.header`
-    display: none;
-    width: 100%;
-    height: 60px;
-    position: relative;
-    padding: 20px;
-    z-index: 3;
+  display: none;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  padding: 20px;
+  z-index: 3;
 
-    & nav {
-        transform: ${({isChecked}) => isChecked ? 'translateX(0%)' : 'translateX(-100%)'};
-        opacity: ${({isChecked}) => isChecked ? '1' : '0'}
-    }
+  & nav {
+    transform: ${({ isChecked }) =>
+      isChecked ? "translateX(0%)" : "translateX(-100%)"};
+    opacity: ${({ isChecked }) => (isChecked ? "1" : "0")};
+  }
 
-    @media screen and (max-width: 836px) {
-        & {
-            display: block;
-        }
-    
+  @media screen and (max-width: 836px) {
+    & {
+      display: block;
     }
-`
+  }
+`;
 
 export const Header = () => {
+  const [isChecked, setCheckBoxState] = useState(false);
 
-    const [isChecked, setCheckBoxState] = useState(false);
+  const onUpdateState = (e) => {
+    setCheckBoxState(e.target.checked);
+  };
 
-    const onUpdateState = (e) => {
-        setCheckBoxState(e.target.checked)
-    }
-
-    const renderedNavLinks = navLinks.map(item => {
-        return (
-            <li key={item.id}>
-                <NavLink 
-                    onClick={()=>setCheckBoxState(false)} 
-                    activeClassName={classes.Active} 
-                    exact={true} 
-                    to={item.pathName}>{item.name}
-                </NavLink>
-            </li>
-        )
-    })
-
+  const renderedNavLinks = navLinks.map((item) => {
     return (
-        <StyledHeader isChecked = {isChecked} >
-            <div className={classes.HeaderContent}>
+      <li key={item.id}>
+        <NavLink
+          onClick={() => setCheckBoxState(false)}
+          activeClassName={classes.Active}
+          exact={true}
+          to={item.pathName}
+        >
+          {item.name}
+        </NavLink>
+      </li>
+    );
+  });
 
-                <nav className={classes.HambMenu}>
-                    <ul>
-                        {renderedNavLinks}
-                    </ul>
-                </nav>
+  return (
+    <StyledHeader isChecked={isChecked}>
+      <div className={classes.HeaderContent}>
+        <nav className={classes.HambMenu}>
+          <ul>{renderedNavLinks}</ul>
+        </nav>
 
-                <div className={classes.Hamb}>
-                    <div className={classes.MenuBtn}>
-                        <input 
-                            checked={isChecked} 
-                            onChange={onUpdateState} 
-                            type="checkbox" 
-                            id="menu_checkbox" 
-                            className={classes.MenuCheckBox} 
-                        />
-                        <label htmlFor="menu_checkbox" className={classes.MenuLabel}>
-                            <div className={classes.MenuTextBar}></div>
-                        </label>
-                    </div>
-                </div>
+        <div className={classes.Hamb}>
+          <div className={classes.MenuBtn}>
+            <input
+              checked={isChecked}
+              onChange={onUpdateState}
+              type="checkbox"
+              id="menu_checkbox"
+              className={classes.MenuCheckBox}
+            />
+            <label htmlFor="menu_checkbox" className={classes.MenuLabel}>
+              <div className={classes.MenuTextBar}></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </StyledHeader>
+  );
+};
 
-            </div>
-        </StyledHeader>
-    )
-
+StyledHeader.propTypes = {
+  isChecked: PropTypes.bool
 }
