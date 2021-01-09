@@ -22,7 +22,7 @@ export const navLinks = [
 ];
 
 export const images = [
-  require("../assets/images/portfolio/e-com.jpg"),
-  require("../assets/images/portfolio/m-player.jpg"),
-  require("../assets/images/portfolio/admin-page.jpg"),
+  require("../assets/images/portfolio/e-com.jpg").default,
+  require("../assets/images/portfolio/m-player.jpg").default,
+  require("../assets/images/portfolio/admin-page.jpg").default,
 ];

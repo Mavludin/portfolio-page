@@ -29,12 +29,12 @@ export const cacheImages = async (srcArray, setIsLoading) => {
     return new Promise((resolve, reject) => {
       const img = new Image();
       img.src = src;
-      img.onload = resolve();
-      img.onerror = reject();
+      img.onload = () => resolve()
+      img.onerror = (error) => reject(error)
     });
   });
 
-  Promise.all(promises);
+  await Promise.all(promises);
 
   setIsLoading(false);
 };
