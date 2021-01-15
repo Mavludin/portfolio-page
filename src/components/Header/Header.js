@@ -3,7 +3,7 @@ import classes from "./Header.module.css";
 
 import { NavLink } from "react-router-dom";
 
-import { navLinks } from "../../utils/projectData";
+import { navLinks } from "../../shared/projectData";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 

@@ -108,36 +108,20 @@
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1;
-  background-size: cover;
   background-position: center;
-  transition: 0.25s ease-in-out;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  transition: .3s ease-in;
 }
 
-.Item:hover .ItemInner::after {
+.ItemInner:hover::after {
   opacity: 0.2;
   z-index: -1;
-  transform: scale(1.1);
-}
-
-.VeganStore .ItemInner {
-  opacity: 0.8;
-}
-
-.VeganStore:hover .ItemInner {
-  opacity: 1;
-}
-
-.ECommerce .ItemInner::after {
-  background-image: url(../../assets/images/portfolio/e-com.jpg);
-}
-
-.MusicPlayer .ItemInner::after {
-  background-image: url(../../assets/images/portfolio/m-player.jpg);
-}
-
-.AdminPage .ItemInner::after {
-  background-image: url(../../assets/images/portfolio/admin-page.jpg);
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 991px) {
