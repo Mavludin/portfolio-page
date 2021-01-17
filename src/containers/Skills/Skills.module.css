@@ -75,12 +75,14 @@
     padding-left: 0;
   }
 
-  .Skills h2 {
-    text-align: center;
+  .SkillsPage ul {
+    max-width: 160px;
+    margin: 0 auto;
+    align-items: flex-start;
   }
 
-  .SkillsPage li {
-    justify-content: center;
+  .Skills h2 {
+    text-align: center;
   }
 
   .Skills > div {

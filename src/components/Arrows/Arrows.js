@@ -3,8 +3,8 @@ import classes from "./Arrows.module.css";
 
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
-import { navigate } from "../../utils/projectFunctions";
-import { navLinks } from "../../utils/projectData";
+import { navigate } from "../../shared/projectFunctions";
+import { navLinks } from "../../shared/projectData";
 import { useHistory, useLocation } from "react-router";
 
 export const Arrows = () => {

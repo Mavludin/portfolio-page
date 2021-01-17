@@ -28,7 +28,7 @@ export const cacheImages = async (srcArray, setIsLoading) => {
   const promises = await srcArray.map((src) => {
     return new Promise((resolve, reject) => {
       const img = new Image();
-      img.src = src;
+      img.src = src.thumbnail;
       img.onload = () => resolve()
       img.onerror = (error) => reject(error)
     });
