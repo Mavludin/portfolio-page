@@ -11,13 +11,6 @@ import { Fragment } from "react";
 
 import PropTypes from "prop-types";
 
-const StyledItemInner = styled.div`
-  &::after {
-    background: url(${({ url, isLoading }) => isLoading ? loader : url});
-    background-color: ${({ isLoading }) => isLoading ? `#1f1f1f` : 'none'};
-    background-size: ${({ isLoading }) => isLoading ? 'unset' : 'cover'};
-  }
-`
 export const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,11 +28,17 @@ export const Portfolio = () => {
               <div key={item.id} className={classes.Item}>
                 <h2>{item.title}</h2>
                 <StyledItemInner
-                  url={item.thumbnail}
                   isLoading={isLoading}
+                  url={item.thumbnail}
                   className={classes.ItemInner}
-                  style={{pointerEvents: isLoading ? 'none' : 'all'}}
                 >
+                  <StyledLoader
+                    isLoading={isLoading}
+                    className={classes.Loader}
+                  >
+                   <img src={loader} alt="Loader" />
+                  </StyledLoader>
+
                   <a
                     href={item.ref}
                     className={classes.RedBtn}
@@ -68,6 +67,22 @@ export const Portfolio = () => {
     </div>
   );
 };
+
+const StyledLoader = styled.div`
+  opacity: ${({ isLoading }) => isLoading ? '1' : '0'};
+  z-index: ${({ isLoading }) => isLoading ? '2' : '-1'};
+`
+
+StyledLoader.propTypes = {
+  isLoading: PropTypes.bool
+}
+
+const StyledItemInner = styled.div`
+  &::after {
+    background: url(${({ url }) => url});
+    pointer-events: ${({ isLoading }) => isLoading ? 'none' : 'all'};
+  }
+`
 
 StyledItemInner.propTypes = {
   url: PropTypes.string,

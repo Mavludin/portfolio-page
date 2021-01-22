@@ -7,27 +7,6 @@ import { navLinks } from "../../shared/projectData";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const StyledHeader = styled.header`
-  display: none;
-  width: 100%;
-  height: 60px;
-  position: relative;
-  padding: 20px;
-  z-index: 3;
-
-  & nav {
-    transform: ${({ isChecked }) =>
-      isChecked ? "translateX(0%)" : "translateX(-100%)"};
-    opacity: ${({ isChecked }) => (isChecked ? "1" : "0")};
-  }
-
-  @media screen and (max-width: 836px) {
-    & {
-      display: block;
-    }
-  }
-`;
-
 export const Header = () => {
   const [isChecked, setCheckBoxState] = useState(false);
 
@@ -71,6 +50,27 @@ export const Header = () => {
     </StyledHeader>
   );
 };
+
+const StyledHeader = styled.header`
+  display: none;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  padding: 20px;
+  z-index: 3;
+
+  & nav {
+    transform: ${({ isChecked }) =>
+      isChecked ? "translateX(0%)" : "translateX(-100%)"};
+    opacity: ${({ isChecked }) => (isChecked ? "1" : "0")};
+  }
+
+  @media screen and (max-width: 836px) {
+    & {
+      display: block;
+    }
+  }
+`;
 
 StyledHeader.propTypes = {
   isChecked: PropTypes.bool
