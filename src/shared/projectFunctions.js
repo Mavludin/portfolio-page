@@ -1,7 +1,3 @@
-export const scrollToTop = () => {
-  document.querySelector('.MainBlock').scrollTop = '0';
-}
-
 export const navigate = (links, nav, direction) => {
   links.map((item, pos, array) => {
       if (item.pathName === nav.location.pathname) {

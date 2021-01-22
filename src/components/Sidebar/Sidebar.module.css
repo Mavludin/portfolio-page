@@ -48,17 +48,7 @@
 
 @media screen and (max-width: 1199px) {
   .SideBar {
-    min-width: 165px;
-    min-height: auto;
-  }
-  .SideBar {
-    right: auto;
-    left: 50%;
-    bottom: 15%;
-    transform: translateX(-50%);
-  }
-  .SideBar img {
-    transform: rotate(270deg) rotateY(180deg);
+    right: 15px;
   }
 }
 

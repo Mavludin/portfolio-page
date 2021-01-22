@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Main.css";
 
 import { CSSTransition } from "react-transition-group";
@@ -56,11 +56,14 @@ export const App = () => {
 
   useEffect(handleWheel, [handleWheel]);
 
+  const mainBlock = useRef();
+
   useEffect(() => {
     nav.history.listen((location, action) => {
-      scrollToTop();
+      mainBlock.current.scrollTop = '0'
     });
   }, [nav.history]);
+
 
   return (
     <div className="App">
@@ -70,7 +73,7 @@ export const App = () => {
       <Sidebar />
       <Arrows />
 
-      <div className="MainBlock">
+      <div className="MainBlock" ref={mainBlock}>
         {routes.map(({ path, Component, ref }) => (
           <Route key={path} exact path={path}>
             {({ match }) => (
