@@ -1,11 +1,10 @@
-import { Fragment } from "react";
-import classes from "./Arrows.module.css";
-
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 import { navigate } from "../../shared/projectFunctions";
 import { navLinks } from "../../shared/projectData";
 import { useHistory, useLocation } from "react-router";
+import styled from "styled-components";
+import { Fragment } from "react";
 
 export const Arrows = () => {
   const nav = {
@@ -15,18 +14,46 @@ export const Arrows = () => {
 
   return (
     <Fragment>
-      <div
+      <StyledArrow
         onClick={() => navigate(navLinks, nav, "prev")}
-        className={`${classes.MobileNav} ${classes.PrevPage}`}
+        className='prev'
       >
         <NavigateBeforeIcon />
-      </div>
-      <div
+      </StyledArrow>
+      <StyledArrow
         onClick={() => navigate(navLinks, nav, "next")}
-        className={`${classes.MobileNav} ${classes.NextPage}`}
+        className='next'
       >
         <NavigateNextIcon />
-      </div>
+      </StyledArrow>
     </Fragment>
   );
 };
+
+const StyledArrow = styled.div`
+  display: none;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ED6464;
+  cursor: pointer;
+  z-index: 3;
+
+  svg {
+    font-size: 3em
+  }
+
+  &.prev {
+    left: 0
+  }
+
+  &.next {
+    right: 0
+  }
+
+  @media screen and (max-width: 836px) {
+    & {
+      display: block;
+    }
+  }
+`

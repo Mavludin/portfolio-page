@@ -9,7 +9,7 @@ import { Sidebar } from "./components/Sidebar/Sidebar";
 
 import { Route, useHistory, useLocation } from "react-router-dom";
 
-import { navigate, scrollToTop } from "./shared/projectFunctions";
+import { navigate } from "./shared/projectFunctions";
 
 import { navLinks, routes } from "./shared/projectData";
 import { Arrows } from "./components/Arrows/Arrows";

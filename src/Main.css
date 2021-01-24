@@ -11,6 +11,7 @@ html, body {
 }
 
 body {
+  margin: 0;
   position: relative;
   font-family: 'Poppins', 'Helvetica', sans-serif;
   color: white;
@@ -74,6 +75,7 @@ body {
   height: 100%;
   z-index: 2;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .page-enter {
@@ -143,7 +145,7 @@ a {
 
 
 @media screen and (max-width: 1199px) {
-  .Page {
+  .page {
     padding: 0 40px;
   }
 }
