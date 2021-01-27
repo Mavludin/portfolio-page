@@ -1,10 +1,6 @@
 .Skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   justify-content: space-around;
 }
@@ -16,8 +12,6 @@
 .SkillsPage ul {
   display: flex;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -62,15 +56,10 @@
 
 @media screen and (max-width: 836px) {
   .SkillsPage {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
   }
 
   .Skills {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     padding-left: 0;
   }

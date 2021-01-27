@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./Main.css";
 
 import { CSSTransition } from "react-transition-group";
 
