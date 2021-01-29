@@ -1,27 +1,26 @@
-import classes from "./Sidebar.module.css";
-
 import { NavLink } from "react-router-dom";
 
 import pointDownIcon from "../../assets/images/aside/point-down.svg";
+import { StyledAside } from "./styles";
 
 export const Sidebar = () => {
   return (
-    <aside className={classes.SideBar}>
+    <StyledAside>
       <div>
         <img src={pointDownIcon} alt="Point down" />
       </div>
-      <NavLink exact={true} activeClassName={classes.Active} to="/">
+      <NavLink exact={true} activeClassName="active" to="/">
         <div></div>
       </NavLink>
-      <NavLink activeClassName={classes.Active} exact to="/about">
+      <NavLink activeClassName="active" exact to="/about">
         <div></div>
       </NavLink>
-      <NavLink activeClassName={classes.Active} exact to="/skills">
+      <NavLink activeClassName="active" exact to="/skills">
         <div></div>
       </NavLink>
-      <NavLink activeClassName={classes.Active} exact to="/portfolio">
+      <NavLink activeClassName="active" exact to="/projects">
         <div></div>
       </NavLink>
-    </aside>
+    </StyledAside>
   );
 };

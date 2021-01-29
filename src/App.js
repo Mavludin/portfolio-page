@@ -2,17 +2,17 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { CSSTransition } from "react-transition-group";
 
-import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
-import { Sidebar } from "./components/Sidebar/Sidebar";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { Sidebar } from "./components/Sidebar";
 
 import { Route, useHistory, useLocation } from "react-router-dom";
 
 import { navigate } from "./shared/projectFunctions";
 
 import { navLinks, routes } from "./shared/projectData";
-import { Arrows } from "./components/Arrows/Arrows";
-import { Lines } from "./components/Lines/Lines";
+import { Arrows } from "./components/Arrows";
+import { Lines } from "./components/Lines";
 
 export const App = () => {
   const [allowWheel, setAllowWheel] = useState(true);
@@ -65,14 +65,14 @@ export const App = () => {
 
 
   return (
-    <div className="App">
+    <div className="app">
 
       <Lines />
       <Header />
       <Sidebar />
       <Arrows />
 
-      <div className="MainBlock" ref={mainBlock}>
+      <div className="mainBlock" ref={mainBlock}>
         {routes.map(({ path, Component, ref }) => (
           <Route key={path} exact path={path}>
             {({ match }) => (

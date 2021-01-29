@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -19,11 +20,11 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #1f1f1f;
   }
   
-  #root, .App {
+  #root, .app {
     height: 100%;
   }
   
-  .App {
+  .app {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -31,13 +32,13 @@ export const GlobalStyles = createGlobalStyle`
     overflow: hidden;
   }
   
-  .MainBlock {
+  .mainBlock {
     width: 100%;
     position: relative;
     height: calc(100% - 50px);
   }
   
-  .flex-content {
+  .flexContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,11 +95,11 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   h1::before {
+    content: attr(datatype);
     height: 100%;
     width: 100%;
     opacity: 0;
     position: absolute;
-    content: attr(datatype);
     z-index: -1;
     left: 5px;
     color: red;
@@ -150,15 +151,15 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   @media screen and (max-width: 836px) {
-    .App {
+    .app {
       justify-content: space-between;
       overflow: visible;
     }
   
-    .MainBlock {
+    .mainBlock {
       overflow: scroll;
     }
-  
+
   }
   
   @media screen and (max-width: 700px) {

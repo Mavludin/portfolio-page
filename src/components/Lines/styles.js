@@ -1,17 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Lines = () => {
-
-  return (
-    <StyledLines className="lines">
-      <div className="line"></div>
-      <div className="line"></div>
-      <div className="line"></div>
-    </StyledLines>
-  );
-};
-
-const StyledLines = styled.div`
+export const StyledLines = styled.div`
   position: absolute;
   top: 0;
   left: 0;

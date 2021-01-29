@@ -1,11 +1,10 @@
 import { useState } from "react";
-import classes from "./Header.module.css";
 
 import { NavLink } from "react-router-dom";
 
 import { navLinks } from "../../shared/projectData";
-import styled from "styled-components";
 import PropTypes from "prop-types";
+import { StyledHeader } from "./styles";
 
 export const Header = () => {
   const [isChecked, setCheckBoxState] = useState(false);
@@ -15,7 +14,7 @@ export const Header = () => {
       <li key={item.id}>
         <NavLink
           onClick={() => setCheckBoxState(false)}
-          activeClassName={classes.Active}
+          activeClassName='active'
           exact={true}
           to={item.pathName}
         >
@@ -27,22 +26,22 @@ export const Header = () => {
 
   return (
     <StyledHeader isChecked={isChecked}>
-      <div className={classes.HeaderContent}>
-        <nav className={classes.MobileMenu}>
+      <div className='headerContent'>
+        <nav className='mobileMenu'>
           <ul>{renderedNavLinks}</ul>
         </nav>
 
-        <div className={classes.MobileMenuToggle}>
-          <div className={classes.MenuBtn}>
+        <div className='mobileMenuToggle'>
+          <div className='menuBtn'>
             <input
               checked={isChecked}
               onChange={(e)=>setCheckBoxState(e.target.checked)}
               type="checkbox"
               id="menuCheckbox"
-              className={classes.MenuCheckBox}
+              className='menuCheckBox'
             />
-            <label htmlFor="menuCheckbox" className={classes.MenuLabel}>
-              <div className={classes.MenuTextBar}></div>
+            <label htmlFor="menuCheckbox" className='menuLabel'>
+              <div className='menuTextBar'></div>
             </label>
           </div>
         </div>
@@ -50,27 +49,6 @@ export const Header = () => {
     </StyledHeader>
   );
 };
-
-const StyledHeader = styled.header`
-  display: none;
-  width: 100%;
-  height: 60px;
-  position: relative;
-  padding: 20px;
-  z-index: 3;
-
-  & nav {
-    transform: ${({ isChecked }) =>
-      isChecked ? "translateX(0%)" : "translateX(-100%)"};
-    opacity: ${({ isChecked }) => (isChecked ? "1" : "0")};
-  }
-
-  @media screen and (max-width: 836px) {
-    & {
-      display: block;
-    }
-  }
-`;
 
 StyledHeader.propTypes = {
   isChecked: PropTypes.bool

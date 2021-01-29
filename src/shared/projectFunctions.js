@@ -1,3 +1,4 @@
+// Main navigation
 export const navigate = (links, nav, direction) => {
   links.map((item, pos, array) => {
       if (item.pathName === nav.location.pathname) {
@@ -19,7 +20,7 @@ export const navigate = (links, nav, direction) => {
     })
 }
 
-// Caching images on the portfolio page
+// Caching images on the projects page
 export const cacheImages = async (srcArray, setIsLoading) => {
   const promises = await srcArray.map((src) => {
     return new Promise((resolve, reject) => {

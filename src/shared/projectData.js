@@ -7,10 +7,12 @@ import reactIcon from "../assets/images/react.svg";
 import reduxIcon from "../assets/images/redux.svg";
 import gitIcon from "../assets/images/git.svg";
 
-import { HomePage } from "../containers/HomePage/HomePage";
-import { AboutPage } from "../containers/About/About";
-import { SkillsPage } from "../containers/Skills/Skills";
-import { Portfolio } from "../containers/Portfolio/Portfolio";
+import { HomePage } from "../containers/HomePage";
+import { AboutPage } from "../containers/About";
+import { SkillsPage } from "../containers/Skills";
+import { GitHub, LinkedIn, Mail, Twitter } from "@material-ui/icons";
+import Instagram from "@material-ui/icons/Instagram";
+import { Projects } from "../containers/Projects";
 
 export const navLinks = [
   {
@@ -30,8 +32,8 @@ export const navLinks = [
   },
   {
     id: 4,
-    name: "Portfolio",
-    pathName: "/portfolio",
+    name: "Projects",
+    pathName: "/projects",
   },
 ];
 
@@ -39,15 +41,15 @@ export const routes = [
   { path: "/", name: "HomePage", Component: HomePage, ref: React.createRef() },
   { path: "/about", name: "AboutPage", Component: AboutPage, ref: React.createRef() },
   { path: "/skills", name: "SkillsPage", Component: SkillsPage, ref: React.createRef() },
-  { path: "/portfolio", name: "Portfolio", Component: Portfolio, ref: React.createRef() },
+  { path: "/projects", name: "Projects", Component: Projects, ref: React.createRef() },
 ];
 
-export const portfolioData = [
+export const projects = [
   {
     id: 1,
     title: 'E-commerce',
     ref: 'https://mavludin-e-commerce.netlify.com/',
-    thumbnail: require('../assets/images/portfolio/e-com.jpg').default,
+    thumbnail: require('../assets/images/projects/e-com.jpg').default,
     tools: [
       {
         id: 1,
@@ -86,7 +88,7 @@ export const portfolioData = [
     id: 2,
     title: 'Music Player',
     ref: 'https://mavludin-music-player.netlify.com/',
-    thumbnail: require('../assets/images/portfolio/m-player.jpg').default,
+    thumbnail: require('../assets/images/projects/m-player.jpg').default,
     tools: [
       {
         id: 1,
@@ -120,7 +122,7 @@ export const portfolioData = [
     id: 3,
     title: 'Admin page',
     ref: 'https://react-admin-page.firebaseapp.com/',
-    thumbnail: require('../assets/images/portfolio/admin-page.jpg').default,
+    thumbnail: require('../assets/images/projects/admin-page.jpg').default,
     tools: [
       {
         id: 1,
@@ -155,4 +157,32 @@ export const portfolioData = [
     ]
   },
 
+]
+
+export const socials = [
+  {
+    id: 1,
+    ref: 'mailto:imevlud@gmail.com',
+    Content: Mail
+  },
+  {
+    id: 2,
+    ref: 'https://www.linkedin.com/in/mavludin-abdulkadirov-a7b037167/',
+    Content: LinkedIn
+  },
+  {
+    id: 3,
+    ref: 'https://github.com/Mavludin',
+    Content: GitHub
+  },
+  {
+    id: 4,
+    ref: 'https://twitter.com/_mavludin',
+    Content: Twitter
+  },
+  {
+    id: 5,
+    ref: 'https://instagram.com/icukengw/',
+    Content: Instagram
+  },
 ]

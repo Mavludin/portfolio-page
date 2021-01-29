@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 import astronaut from "../../assets/images/about/astronaut.svg";
-import styled from "styled-components";
+import { StyledAbout } from "./styles";
 
 export const AboutPage = () => {
   return (
-    <StyledAbout className="about flex-content">
+    <StyledAbout className="about flexContent">
       <h1 datatype="What do I do?">What do I do?</h1>
 
       <img className='astronaut' src={astronaut} alt="That's me" />
@@ -20,33 +20,3 @@ export const AboutPage = () => {
     </StyledAbout>
   );
 };
-
-const StyledAbout = styled.div`
-  h1 {
-    margin: 0
-  }
-
-  p {
-    text-align: center
-  }
-
-  a {
-    color: #ed6464
-  }
-
-  .astronaut {
-    display: block;
-    width: 200px;
-    margin-bottom: 20px
-  }
-
-  @media screen and (max-width: 600px) {
-    .astronaut {
-      width: 120px;
-    }
-    p {
-      text-align: justify
-    }
-  }
-
-`

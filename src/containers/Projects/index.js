@@ -1,53 +1,48 @@
 import { useEffect, useState } from "react";
-import classes from "./Portfolio.module.css";
 
-import loader from "../../assets/images/portfolio/loader.svg";
+import loader from "../../assets/images/projects/loader.svg";
 
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { cacheImages } from "../../shared/projectFunctions";
-import { portfolioData } from "../../shared/projectData";
-import styled from "styled-components";
+import { projects } from "../../shared/projectData";
 import { Fragment } from "react";
+import { StyledItemInner, StyledLoader, StyledProjects } from "./styles";
 
 import PropTypes from "prop-types";
 
-export const Portfolio = () => {
+export const Projects = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    cacheImages(portfolioData, setIsLoading);
+    cacheImages(projects, setIsLoading);
   }, []);
 
   return (
-    <div className={`${classes.PortfolioPage} flex-content`}>
+    <StyledProjects className='projects flexContent'>
       <h1 datatype="My recent works">My recent works</h1>
-      <div className={classes.Content}>
+      <div className='content'>
         {
-          portfolioData.map(item=>{
+          projects.map(item=>{
             return (
-              <div key={item.id} className={classes.Item}>
+              <div key={item.id} className='item'>
                 <h2>{item.title}</h2>
                 <StyledItemInner
+                  className="itemInner"
                   isLoading={isLoading}
                   url={item.thumbnail}
-                  className={classes.ItemInner}
                 >
-                  <StyledLoader
-                    isLoading={isLoading}
-                    className={classes.Loader}
-                  >
+                  <StyledLoader isLoading={isLoading}>
                    <img src={loader} alt="Loader" />
                   </StyledLoader>
-
                   <a
                     href={item.ref}
-                    className={classes.RedBtn}
+                    className='redBtn'
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <span>Take a look</span> <ArrowForwardIcon />
                   </a>
-                  <p className={classes.Tools}>
+                  <p className='tools'>
                     {
                       item.tools.map(item=>{
                         return(
@@ -64,25 +59,13 @@ export const Portfolio = () => {
           })
         }
       </div>
-    </div>
+    </StyledProjects>
   );
 };
-
-const StyledLoader = styled.div`
-  opacity: ${({ isLoading }) => isLoading ? '1' : '0'};
-  z-index: ${({ isLoading }) => isLoading ? '2' : '-1'};
-`
 
 StyledLoader.propTypes = {
   isLoading: PropTypes.bool
 }
-
-const StyledItemInner = styled.div`
-  &::after {
-    background: url(${({ url }) => url});
-    pointer-events: ${({ isLoading }) => isLoading ? 'none' : 'all'};
-  }
-`
 
 StyledItemInner.propTypes = {
   url: PropTypes.string,
