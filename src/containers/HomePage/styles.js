@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const StyledHomePage = styled.div`
 
+  & {
+    justify-content: center !important
+  }
+
   & h1 span {
     color: #ed6464;
   }

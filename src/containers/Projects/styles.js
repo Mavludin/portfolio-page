@@ -34,7 +34,7 @@ export const StyledProjects = styled.div`
     width: 32px
   }
 
-  .redBtn {
+  & .redBtn {
     font-size: 1em;
     border: 2px solid white;
     padding: 5px 15px;
@@ -46,17 +46,17 @@ export const StyledProjects = styled.div`
     transition: background-color 0.2s;
   }
 
-  .redBtn svg {
+  & .redBtn svg {
     margin-left: 8px;
     width: 0.8em;
   }
 
-  .redBtn:hover {
+  & .redBtn:hover {
     background-color: #ed6464;
     border-color: #ed6464;
   }
 
-  .redBtn:hover svg {
+  & .redBtn:hover svg {
     animation: jumping 1s ease-out;
   }
 
@@ -87,10 +87,6 @@ export const StyledProjects = styled.div`
   }
 
   @media screen and (max-width: 836px) {
-    & {
-      justify-content: flex-start !important
-    }
-    
     .item {
       width: 50%;
     }

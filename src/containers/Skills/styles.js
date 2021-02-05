@@ -60,10 +60,6 @@ export const StyledSkills = styled.div`
 
   @media screen and (max-width: 836px) {
 
-    & {
-      justify-content: flex-start !important
-    }
-
     .skills {
       flex-direction: column;
       padding-left: 0;

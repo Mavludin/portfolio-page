@@ -160,6 +160,10 @@ export const GlobalStyles = createGlobalStyle`
       overflow: scroll;
     }
 
+    .flexContent {
+      justify-content: flex-start
+    }
+
   }
   
   @media screen and (max-width: 700px) {
