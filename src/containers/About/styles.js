@@ -19,7 +19,6 @@ export const StyledAbout = styled.div`
   .astronaut {
     width: 200px;
     min-width: 150px;
-    margin-bottom: 20px;
     transition: .3s;
 
     /* min-height: ${({ isLoading }) => isLoading ? 0 : '195px'}; */
@@ -35,11 +34,16 @@ export const StyledAbout = styled.div`
   }
 
   @media screen and (max-width: 600px) {
+    h1 {
+      height: 15%
+    }
     .astronaut {
       width: 150px;
+      height: 40%;
     }
     p {
-      text-align: justify
+      text-align: justify;
+      height: 45%
     }
   }
 

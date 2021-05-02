@@ -5,7 +5,7 @@ import { StyledAside } from "./styles";
 
 export const Sidebar = () => {
   return (
-    <StyledAside>
+    <StyledAside className="asideNav">
       <div>
         <img src={pointDownIcon} alt="Point down" />
       </div>

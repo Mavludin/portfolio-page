@@ -47,9 +47,9 @@ export const routes = [
 export const projects = [
   {
     id: 1,
-    title: 'E-commerce',
-    ref: 'https://mavludin-e-commerce.netlify.com/',
-    thumbnail: require('../assets/images/projects/e-com.jpg').default,
+    title: 'Pizza Shop',
+    ref: 'https://mavludin-pizza-shop.netlify.app/',
+    thumbnail: require('../assets/images/projects/pizza-shop.jpg').default,
     tools: [
       {
         id: 1,

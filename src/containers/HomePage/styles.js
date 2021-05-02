@@ -33,10 +33,6 @@ export const StyledHomePage = styled.div`
     border-color: #ed6464;
   }
 
-  .redBtn:hover svg {
-    animation: jumping 1s ease-out;
-  }
-
   @media screen and (max-width: 700px) {
     .redBtn {
       font-size: 1.2em;

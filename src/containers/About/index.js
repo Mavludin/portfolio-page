@@ -11,7 +11,6 @@ export const AboutPage = () => {
 
   useEffect(()=>{
     cacheImages([{thumbnail: astronaut}], setIsLoading)
-    console.log(isLoading)
   }, [isLoading])
 
   return (
@@ -20,8 +19,6 @@ export const AboutPage = () => {
       className="about flexContent"
     >
       <h1 datatype="What do I do?">What do I do?</h1>
-
-      {/* <img className='astronaut' src={astronaut} alt="That's me" /> */}
 
       <div className="astronaut"></div>
 
