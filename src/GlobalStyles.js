@@ -30,6 +30,7 @@ export const GlobalStyles = createGlobalStyle`
     justify-content: space-around;
     align-items:center;
     overflow: hidden;
+    min-height: max-content
   }
   
   .mainBlock {

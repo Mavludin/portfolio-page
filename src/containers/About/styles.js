@@ -19,10 +19,10 @@ export const StyledAbout = styled.div`
   .astronaut {
     width: 200px;
     min-width: 150px;
+    min-height: 180px;
     transition: .3s;
 
     /* min-height: ${({ isLoading }) => isLoading ? 0 : '195px'}; */
-    height: 195px;
     /* background-image: url(${astronaut});s */
     background-image: url(${({ isLoading }) => isLoading ? overlay : astronaut});
     transform: translateX(${({ isLoading }) => isLoading ? '-100%' : 0});
@@ -34,16 +34,11 @@ export const StyledAbout = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    h1 {
-      height: 15%
-    }
     .astronaut {
       width: 150px;
-      height: 40%;
     }
     p {
       text-align: justify;
-      height: 45%
     }
   }
 
