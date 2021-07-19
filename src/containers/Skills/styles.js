@@ -56,8 +56,8 @@ export const StyledSkills = styled.div`
   @media screen and (max-width: 836px) {
 
     & {
-      display: block;
-      height: auto
+      display: block !important;
+      height: auto !important
     }
 
     .skillsContent {
