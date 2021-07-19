@@ -12,7 +12,7 @@ import { routes } from "./shared/projectData";
 import { Arrows } from "./components/Arrows";
 import { Lines } from "./components/Lines";
 import { Language } from "./components/Language";
-import { useWheel } from "./shared/hooks";
+import { useWheel } from "./shared/useWheel";
 
 export const App = () => {
 
@@ -21,7 +21,7 @@ export const App = () => {
     location: useLocation(),
   };
 
-  useWheel()
+  useWheel(nav)
 
   const mainBlock = useRef();
 

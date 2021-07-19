@@ -1,9 +1,9 @@
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
-import { navigate } from "../../shared/projectFunctions";
+import { navBack, navForward } from "../../shared/projectFunctions";
 import { navLinks } from "../../shared/projectData";
 import { useHistory, useLocation } from "react-router";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { StyledArrow } from "./styles";
 
 export const Arrows = () => {
@@ -12,16 +12,34 @@ export const Arrows = () => {
     location: useLocation(),
   };
 
+  const [allowNav, setAllowNav] = useState(true)
+
+  const handleForwardNav = () => {
+    if (allowNav) {
+      setAllowNav(false);
+      setTimeout(() => setAllowNav(true), 1000)
+      navForward(navLinks, nav)
+    }
+  }
+
+  const handleBackwardsNav = () => {
+    if (allowNav) {
+      setAllowNav(false);
+      setTimeout(() => setAllowNav(true), 1000)
+      navBack(navLinks, nav)
+    }
+  }
+
   return (
     <Fragment>
       <StyledArrow
-        onClick={() => navigate(navLinks, nav, "prev")}
+        onClick={handleForwardNav}
         className='prev'
       >
         <NavigateBeforeIcon />
       </StyledArrow>
       <StyledArrow
-        onClick={() => navigate(navLinks, nav, "next")}
+        onClick={handleBackwardsNav}
         className='next'
       >
         <NavigateNextIcon />

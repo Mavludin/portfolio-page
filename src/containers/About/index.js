@@ -11,7 +11,7 @@ export const AboutPage = () => {
 
   useEffect(()=>{
     cacheImages([{thumbnail: astronaut}], setIsLoading)
-  }, [isLoading])
+  }, [])
 
   return (
     <StyledAbout

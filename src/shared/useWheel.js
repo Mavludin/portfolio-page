@@ -1,50 +1,47 @@
 import { useEffect, useState } from "react";
-import { useHistory, useLocation } from "react-router";
 import { navLinks } from "./projectData";
-import { navigate } from "./projectFunctions";
+import { navBack, navForward } from "./projectFunctions";
 
-export const useWheel = () => {
+export const useWheel = (nav) => {
+
   const [allowWheel, setAllowWheel] = useState(true);
 
-  const nav = {
-    history: useHistory(),
-    location: useLocation(),
-  };
-
-  const handleWheel = () => {
+  useEffect(() => {
     const handleResize = () => {
       if (window.matchMedia("(min-width: 836px)").matches) {
         setAllowWheel(true);
       } else {
         setAllowWheel(false);
       }
-    };
-
+    }
     handleResize()
-
+    
     window.addEventListener("resize", handleResize);
 
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [])
+
+  useEffect(() => {
     const handleWheel = (e) => {
       if (allowWheel) {
         setAllowWheel(false);
         setTimeout(() => setAllowWheel(true), 1000)
         if (e.deltaY > 0) {
-          navigate(navLinks, nav, "next");
+          navForward(navLinks, nav);
         } else {
-          navigate(navLinks, nav, "prev");
+          navBack(navLinks, nav);
         }
       } else return false;
-    };
 
+    }
     window.addEventListener("wheel", handleWheel);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
       window.removeEventListener("wheel", handleWheel);
     };
-  }
-
-  useEffect(handleWheel, [handleWheel]);
+  }, [allowWheel, nav])
 
   return allowWheel
 

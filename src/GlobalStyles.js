@@ -86,9 +86,9 @@ export const GlobalStyles = createGlobalStyle`
   
   h1 {
     font-size: 3em;
-    text-align: center;
     position: relative;
     margin-bottom: 30px;
+    text-align: center;
   }
   
   h1:hover::before {

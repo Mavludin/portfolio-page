@@ -7,6 +7,10 @@ import reactIcon from "../assets/images/react.svg";
 import reduxIcon from "../assets/images/redux.svg";
 import gitIcon from "../assets/images/git.svg";
 
+import pizzaShopThumbnail from '../assets/images/projects/pizza-shop.jpg'
+import musicPlayerThumbnail from '../assets/images/projects/m-player.jpg'
+import adminPageThumbnail from '../assets/images/projects/admin-page.jpg'
+
 import { HomePage } from "../containers/HomePage";
 import { AboutPage } from "../containers/About";
 import { SkillsPage } from "../containers/Skills";
@@ -49,7 +53,7 @@ export const projects = [
     id: 1,
     title: 'Pizza Shop',
     ref: 'https://mavludin-pizza-shop.netlify.app/',
-    thumbnail: require('../assets/images/projects/pizza-shop.jpg').default,
+    thumbnail: pizzaShopThumbnail,
     tools: [
       {
         id: 1,
@@ -88,7 +92,7 @@ export const projects = [
     id: 2,
     title: 'Music Player',
     ref: 'https://mavludin-music-player.netlify.com/',
-    thumbnail: require('../assets/images/projects/m-player.jpg').default,
+    thumbnail: musicPlayerThumbnail,
     tools: [
       {
         id: 1,
@@ -122,7 +126,7 @@ export const projects = [
     id: 3,
     title: 'Admin page',
     ref: 'https://react-admin-page.firebaseapp.com/',
-    thumbnail: require('../assets/images/projects/admin-page.jpg').default,
+    thumbnail: adminPageThumbnail,
     tools: [
       {
         id: 1,

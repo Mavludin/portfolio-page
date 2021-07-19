@@ -5,11 +5,10 @@ export const StyledHeader = styled.header`
   width: 100%;
   height: 60px;
   position: relative;
-  padding: 20px;
+  padding: 15px;
   z-index: 3;
 
   .headerContent {
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

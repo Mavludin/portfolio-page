@@ -2,25 +2,19 @@ import styled from "styled-components";
 
 export const StyledSkills = styled.div`
   .skills {
-    display: flex;
     width: 100%;
-    align-items: center;
+  }
+
+  .skillsContent {
+    display: flex;
     justify-content: space-around;
   }
 
-  .skills > div {
+  .skillsContent > div {
     height: 100%;
   }
 
-  & ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
   & li {
-    display: flex;
-    align-items: center;
     border-bottom: 2px solid transparent;
     font-size: 1.2em;
     width: 100%;
@@ -29,6 +23,7 @@ export const StyledSkills = styled.div`
   & img {
     max-width: 32px;
     margin-right: 10px;
+    vertical-align: middle;
   }
 
   .spinIcon {
@@ -44,7 +39,7 @@ export const StyledSkills = styled.div`
     margin-top: 20px;
   }
 
-  & li:hover .SpinIcon {
+  & li:hover .spinIcon {
     animation-play-state: paused;
   }
 
@@ -60,9 +55,18 @@ export const StyledSkills = styled.div`
 
   @media screen and (max-width: 836px) {
 
-    .skills {
-      flex-direction: column;
-      padding-left: 0;
+    & {
+      display: block;
+      height: auto
+    }
+
+    .skillsContent {
+      display: block;
+    }
+
+    .skillsContent > div {
+      width: 100%;
+      margin-bottom: 20px
     }
 
     & ul {
