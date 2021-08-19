@@ -57,7 +57,7 @@ export const StyledSkills = styled.div`
 
     & {
       display: block !important;
-      height: auto !important
+      height: auto !important;
     }
 
     .skillsContent {

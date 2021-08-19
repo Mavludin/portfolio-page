@@ -42,10 +42,10 @@ export const navLinks = [
 ];
 
 export const routes = [
-  { path: "/", name: "HomePage", Component: HomePage, ref: React.createRef() },
-  { path: "/about", name: "AboutPage", Component: AboutPage, ref: React.createRef() },
-  { path: "/skills", name: "SkillsPage", Component: SkillsPage, ref: React.createRef() },
-  { path: "/projects", name: "Projects", Component: Projects, ref: React.createRef() },
+  { exact: true, path: "/", name: "HomePage", Component: HomePage, ref: React.createRef() },
+  { exact: false, path: "/about", name: "AboutPage", Component: AboutPage, ref: React.createRef() },
+  { exact: false, path: "/skills", name: "SkillsPage", Component: SkillsPage, ref: React.createRef() },
+  { exact: false, path: "/projects", name: "Projects", Component: Projects, ref: React.createRef() },
 ];
 
 export const projects = [

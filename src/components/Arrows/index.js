@@ -33,13 +33,13 @@ export const Arrows = () => {
   return (
     <Fragment>
       <StyledArrow
-        onClick={handleForwardNav}
+        onClick={handleBackwardsNav}
         className='prev'
       >
         <NavigateBeforeIcon />
       </StyledArrow>
       <StyledArrow
-        onClick={handleBackwardsNav}
+        onClick={handleForwardNav}
         className='next'
       >
         <NavigateNextIcon />

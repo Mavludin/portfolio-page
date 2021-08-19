@@ -1,0 +1,20 @@
+.noMatch h1 {
+  display: flex;
+  align-items: center;
+}
+
+.noMatch svg {
+  font-size: 2em;
+  margin-left: 10px;
+}
+
+.noMatch a {
+  color: #ed6464;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 836px) {
+  .noMatch {
+    justify-content: center;
+  }
+}

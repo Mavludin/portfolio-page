@@ -90,6 +90,10 @@ export const StyledProjects = styled.div`
     .item {
       width: 50%;
     }
+
+    & {
+      justify-content: flex-start !important
+    }
   }
 
   @media screen and (max-width: 600px) {

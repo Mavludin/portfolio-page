@@ -8,32 +8,38 @@ import { Sidebar } from "./components/Sidebar";
 
 import { Route, useHistory, useLocation } from "react-router-dom";
 
-import { routes } from "./shared/projectData";
+import { navLinks, routes } from "./shared/projectData";
 import { Arrows } from "./components/Arrows";
 import { Lines } from "./components/Lines";
 import { Language } from "./components/Language";
 import { useWheel } from "./shared/useWheel";
+import { NoMatch } from "./containers/NoMatch/NoMatch";
 
 export const App = () => {
-
   const nav = {
     history: useHistory(),
     location: useLocation(),
   };
 
-  useWheel(nav)
+  useWheel(nav);
 
   const mainBlock = useRef();
 
   useEffect(() => {
     nav.history.listen((location, action) => {
-      mainBlock.current.scrollTop = '0'
+      mainBlock.current.scrollTop = "0";
     });
   }, [nav.history]);
 
+  useEffect(() => {
+    const match = navLinks.some(
+      (link) => link.pathName === nav.location.pathname
+    );
+    if (!match) nav.history.push("/404");
+  }, []);
+
   return (
     <div className="app">
-
       <Lines />
       <Header />
       <Sidebar />
@@ -59,6 +65,9 @@ export const App = () => {
             )}
           </Route>
         ))}
+        <Route exact path="/404">
+          <NoMatch />
+        </Route>
       </div>
 
       <Footer />
