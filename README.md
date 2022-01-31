@@ -4,7 +4,8 @@
 
 ## Библиотеки
 
-Дополнительные библиотеки, которые используются: Axios, Char.js, Redux
+Дополнительные библиотеки, которые используются:  
+Material UI, Prop Types, React Router, React Transition Group, Styled Components
 
 ## Запуск проекта
 
