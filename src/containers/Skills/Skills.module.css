@@ -1,0 +1,102 @@
+.skills {
+  width: 100%;
+}
+
+.skillsContent {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skillsContent > div {
+  height: 100%;
+}
+
+.skills li {
+  border-bottom: 2px solid transparent;
+  font-size: 1.2em;
+  width: 100%;
+}
+
+.skills img {
+  max-width: 32px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.spinIcon {
+  animation: rotating 4s linear infinite;
+}
+
+.skills a {
+  color: #ed6464;
+  cursor: pointer;
+}
+
+.skillsPage p {
+  margin-top: 20px;
+}
+
+.skillsPage li:hover .spinIcon {
+  animation-play-state: paused;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 836px) {
+  .skillsPage {
+    display: block !important;
+    height: auto !important;
+  }
+
+  .skillsContent {
+    display: block;
+  }
+
+  .skillsContent > div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .skillsPage ul {
+    max-width: 185px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  .skills h2 {
+    text-align: center;
+  }
+
+  .skills > div {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .skillsPage li {
+    margin-left: 27px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skillsPage ul {
+    width: 170px;
+  }
+
+  .skillsPage li {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .skillsPage ul {
+    padding: 0;
+  }
+}

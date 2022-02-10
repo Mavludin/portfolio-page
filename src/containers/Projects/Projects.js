@@ -7,6 +7,7 @@ import { cacheImages } from "../../shared/projectFunctions";
 import { projects } from "../../shared/projectData";
 import { Fragment } from "react";
 import { StyledItemInner, StyledLoader, StyledProjects } from "./styles";
+import styles from './Projects.module.css'
 
 import PropTypes from "prop-types";
 
@@ -18,7 +19,7 @@ export const Projects = () => {
   }, []);
 
   return (
-    <StyledProjects className='projects flexContent'>
+    <StyledProjects className={`${styles.projects} flexContent`}>
       <h1 datatype="My recent works">My recent works</h1>
       <div className='content'>
         {

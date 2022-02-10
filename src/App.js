@@ -36,7 +36,7 @@ export const App = () => {
       (link) => link.pathName === nav.location.pathname
     );
     if (!match) nav.history.push("/404");
-  }, []);
+  }, [nav.location.pathname, nav.history]);
 
   return (
     <div className="app">

@@ -1,11 +1,11 @@
 import React from "react";
 
-import html5Icon from "../assets/images/html-5.svg";
-import css3Icon from "../assets/images/css-3.svg";
-import jsIcon from "../assets/images/js.svg";
-import reactIcon from "../assets/images/react.svg";
-import reduxIcon from "../assets/images/redux.svg";
-import gitIcon from "../assets/images/git.svg";
+import html5Icon from "../assets/images/skills/html-5.svg";
+import css3Icon from "../assets/images/skills/css-3.svg";
+import jsIcon from "../assets/images/skills/js.svg";
+import reactIcon from "../assets/images/skills/react.svg";
+import reduxIcon from "../assets/images/skills/redux.svg";
+import gitIcon from "../assets/images/skills/git.svg";
 
 import pizzaShopThumbnail from '../assets/images/projects/pizza-shop.jpg'
 import musicPlayerThumbnail from '../assets/images/projects/m-player.jpg'
@@ -13,10 +13,10 @@ import adminPageThumbnail from '../assets/images/projects/admin-page.jpg'
 
 import { HomePage } from "../containers/HomePage";
 import { AboutPage } from "../containers/About";
-import { SkillsPage } from "../containers/Skills";
+import { SkillsPage } from "../containers/Skills/Skills";
 import { GitHub, LinkedIn, Mail, Twitter } from "@material-ui/icons";
 import Instagram from "@material-ui/icons/Instagram";
-import { Projects } from "../containers/Projects";
+import { Projects } from "../containers/Projects/Projects";
 
 export const navLinks = [
   {
