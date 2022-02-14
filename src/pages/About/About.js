@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import astronaut from "../../assets/images/about/astronaut.svg";
 import { cacheImages } from "../../shared/projectFunctions";
-import { StyledAbout } from "./styles";
+import { StyledAstronaut } from "./styles";
+import styles from './About.module.css'
 
 export const AboutPage = () => {
 
@@ -14,13 +16,10 @@ export const AboutPage = () => {
   }, [])
 
   return (
-    <StyledAbout
-      isLoading={isLoading}
-      className="about flexContent"
-    >
+    <div className={`${styles.about} flexContent`}>
       <h1 datatype="What do I do?">What do I do?</h1>
 
-      <div className="astronaut"></div>
+      <StyledAstronaut isLoading={isLoading} />
 
       <p>
         I build web sites and applications by utilizing the most progressive web
@@ -29,6 +28,10 @@ export const AboutPage = () => {
         During the development process, I adhere to the solutions that provide
         maximum user experience with a minimalist design.
       </p>
-    </StyledAbout>
+    </div>
   );
 };
+
+StyledAstronaut.propTypes = {
+  isLoading: PropTypes.bool
+}

@@ -1,0 +1,27 @@
+.arrows {
+  display: none;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ED6464;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.arrows svg {
+  font-size: 3em
+}
+
+.arrows.prev {
+  left: 0
+}
+
+.arrows.next {
+  right: 0
+}
+
+@media screen and (max-width: 836px) {
+  .arrows {
+    display: block;
+  }
+}

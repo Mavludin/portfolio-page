@@ -1,0 +1,7 @@
+.langugage {
+  position: absolute;
+  top: 2%;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+}

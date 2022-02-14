@@ -2,18 +2,17 @@ import React, { useEffect, useRef } from "react";
 
 import { CSSTransition } from "react-transition-group";
 
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import { Sidebar } from "./components/Sidebar";
+import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
+import { Sidebar } from "./components/Sidebar/Sidebar";
 
 import { Route, useHistory, useLocation } from "react-router-dom";
 
 import { navLinks, routes } from "./shared/projectData";
-import { Arrows } from "./components/Arrows";
-import { Lines } from "./components/Lines";
-import { Language } from "./components/Language";
-import { useWheel } from "./shared/useWheel";
-import { NoMatch } from "./containers/NoMatch/NoMatch";
+import { Arrows } from "./components/Arrows/Arrows";
+import { Lines } from "./components/Lines/Lines";
+import { NoMatch } from "./pages/NoMatch/NoMatch";
+import { useWheel } from "./shared/hooks/useWheel";
 
 export const App = () => {
   const nav = {
@@ -44,8 +43,6 @@ export const App = () => {
       <Header />
       <Sidebar />
       <Arrows />
-
-      <Language />
 
       <div className="mainBlock" ref={mainBlock}>
         {routes.map(({ path, Component, ref }) => (

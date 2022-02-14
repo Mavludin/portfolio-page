@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 
 import { navLinks } from "../../shared/projectData";
 import PropTypes from "prop-types";
-import { StyledHeader } from "./styles";
+import { StyledMobileMenu } from "./styles";
+import styles from './Header.module.css'
 
 export const Header = () => {
   const [isChecked, setCheckBoxState] = useState(false);
@@ -14,7 +15,7 @@ export const Header = () => {
       <li key={item.id}>
         <NavLink
           onClick={() => setCheckBoxState(false)}
-          activeClassName='active'
+          activeClassName={styles.active}
           exact={true}
           to={item.pathName}
         >
@@ -25,31 +26,31 @@ export const Header = () => {
   });
 
   return (
-    <StyledHeader isChecked={isChecked}>
-      <div className='headerContent'>
-        <nav className='mobileMenu'>
+    <header className={styles.header}>
+      <div className={styles.headerContent}>
+        <StyledMobileMenu isChecked={isChecked}>
           <ul>{renderedNavLinks}</ul>
-        </nav>
+        </StyledMobileMenu>
 
-        <div className='mobileMenuToggle'>
-          <div className='menuBtn'>
+        <div className={styles.mobileMenuToggle}>
+          <div className={styles.menuBtn}>
             <input
               checked={isChecked}
               onChange={(e)=>setCheckBoxState(e.target.checked)}
               type="checkbox"
               id="menuCheckbox"
-              className='menuCheckBox'
+              className={styles.menuCheckBox}
             />
-            <label htmlFor="menuCheckbox" className='menuLabel'>
-              <div className='menuTextBar'></div>
+            <label htmlFor="menuCheckbox" className={styles.menuLabel}>
+              <div className={styles.menuTextBar}></div>
             </label>
           </div>
         </div>
       </div>
-    </StyledHeader>
+    </header>
   );
 };
 
-StyledHeader.propTypes = {
+StyledMobileMenu.propTypes = {
   isChecked: PropTypes.bool
 }

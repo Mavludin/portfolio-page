@@ -11,12 +11,16 @@ import pizzaShopThumbnail from '../assets/images/projects/pizza-shop.jpg'
 import musicPlayerThumbnail from '../assets/images/projects/m-player.jpg'
 import adminPageThumbnail from '../assets/images/projects/admin-page.jpg'
 
-import { HomePage } from "../containers/HomePage";
-import { AboutPage } from "../containers/About";
-import { SkillsPage } from "../containers/Skills/Skills";
-import { GitHub, LinkedIn, Mail, Twitter } from "@material-ui/icons";
-import Instagram from "@material-ui/icons/Instagram";
-import { Projects } from "../containers/Projects/Projects";
+import { HomePage } from "../pages/HomePage/HomePage";
+import { AboutPage } from "../pages/About/About";
+import { SkillsPage } from "../pages/Skills/Skills";
+import { Projects } from "../pages/Projects/Projects";
+
+import MailIcon from '@mui/icons-material/Mail';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 export const navLinks = [
   {
@@ -167,26 +171,26 @@ export const socials = [
   {
     id: 1,
     ref: 'mailto:imevlud@gmail.com',
-    Content: Mail
+    Content: MailIcon
   },
   {
     id: 2,
     ref: 'https://www.linkedin.com/in/mavludin-abdulkadirov-a7b037167/',
-    Content: LinkedIn
+    Content: LinkedInIcon
   },
   {
     id: 3,
     ref: 'https://github.com/Mavludin',
-    Content: GitHub
+    Content: GitHubIcon
   },
   {
     id: 4,
     ref: 'https://twitter.com/_mavludin',
-    Content: Twitter
+    Content: TwitterIcon
   },
   {
     id: 5,
     ref: 'https://instagram.com/icukengw/',
-    Content: Instagram
+    Content: InstagramIcon
   },
 ]

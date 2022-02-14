@@ -1,7 +1,7 @@
-import React from 'react'
-import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
-import styles from './NoMatch.module.css'
-import { Link } from 'react-router-dom';
+import React from "react";
+import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
+import styles from "./NoMatch.module.css";
+import { Link } from "react-router-dom";
 
 export const NoMatch = () => {
   return (
@@ -11,5 +11,5 @@ export const NoMatch = () => {
       </h1>
       <Link to="/"> Go to main page</Link>
     </div>
-  )
-}
+  );
+};

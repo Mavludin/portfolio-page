@@ -1,0 +1,17 @@
+.about h1 {
+  margin: 0
+}
+
+.about p {
+  text-align: center
+}
+
+.about a {
+  color: #ed6464
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    text-align: justify;
+  }
+}

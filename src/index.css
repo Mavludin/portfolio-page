@@ -124,6 +124,10 @@ a {
   color: white;
 }
 
+.MuiTypography-root {
+  font-family: 'Poppins', sans-serif !important;
+}
+
 @media screen and (max-width: 1199px) {
   .page {
     padding: 0 40px;

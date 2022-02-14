@@ -1,10 +1,10 @@
-import { StyledFooter } from "./styles";
 import { socials } from "../../shared/projectData";
+import styles from './Footer.module.css'
 
 export const Footer = () => {
   return (
-    <StyledFooter>
-      <div className='contacts'>
+    <footer className={styles.footer}>
+      <div className={styles.contacts}>
         {
           socials.map(item => {
             return (
@@ -20,6 +20,6 @@ export const Footer = () => {
           })
         }
       </div>
-    </StyledFooter>
+    </footer>
   );
 };

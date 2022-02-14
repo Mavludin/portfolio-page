@@ -1,10 +1,11 @@
-import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
-import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { navBack, navForward } from "../../shared/projectFunctions";
 import { navLinks } from "../../shared/projectData";
-import { useHistory, useLocation } from "react-router";
 import { Fragment, useState } from "react";
-import { StyledArrow } from "./styles";
+import styles from './Arrows.module.css'
+import { useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 export const Arrows = () => {
   const nav = {
@@ -32,18 +33,16 @@ export const Arrows = () => {
 
   return (
     <Fragment>
-      <StyledArrow
+      <div className={`${styles.arrows} ${styles.prev}`}
         onClick={handleBackwardsNav}
-        className='prev'
       >
         <NavigateBeforeIcon />
-      </StyledArrow>
-      <StyledArrow
+      </div>
+      <div className={`${styles.arrows} ${styles.next}`}
         onClick={handleForwardNav}
-        className='next'
       >
         <NavigateNextIcon />
-      </StyledArrow>
+      </div>
     </Fragment>
   );
 };

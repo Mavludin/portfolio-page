@@ -1,5 +1,3 @@
-import styles from './Skills.module.css' 
-
 import html5Icon from "../../assets/images/skills/html-5.svg";
 import css3Icon from "../../assets/images/skills/css-3.svg";
 import jsIcon from "../../assets/images/skills/js.svg";
@@ -9,7 +7,10 @@ import gitIcon from "../../assets/images/skills/git.svg";
 import psIcon from "../../assets/images/skills/ps.svg";
 import figmaIcon from "../../assets/images/skills/figma.svg";
 import reactQueryIcon from "../../assets/images/skills/react-query.png";
+
 import { Link } from "react-router-dom";
+
+import styles from './Skills.module.css' 
 
 export const SkillsPage = () => {
   return (

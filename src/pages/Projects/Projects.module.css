@@ -30,7 +30,7 @@
   width: 32px;
 }
 
-.projects.redBtn {
+.projects .redBtn {
   font-size: 1em;
   border: 2px solid white;
   padding: 5px 15px;
@@ -42,17 +42,17 @@
   transition: background-color 0.2s;
 }
 
-.projects.redBtn svg {
+.projects .redBtn svg {
   margin-left: 8px;
   width: 0.8em;
 }
 
-.projects.redBtn:hover {
+.projects .redBtn:hover {
   background-color: #ed6464;
   border-color: #ed6464;
 }
 
-.projects.redBtn:hover svg {
+.projects .redBtn:hover svg {
   animation: jumping 1s ease-out;
 }
 

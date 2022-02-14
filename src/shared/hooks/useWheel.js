@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { navLinks } from "./projectData";
-import { navBack, navForward } from "./projectFunctions";
+import { navLinks } from "../projectData";
+import { navBack, navForward } from "../projectFunctions";
 
 export const useWheel = (nav) => {
 
