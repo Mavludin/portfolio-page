@@ -1,15 +1,21 @@
 import React from "react";
 
-import html5Icon from "../assets/images/skills/html-5.svg";
-import css3Icon from "../assets/images/skills/css-3.svg";
 import jsIcon from "../assets/images/skills/js.svg";
+import tsIcon from "../assets/images/skills/typescript.svg";
 import reactIcon from "../assets/images/skills/react.svg";
 import reduxIcon from "../assets/images/skills/redux.svg";
-import gitIcon from "../assets/images/skills/git.svg";
+import GitIcon from "../assets/images/skills/git.svg";
+import materialUI from "../assets/images/skills/materail-ui.png";
+import antdIcon from "../assets/images/skills/antd.png";
+import chartsIcon from "../assets/images/skills/charts.png";
+import reactQueryIcon from "../assets/images/skills/react-query.png";
 
 import pizzaShopThumbnail from '../assets/images/projects/pizza-shop.jpg'
 import musicPlayerThumbnail from '../assets/images/projects/m-player.jpg'
 import adminPageThumbnail from '../assets/images/projects/admin-page.jpg'
+import contactListThumbnail from '../assets/images/projects/contact-list.jpg'
+import todoListThumbnail from '../assets/images/projects/to-do-list.jpg'
+import labyrinthThumbnail from '../assets/images/projects/labyrinth.jpg'
 
 import { HomePage } from "../pages/HomePage/HomePage";
 import { AboutPage } from "../pages/About/About";
@@ -21,6 +27,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 export const navLinks = [
   {
@@ -61,33 +68,33 @@ export const projects = [
     tools: [
       {
         id: 1,
-        src: html5Icon,
-        alt: 'Html 5 icon'
+        src: jsIcon,
+        alt: 'JavaScript'
       },
       {
         id: 2,
-        src: css3Icon,
-        alt: 'Css 3 icon'
+        src: reactIcon,
+        alt: 'React JS'
       },
       {
         id: 3,
-        src: jsIcon,
-        alt: 'Js icon'
+        src: GitIcon,
+        alt: 'Git'
       },
       {
         id: 4,
-        src: reactIcon,
-        alt: 'React icon'
+        src: reduxIcon,
+        alt: 'Redux'
       },
       {
         id: 5,
-        src: gitIcon,
-        alt: 'Git icon'
+        src: reactQueryIcon,
+        alt: 'React Query'
       },
       {
         id: 6,
-        src: reduxIcon,
-        alt: 'Redux icon'
+        src: materialUI,
+        alt: 'Material UI'
       },
     ]
   },
@@ -100,28 +107,28 @@ export const projects = [
     tools: [
       {
         id: 1,
-        src: html5Icon,
-        alt: 'Html 5 icon'
+        src: jsIcon,
+        alt: 'JavaScript'
       },
       {
         id: 2,
-        src: css3Icon,
-        alt: 'Css 3 icon'
+        src: reactIcon,
+        alt: 'React JS'
       },
       {
         id: 3,
-        src: jsIcon,
-        alt: 'Js icon'
+        src: GitIcon,
+        alt: 'Git'
       },
       {
         id: 4,
-        src: reactIcon,
-        alt: 'React icon'
+        src: reduxIcon,
+        alt: 'Redux'
       },
       {
         id: 5,
-        src: gitIcon,
-        alt: 'Git icon'
+        src: materialUI,
+        alt: 'Material UI'
       },
     ]
   },
@@ -134,33 +141,130 @@ export const projects = [
     tools: [
       {
         id: 1,
-        src: html5Icon,
-        alt: 'Html 5 icon'
+        src: jsIcon,
+        alt: 'JavaScript'
       },
       {
         id: 2,
-        src: css3Icon,
-        alt: 'Css 3 icon'
+        src: reactIcon,
+        alt: 'React JS'
       },
       {
         id: 3,
-        src: jsIcon,
-        alt: 'Js icon'
+        src: GitIcon,
+        alt: 'Git'
       },
       {
         id: 4,
-        src: reactIcon,
-        alt: 'React icon'
+        src: reduxIcon,
+        alt: 'Redux'
       },
       {
         id: 5,
-        src: gitIcon,
-        alt: 'Git icon'
+        src: chartsIcon,
+        alt: 'Charts'
+      },
+    ]
+  },
+
+  {
+    id: 4,
+    title: 'Contact list',
+    ref: 'https://mavludin-contact-list.netlify.app/',
+    thumbnail: contactListThumbnail,
+    tools: [
+      {
+        id: 1,
+        src: jsIcon,
+        alt: 'JavaScript'
       },
       {
-        id: 6,
+        id: 2,
+        src: reactIcon,
+        alt: 'React JS'
+      },
+      {
+        id: 3,
+        src: GitIcon,
+        alt: 'Git'
+      },
+      {
+        id: 4,
         src: reduxIcon,
-        alt: 'Redux icon'
+        alt: 'Redux'
+      },
+      {
+        id: 5,
+        src: materialUI,
+        alt: 'Material UI'
+      },
+    ]
+  },
+
+  {
+    id: 5,
+    title: 'To-do list',
+    ref: 'https://mavludin-todo-list.netlify.app/',
+    thumbnail: todoListThumbnail,
+    tools: [
+      {
+        id: 1,
+        src: tsIcon,
+        alt: 'TypeScript'
+      },
+      {
+        id: 2,
+        src: reactIcon,
+        alt: 'React JS'
+      },
+      {
+        id: 3,
+        src: GitIcon,
+        alt: 'Git'
+      },
+      {
+        id: 4,
+        src: reduxIcon,
+        alt: 'Redux'
+      },
+      {
+        id: 5,
+        src: antdIcon,
+        alt: 'Ant Design'
+      },
+    ]
+  },
+
+  {
+    id: 6,
+    title: 'Labyrinth game',
+    ref: 'https://mavludin-labyrinth-game.netlify.app/',
+    thumbnail: labyrinthThumbnail,
+    tools: [
+      {
+        id: 1,
+        src: jsIcon,
+        alt: 'JavaScript'
+      },
+      {
+        id: 2,
+        src: reactIcon,
+        alt: 'React JS'
+      },
+      {
+        id: 3,
+        src: GitIcon,
+        alt: 'Git'
+      },
+      {
+        id: 4,
+        src: reduxIcon,
+        alt: 'Redux'
+      },
+      {
+        id: 5,
+        src: antdIcon,
+        alt: 'Ant Design'
       },
     ]
   },
@@ -180,7 +284,7 @@ export const socials = [
   },
   {
     id: 3,
-    ref: 'https://github.com/Mavludin',
+    ref: 'https://Github.com/Mavludin',
     Content: GitHubIcon
   },
   {
@@ -192,5 +296,10 @@ export const socials = [
     id: 5,
     ref: 'https://instagram.com/icukengw/',
     Content: InstagramIcon
+  },
+  {
+    id: 6,
+    ref: 'https://www.youtube.com/c/maxwellcoding',
+    Content: YouTubeIcon
   },
 ]

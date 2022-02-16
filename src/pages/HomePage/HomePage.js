@@ -7,7 +7,7 @@ export const HomePage = () => {
     <div className={`${styles.homePage} flexContent`}>
       <h1>
         {" "}
-        Hello, I'm <span>Mavludin</span> <br /> A front-end web developer{" "}
+        Hello, I'm <span>Mavludin</span> <br /> A Front-end web developer{" "}
       </h1>
       <Link to="/about" className={styles.redBtn}>
         <span>Get to know more</span>

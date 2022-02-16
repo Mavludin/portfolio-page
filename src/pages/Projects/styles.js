@@ -4,7 +4,7 @@ export const StyledItemInner = styled.div`
   padding: 5px;
   height: 100%;
   width: 100%;
-  border: 1px solid white;
+  border: 2px solid transparent;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
@@ -12,6 +12,10 @@ export const StyledItemInner = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
+
+  &:hover {
+    border: 2px solid white;
+  }
 
   &::after {
     content: "";
@@ -29,15 +33,15 @@ export const StyledItemInner = styled.div`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    backface-visibility: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: 0.2s ease-in;
   }
 
   &:hover::after {
     opacity: 0.2;
     z-index: -1;
-    transform: scale(1.05);
+    width: 103%;
+    height: 106%;
   }
 `
 
