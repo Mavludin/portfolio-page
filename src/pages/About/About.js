@@ -21,13 +21,10 @@ export const AboutPage = () => {
 
       <StyledAstronaut isLoading={isLoading} />
 
-      <p>
-        I build web sites and applications by utilizing the most progressive web
-        technologies that you can get familiar with on
-        <Link to="/skills"> the next page. </Link>
-        During the development process, I adhere to the solutions that provide
-        maximum user experience with a minimalist design.
+      <p style={{marginTop: '20px'}}>
+        I build web sites and applications with React JS.
       </p>
+      <p>See what I use for that on <Link to="/skills"> the next page. </Link></p>
     </div>
   );
 };
