@@ -19,7 +19,7 @@ import styles from './Skills.module.css'
 export const SkillsPage = () => {
   return (
     <div className={`${styles.skillsPage} flexContent`}>
-      <h1 datatype="Skills">What I use</h1>
+      <h1 datatype="What I use">What I use</h1>
 
       <div className={styles.skills}>
         <div className={styles.skillsContent}>
