@@ -289,16 +289,6 @@ export const socials = [
   },
   {
     id: 4,
-    ref: 'https://twitter.com/_mavludin',
-    Content: TwitterIcon
-  },
-  {
-    id: 5,
-    ref: 'https://instagram.com/icukengw/',
-    Content: InstagramIcon
-  },
-  {
-    id: 6,
     ref: 'https://www.youtube.com/c/maxwellcoding',
     Content: YouTubeIcon
   },
